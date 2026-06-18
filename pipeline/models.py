@@ -12,7 +12,7 @@ from __future__ import annotations
 from dataclasses import dataclass, asdict
 from datetime import datetime, date
 
-from config import sport_for_strava
+from config import sport_for_strava, sport_for_garmin
 
 
 @dataclass
@@ -83,6 +83,37 @@ class Activity:
             avg_speed=_f(a.get("average_speed")),
             suffer_score=_f(a.get("suffer_score")),
             kudos=int(a.get("kudos_count", 0) or 0),
+        )
+
+    @classmethod
+    def from_garmin(cls, athlete_id: str, a: dict) -> "Activity | None":
+        """Build from a Garmin Connect activity summary dict. Returns None for
+        types we do not track (walks, hikes, strength, ...)."""
+        type_key = (a.get("activityType") or {}).get("typeKey", "")
+        sport = sport_for_garmin(type_key)
+        if sport is None:
+            return None
+        start = a.get("startTimeLocal") or a.get("startTimeGMT") or ""
+        start = start.replace(" ", "T") if start else ""
+        if not start:
+            return None  # no timestamp → can't place it on a day
+        moving = a.get("movingDuration") or a.get("duration") or 0
+        return cls(
+            athlete_id=athlete_id,
+            source="garmin",
+            activity_id=str(a.get("activityId")),
+            sport=sport,
+            name=a.get("activityName") or sport.title(),
+            start_local=start,
+            distance_m=float(a.get("distance") or 0.0),
+            moving_s=int(moving or 0),
+            elapsed_s=int(a.get("duration") or moving or 0),
+            elevation_m=float(a.get("elevationGain") or 0.0),
+            avg_hr=_f(a.get("averageHR")),
+            max_hr=_f(a.get("maxHR")),
+            avg_speed=_f(a.get("averageSpeed")),
+            suffer_score=_f(a.get("activityTrainingLoad")),
+            kudos=0,
         )
 
 

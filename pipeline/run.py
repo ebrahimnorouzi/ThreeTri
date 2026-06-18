@@ -1,21 +1,21 @@
-"""The nightly job — fetch → store → compute → publish.
+"""The nightly job — fetch → store → compute → publish (Garmin-only).
 
 Run by the GitHub Action (and locally for testing):
 
     python pipeline/run.py                 # incremental: fetch since last sync
     python pipeline/run.py --full          # re-fetch the whole season
-    python pipeline/run.py --no-garmin     # Strava only
-    python pipeline/run.py --garmin-days 21
+    python pipeline/run.py --garmin-days 21  # widen the wellness window
 
-It is incremental and idempotent: only activities since the last stored day
-(minus a 2-day overlap to catch edits) are fetched, then upserted into the
-SQLite store. The dashboard is rebuilt from the *entire* store every time, so
-trends and totals always reflect full history.
+It pulls BOTH activities (swim/bike/run) and wellness (sleep/HRV/…) from Garmin
+Connect, one login per athlete. Incremental and idempotent: only activities
+since the last stored day (minus a 2-day overlap) are fetched, then upserted
+into the SQLite store. The dashboard is rebuilt from the entire store each run.
 
-Needs these env vars / GitHub Secrets:
-    STRAVA_CLIENT_ID, STRAVA_CLIENT_SECRET           (shared app)
-    STRAVA_REFRESH_TOKEN_<EBI|SIA|ALBORZ>            (per athlete)
-    GARMIN_TOKEN_<EBI|SIA|ALBORZ>                    (per athlete, optional)
+Needs these GitHub Secrets:
+    GARMIN_TOKEN_EBI, GARMIN_TOKEN_SIA, GARMIN_TOKEN_ALBORZ   (per athlete)
+
+(Strava is dormant in this setup — pipeline/strava.py is kept for if you ever
+get a Strava subscription and want to switch back / add it.)
 """
 
 from __future__ import annotations
@@ -23,19 +23,17 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-from collections import defaultdict
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta, timezone, date
 
-from config import ATHLETES
+from config import ATHLETES, SEASON_START
 import store
-import strava
 import garmin
 from compute import assemble_dashboard
 from sample_data import SITE_DATA  # reuse the canonical output path
 
 
-def _latest_day_by_athlete(activities) -> dict[str, object]:
-    latest: dict[str, object] = {}
+def _latest_day_by_athlete(activities) -> dict[str, date]:
+    latest: dict[str, date] = {}
     for a in activities:
         d = a.day
         if a.athlete_id not in latest or d > latest[a.athlete_id]:
@@ -44,13 +42,14 @@ def _latest_day_by_athlete(activities) -> dict[str, object]:
 
 
 def main() -> int:
-    ap = argparse.ArgumentParser(description="ThreeTri nightly pipeline")
+    ap = argparse.ArgumentParser(description="ThreeTri nightly pipeline (Garmin-only)")
     ap.add_argument("--full", action="store_true", help="re-fetch the whole season, ignoring last sync")
-    ap.add_argument("--no-garmin", action="store_true", help="skip Garmin wellness")
     ap.add_argument("--garmin-days", type=int, default=14, help="how many days of wellness to fetch")
     args = ap.parse_args()
 
-    season_start = strava.season_start_date()
+    season_start = date.fromisoformat(SEASON_START)
+    today = datetime.now(timezone.utc).date()
+
     conn = store.connect()
     existing = store.load_activities(conn)
     latest = _latest_day_by_athlete(existing)
@@ -58,7 +57,6 @@ def main() -> int:
 
     new_activities = []
     new_wellness = []
-    rotated_tokens: dict[str, str] = {}
 
     for ath in ATHLETES:
         if args.full or ath["id"] not in latest:
@@ -66,13 +64,9 @@ def main() -> int:
         else:
             after = max(season_start, latest[ath["id"]] - timedelta(days=2))  # 2-day overlap
 
-        acts, rotated = strava.fetch_athlete(ath, after)
+        acts, wellness = garmin.fetch_athlete(ath, after, today, wellness_days=args.garmin_days)
         new_activities.extend(acts)
-        if rotated:
-            rotated_tokens[ath["strava_secret"]] = rotated
-
-        if not args.no_garmin:
-            new_wellness.extend(garmin.fetch_athlete(ath, days=args.garmin_days))
+        new_wellness.extend(wellness)
 
     if new_activities:
         store.save_activities(conn, new_activities)
@@ -83,14 +77,9 @@ def main() -> int:
     wellness = store.load_wellness(conn)
     conn.close()
 
-    # Surface rotated Strava refresh tokens loudly (GitHub Actions annotation).
-    for secret_name, _val in rotated_tokens.items():
-        print(f"::warning::Strava refresh token rotated — update GitHub Secret '{secret_name}' "
-              f"(re-run scripts/mint_strava_token.py if logins start failing).")
-
     if not activities:
         print("No activities in store and none fetched — keeping existing dashboard.json "
-              "(is this a misconfigured run? check the STRAVA_* secrets).")
+              "(misconfigured run? check the GARMIN_TOKEN_* secrets and that tokens haven't expired).")
         return 0
 
     now = datetime.now(timezone.utc).replace(tzinfo=None)

@@ -160,9 +160,26 @@ def athlete_by_id(athlete_id: str) -> dict:
 
 def sport_for_strava(activity_type: str, sport_type: str | None = None) -> str | None:
     """Map a Strava activity onto one of our buckets, or None if it is not a
-    swim/bike/run (e.g. a WeightTraining or Yoga session)."""
+    swim/bike/run (e.g. a WeightTraining or Yoga session). Strava is dormant in
+    the Garmin-only setup but kept for if you ever enable it."""
     candidate = sport_type or activity_type
     for bucket, meta in SPORTS.items():
         if candidate in meta["strava_types"] or activity_type in meta["strava_types"]:
             return bucket
+    return None
+
+
+def sport_for_garmin(type_key: str | None) -> str | None:
+    """Map a Garmin activityType.typeKey onto a swim/bike/run bucket, or None.
+
+    Garmin has many granular keys (running, trail_running, treadmill_running,
+    road_biking, indoor_cycling, virtual_ride, lap_swimming, open_water_swimming,
+    …). Substring matching covers them all and excludes walks/hikes/strength."""
+    t = (type_key or "").lower()
+    if "swim" in t:
+        return "swim"
+    if any(k in t for k in ("cycl", "bik", "ride")):
+        return "bike"
+    if "run" in t:
+        return "run"
     return None

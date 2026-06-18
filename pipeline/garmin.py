@@ -1,4 +1,9 @@
-"""Garmin Connect wellness fetcher — sleep, HRV, resting HR, Body Battery.
+"""Garmin Connect fetcher — activities (swim/bike/run) AND wellness
+(sleep, HRV, resting HR, Body Battery).
+
+This is the primary data source in the Garmin-only setup: Garmin Connect holds
+both the training activities and the recovery metrics, so one login per athlete
+gets everything.
 
 VERIFIED 2026 approach (python-garminconnect >= 0.3.x, garth removed):
   * Tokens are minted ONCE locally (scripts/mint_garmin_token.py) and stored as a
@@ -17,7 +22,7 @@ from __future__ import annotations
 import os
 from datetime import date, timedelta
 
-from models import DailyWellness
+from models import Activity, DailyWellness
 
 try:
     from garminconnect import Garmin
@@ -90,32 +95,51 @@ def _one_day(g, aid: str, d: str) -> DailyWellness:
     return w
 
 
-def fetch_athlete(athlete: dict, days: int = 14) -> list[DailyWellness]:
-    """Fetch the last `days` of wellness for one athlete. Returns [] on any
-    failure (non-fatal) so Strava-only runs always succeed."""
+def fetch_athlete(
+    athlete: dict, after: date, today: date | None = None, wellness_days: int = 14
+) -> tuple[list[Activity], list[DailyWellness]]:
+    """Fetch one athlete's activities (since `after`) AND recent wellness in a
+    single login. Returns ([], []) on any failure (non-fatal) so one athlete's
+    expired token never breaks the whole run."""
+    today = today or date.today()
     if not _HAVE_GARMIN:
         print(f"  [garmin] {athlete['id']}: garminconnect not installed — skipping")
-        return []
+        return [], []
     token = os.environ.get(athlete["garmin_secret"], "").strip()
     if not token:
         print(f"  [garmin] {athlete['id']}: no {athlete['garmin_secret']} secret — skipping")
-        return []
+        return [], []
 
     try:
         g = _login(token)
     except Exception as exc:  # expired token, Cloudflare, etc.
         print(f"  [garmin] {athlete['id']}: login/resume failed ({type(exc).__name__}: {exc}); "
               f"re-mint with scripts/mint_garmin_token.py if this persists")
-        return []
+        return [], []
 
-    out: list[DailyWellness] = []
-    today = date.today()
-    for n in range(days):
+    # --- activities ---
+    activities: list[Activity] = []
+    skipped = 0
+    try:
+        raw = g.get_activities_by_date(after.isoformat(), today.isoformat()) or []
+        for a in raw:
+            act = Activity.from_garmin(athlete["id"], a)
+            if act is None:
+                skipped += 1
+            else:
+                activities.append(act)
+        print(f"  [garmin] {athlete['id']}: {len(activities)} activities since {after} (+{skipped} non-tri)")
+    except Exception as exc:
+        print(f"  [garmin] {athlete['id']}: activities fetch failed ({type(exc).__name__}: {exc})")
+
+    # --- wellness ---
+    wellness: list[DailyWellness] = []
+    for n in range(wellness_days):
         d = (today - timedelta(days=n)).isoformat()
         try:
-            out.append(_one_day(g, athlete["id"], d))
+            wellness.append(_one_day(g, athlete["id"], d))
         except Exception as exc:
             print(f"  [garmin] {athlete['id']} {d}: {type(exc).__name__}")
-    got = sum(1 for w in out if w.hrv or w.sleep_hours or w.rhr)
-    print(f"  [garmin] {athlete['id']}: {got}/{len(out)} days with data")
-    return out
+    got = sum(1 for w in wellness if w.hrv or w.sleep_hours or w.rhr)
+    print(f"  [garmin] {athlete['id']}: {got}/{len(wellness)} wellness days with data")
+    return activities, wellness

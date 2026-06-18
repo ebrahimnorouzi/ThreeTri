@@ -525,8 +525,8 @@ def assemble_dashboard(activities: list[Activity], wellness: list[DailyWellness]
     trends = _weekly_trends(acts_by_ath, season_start, today)
     highlights = _highlights(athletes_out, h2h["this_week"], team, season_acts, today)
 
-    sources = ["strava"]
-    if any(a["readiness"] for a in athletes_out):
+    sources = sorted({a.source for a in season_acts}) or ["garmin"]
+    if any(a["readiness"] for a in athletes_out) and "garmin" not in sources:
         sources.append("garmin")
 
     return {

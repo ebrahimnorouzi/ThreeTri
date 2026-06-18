@@ -49,11 +49,8 @@ jobs:
 
       - name: Run pipeline (fetch → store → build dashboard.json)
         env:
-          STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
-          STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
-          STRAVA_REFRESH_TOKEN_EBI: ${{ secrets.STRAVA_REFRESH_TOKEN_EBI }}
-          STRAVA_REFRESH_TOKEN_SIA: ${{ secrets.STRAVA_REFRESH_TOKEN_SIA }}
-          STRAVA_REFRESH_TOKEN_ALBORZ: ${{ secrets.STRAVA_REFRESH_TOKEN_ALBORZ }}
+          # Garmin-only setup. (If you ever add Strava, also pass STRAVA_CLIENT_ID,
+          # STRAVA_CLIENT_SECRET and STRAVA_REFRESH_TOKEN_<NAME> here.)
           GARMIN_TOKEN_EBI: ${{ secrets.GARMIN_TOKEN_EBI }}
           GARMIN_TOKEN_SIA: ${{ secrets.GARMIN_TOKEN_SIA }}
           GARMIN_TOKEN_ALBORZ: ${{ secrets.GARMIN_TOKEN_ALBORZ }}

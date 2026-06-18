@@ -102,7 +102,7 @@ def _mk_activity(rng: random.Random, aid: str, d: date, sport: str, idx: int, ra
 
     return Activity(
         athlete_id=aid,
-        source="strava",
+        source="garmin",
         activity_id=f"sample-{aid}-{d.isoformat()}-{idx}",
         sport=sport,
         name=rng.choice(names),
