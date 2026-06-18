@@ -58,32 +58,37 @@ Garmin needs your password + MFA, so each person does this **on their own
 machine** (your password never leaves it — only the resulting token is shared):
 
 ```bash
-# Python 3.12+ required (curl_cffi)
-pip install garminconnect curl_cffi
+# Python 3.12+ required (curl_cffi). Pin the version so the token works in CI.
+pip install garminconnect==0.3.6 curl_cffi
 python scripts/mint_garmin_token.py
 ```
 
-Enter your Garmin email, password, and MFA code if prompted. It prints a long
-base64 **token blob** (valid ~1 year). Send it to Ebi to store as
-`GARMIN_TOKEN_<NAME>`.
+Enter your Garmin email, password, and MFA code if prompted. It writes the token
+to **`garmin_token.txt`** (gitignored, valid ~1 year). Send that file's contents
+to Ebi to store as `GARMIN_TOKEN_<NAME>`, then delete the file. Your password
+never leaves your machine, and the token is never printed to the terminal.
 
 ### 📨 Message to send Sia & Alborz
 
-> Hey! I'm building a live site tracking the three of us training for Mallorca 🏊🚴🏃.
-> To pull your Garmin stats, run this once on your computer (it needs Python 3.12+):
+> Hey! Building a live site tracking the three of us training for Mallorca 🏊🚴🏃.
+> To pull your Garmin stats, run this once on your computer (needs **Python 3.12+** —
+> get it from python.org if you don't have it):
 >
-> ```
-> pip install garminconnect curl_cffi
-> python scripts/mint_garmin_token.py
-> ```
-> (Grab the repo first: `git clone https://github.com/ebrahimnorouzi/ThreeTri`.)
+> **1.** Download this one file (right-click → Save As `mint_garmin_token.py`):
+> https://raw.githubusercontent.com/ebrahimnorouzi/ThreeTri/main/scripts/mint_garmin_token.py
 >
-> It'll ask for your Garmin email + password (+ MFA code). Your password stays on
-> your machine — it just prints a long code at the end. **Copy that whole code and
-> send it to me privately.** That's all I need. 🙌
+> **2.** In a terminal, in the folder where you saved it:
+> ```
+> pip install garminconnect==0.3.6 curl_cffi
+> python mint_garmin_token.py
+> ```
+> **3.** Enter your Garmin email + password (+ MFA if asked). Your password stays on
+> your machine. It creates a file **`garmin_token.txt`**.
+>
+> **4.** Send me the contents of that file **privately** (DM), then delete it. 🙌
 
-> No Python? We can do it together on a quick call (screen-share) so you type your
-> own password — I just need the token it prints.
+> No Python? We can do it together on a quick screen-share call so you type your own
+> password — I just need the token the file ends up with.
 
 ---
 

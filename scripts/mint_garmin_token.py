@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import getpass
 import sys
+from pathlib import Path
 
 
 def main() -> int:
@@ -47,7 +48,7 @@ def main() -> int:
         print("Double-check the password / MFA code and try again.")
         return 1
 
-    token_b64 = garmin.client.dumps()  # base64(JSON([oauth1, oauth2]))
+    token = garmin.client.dumps()  # serialised Garmin session (DI token JSON)
 
     # quick smoke test so you know the token actually works
     try:
@@ -57,13 +58,18 @@ def main() -> int:
     except Exception:
         print("✅ Login OK (test data call skipped — token still valid for the pipeline).")
 
+    # Write to a gitignored file rather than printing it — so it never ends up
+    # in terminal scrollback, a screenshot, or a chat. Copy from the file.
+    out = Path("garmin_token.txt")
+    out.write_text(token, encoding="utf-8")
     print("\n" + "=" * 64)
-    print("  GARMIN TOKEN — store as GARMIN_TOKEN_<NAME> in GitHub Secrets.")
-    print("  Paste the ENTIRE line below (it is long, ~1-2 KB):")
+    print(f"  Token written to:  {out.resolve()}")
+    print("  1. Open that file, copy its ENTIRE contents.")
+    print("  2. Paste it into the GitHub secret GARMIN_TOKEN_<NAME>.")
+    print("  3. DELETE the file afterwards.")
+    print("  Treat it like a password — it grants access to your Garmin account.")
+    print("  Do NOT paste it into chats or screenshots.")
     print("=" * 64)
-    print(token_b64)
-    print("=" * 64)
-    print("Treat this like a password — it grants access to your Garmin account.")
     return 0
 
 

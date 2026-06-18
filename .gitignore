@@ -235,5 +235,6 @@ data/sample.db
 .tokens/
 *.tokens.json
 strava_tokens.json
+garmin_token*.txt
 .garminconnect/
 .env
