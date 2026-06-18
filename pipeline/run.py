@@ -78,6 +78,12 @@ def main() -> int:
     conn.close()
 
     if not activities:
+        # Nothing real yet (e.g. secrets not configured). Don't leave/commit an
+        # empty schema-only DB — remove it so the nightly job makes no noisy commit.
+        try:
+            store.DEFAULT_DB.unlink(missing_ok=True)
+        except OSError:
+            pass
         print("No activities in store and none fetched — keeping existing dashboard.json "
               "(misconfigured run? check the GARMIN_TOKEN_* secrets and that tokens haven't expired).")
         return 0
