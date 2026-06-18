@@ -165,7 +165,8 @@ venv.bak/
 .ropeproject
 
 # mkdocs documentation
-/site
+# NOTE: disabled for ThreeTri — our static frontend lives in site/ and MUST be committed.
+# /site
 
 # mypy
 .mypy_cache/
@@ -216,3 +217,23 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ---- ThreeTri ----
+# (.gitignore does NOT support trailing inline comments — keep patterns on their own line)
+# Local dev artifacts (never committed):
+node_modules/
+package.json
+package-lock.json
+.preview/
+# local pdftotext extraction of the guide:
+guide.txt
+# the downloaded guide PDF (not part of the project):
+running-on-ai-iceberg-guide*.pdf
+# sample MCP DB only — the REAL store data/threetri.db IS committed:
+data/sample.db
+# Local credential/token stores (NEVER commit secrets — they live in GitHub Secrets):
+.tokens/
+*.tokens.json
+strava_tokens.json
+.garminconnect/
+.env

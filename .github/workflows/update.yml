@@ -1,0 +1,84 @@
+name: Update data & deploy
+
+# Runs the nightly pipeline, commits the refreshed data back to the repo (for
+# history), and publishes the static site to GitHub Pages — all in one job.
+#
+# Why one job: a push made with the built-in GITHUB_TOKEN does NOT trigger other
+# workflows, so committing data here would never kick off a separate deploy.
+# Doing fetch + commit + deploy in sequence sidesteps that entirely, and the
+# Pages artifact is uploaded straight from the working tree (already fresh).
+
+on:
+  schedule:
+    - cron: "17 5 * * *"   # daily 05:17 UTC (cron is always UTC; off-the-hour for reliability)
+  workflow_dispatch: {}     # lets you run it on demand from the Actions tab
+  push:
+    branches: [main]
+    paths:                  # redeploy when the site or pipeline changes (not on data commits)
+      - "site/**"
+      - "pipeline/**"
+      - ".github/workflows/**"
+
+permissions:
+  contents: write   # commit refreshed data back to the repo
+  pages: write      # publish to GitHub Pages
+  id-token: write   # OIDC token required by deploy-pages
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"   # required by curl_cffi (Garmin auth)
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r pipeline/requirements.txt
+
+      - name: Run pipeline (fetch → store → build dashboard.json)
+        env:
+          STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
+          STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
+          STRAVA_REFRESH_TOKEN_EBI: ${{ secrets.STRAVA_REFRESH_TOKEN_EBI }}
+          STRAVA_REFRESH_TOKEN_SIA: ${{ secrets.STRAVA_REFRESH_TOKEN_SIA }}
+          STRAVA_REFRESH_TOKEN_ALBORZ: ${{ secrets.STRAVA_REFRESH_TOKEN_ALBORZ }}
+          GARMIN_TOKEN_EBI: ${{ secrets.GARMIN_TOKEN_EBI }}
+          GARMIN_TOKEN_SIA: ${{ secrets.GARMIN_TOKEN_SIA }}
+          GARMIN_TOKEN_ALBORZ: ${{ secrets.GARMIN_TOKEN_ALBORZ }}
+        run: python pipeline/run.py
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name  'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/threetri.db site/data/dashboard.json
+          if git diff --staged --quiet; then
+            echo "No data changes to commit."
+          else
+            git commit -m "chore(data): scheduled refresh [skip ci]"
+            git push
+          fi
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

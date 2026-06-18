@@ -1,0 +1,6 @@
+# ThreeTri data pipeline dependencies (run by the nightly GitHub Action).
+# Requires Python >= 3.12 (curl_cffi, the Garmin Cloudflare bypass, needs it).
+requests>=2.31,<3            # Strava REST API
+garminconnect>=0.3.6         # Garmin Connect (sleep / HRV / readiness); 0.3.x = native auth, no garth
+curl_cffi>=0.7               # TLS impersonation curl_cffi backend used by garminconnect 0.3.x
+segno>=1.6                   # QR code generation (pure-python, SVG + PNG)

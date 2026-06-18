@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>ThreeTri · Scan to follow us live</title>
+  <meta name="theme-color" content="#070b12" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23070b12'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle'%3E%F0%9F%94%BA%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    body { display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 24px; }
+    .race-card {
+      width: min(440px, 94vw); text-align: center; padding: 30px 26px 26px;
+      border-radius: 26px; border: 1px solid var(--border-strong);
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      box-shadow: var(--shadow);
+    }
+    .race-card .brand-name { font-size: 1.5rem; }
+    .rc-kicker { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--c-ebi); margin: 14px 0 4px; }
+    .rc-title { font-family: var(--font-display); font-size: 2rem; font-weight: 700;
+      background: linear-gradient(100deg, var(--c-ebi), var(--c-sia), var(--c-alborz));
+      -webkit-background-clip: text; background-clip: text; color: transparent; line-height: 1.05; }
+    .rc-sub { color: var(--muted); font-size: 0.86rem; margin: 4px 0 18px; }
+    .qbox { background: #fff; border-radius: 18px; padding: 16px; display: inline-block; box-shadow: 0 0 40px rgba(34,211,238,0.25); }
+    .qbox img, .qbox svg { width: min(260px, 70vw); height: auto; display: block; }
+    .rc-scan { font-family: var(--font-display); font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin: 16px 0 2px; }
+    .rc-url { font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); word-break: break-all; }
+    .rc-count { display: flex; justify-content: center; gap: 6px; margin: 18px 0 14px; }
+    .rc-count .cd-block { min-width: 56px; padding: 8px 6px 5px; }
+    .rc-count .cd-num { font-size: 1.5rem; }
+    .rc-athletes { display: flex; justify-content: center; gap: 16px; margin-top: 8px; }
+    .rc-ath { display: flex; align-items: center; gap: 7px; font-weight: 600; font-size: 0.92rem; }
+    .rc-ath .d { width: 11px; height: 11px; border-radius: 50%; box-shadow: 0 0 8px currentColor; }
+    .rc-back { display: inline-block; margin-top: 18px; font-size: 0.8rem; color: var(--muted); border-bottom: 1px dashed var(--border-strong); }
+  </style>
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <div class="race-card">
+    <span class="brand-name">THREE<b style="color:var(--c-ebi)">TRI</b></span>
+    <div class="rc-kicker" id="rc-phase">THE ROAD TO</div>
+    <div class="rc-title" id="rc-title">Mallorca '26</div>
+    <div class="rc-sub" id="rc-sub">Triathlon · Port de Palma de Mallorca</div>
+
+    <div class="qbox"><img src="assets/img/qr.svg" alt="QR code linking to the ThreeTri live dashboard" /></div>
+
+    <div class="rc-scan">📲 Scan to follow us live</div>
+    <div class="rc-url" id="rc-url">ebrahimnorouzi.github.io/ThreeTri</div>
+
+    <div class="rc-count" id="rc-count">
+      <div class="cd-block"><span class="cd-num" id="cd-days">––</span><span class="cd-label">days</span></div>
+      <div class="cd-block"><span class="cd-num" id="cd-hours">––</span><span class="cd-label">hrs</span></div>
+      <div class="cd-block"><span class="cd-num" id="cd-mins">––</span><span class="cd-label">min</span></div>
+      <div class="cd-block"><span class="cd-num" id="cd-secs">––</span><span class="cd-label">sec</span></div>
+    </div>
+
+    <div class="rc-athletes" id="rc-athletes"></div>
+    <div style="margin-top:16px">
+      <a class="ig-link" href="https://www.instagram.com/ebi.n.94/" target="_blank" rel="noopener"><span class="ig-glyph">📸</span> @ebi.n.94</a>
+    </div>
+    <a class="rc-back" href="index.html">← back to the dashboard</a>
+  </div>
+
+  <script type="module">
+    import { byId, el, startCountdown, loadDashboard } from "./assets/js/util.js";
+    const FALLBACK_START = "2026-09-20T08:00:00+02:00";
+    try {
+      const d = await loadDashboard();
+      byId("rc-title").textContent = d.race.short_name;
+      byId("rc-sub").textContent = `Triathlon · ${d.race.location}`;
+      byId("rc-phase").textContent = `${d.race.phase} · ${d.race.days_to_go} days to go`;
+      byId("rc-url").textContent = (d.meta.site_url || "").replace(/^https?:\/\//, "").replace(/\/$/, "");
+      const wrap = byId("rc-athletes");
+      for (const a of d.athletes) {
+        wrap.appendChild(el("span", { class: "rc-ath", style: `color:${a.color}` },
+          el("span", { class: "d" }), el("span", { style: "color:var(--text)" }, a.name)));
+      }
+      startCountdown(d.race.start_iso || FALLBACK_START, cdEls());
+    } catch (e) {
+      startCountdown(FALLBACK_START, cdEls());
+    }
+    function cdEls() {
+      return { days: byId("cd-days"), hours: byId("cd-hours"), mins: byId("cd-mins"), secs: byId("cd-secs") };
+    }
+  </script>
+</body>
+</html>

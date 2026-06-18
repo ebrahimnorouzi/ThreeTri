@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="'Segoe UI',system-ui,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070b12"/>
+      <stop offset="1" stop-color="#0a1019"/>
+    </linearGradient>
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="0.55" stop-color="#f0398b"/>
+      <stop offset="1" stop-color="#a3e635"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0" r="0.8">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g stroke="#ffffff" stroke-opacity="0.05">
+    <path d="M0 90 H1200 M0 180 H1200 M0 270 H1200 M0 360 H1200 M0 450 H1200 M0 540 H1200"/>
+    <path d="M100 0 V630 M250 0 V630 M400 0 V630 M550 0 V630 M700 0 V630 M850 0 V630 M1000 0 V630 M1150 0 V630"/>
+  </g>
+  <text x="80" y="150" fill="#8a99ad" font-size="30" font-weight="600" letter-spacing="16">THE ROAD TO</text>
+  <text x="76" y="290" fill="url(#neon)" font-size="150" font-weight="800" letter-spacing="2">MALLORCA '26</text>
+  <text x="80" y="360" fill="#eaf1fb" font-size="34" font-weight="600">Ebi · Sia · Alborz — swim · bike · run, compared live.</text>
+  <text x="80" y="420" fill="#8a99ad" font-size="26">Triathlon Port de Palma de Mallorca · 20 Sep 2026</text>
+  <g transform="translate(80,490)">
+    <circle cx="14" cy="0" r="14" fill="#22d3ee"/><text x="38" y="8" fill="#eaf1fb" font-size="28" font-weight="700">Ebi</text>
+    <circle cx="194" cy="0" r="14" fill="#f0398b"/><text x="218" y="8" fill="#eaf1fb" font-size="28" font-weight="700">Sia</text>
+    <circle cx="374" cy="0" r="14" fill="#a3e635"/><text x="398" y="8" fill="#eaf1fb" font-size="28" font-weight="700">Alborz</text>
+  </g>
+  <text x="1120" y="560" text-anchor="end" fill="#5b6877" font-size="24" font-weight="700" letter-spacing="6">🔺 THREETRI</text>
+</svg>

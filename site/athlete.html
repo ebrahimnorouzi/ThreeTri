@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>ThreeTri · Athlete</title>
+  <meta name="description" content="Athlete profile — swim, bike, run season stats and training trends on the road to Mallorca '26." />
+  <meta name="theme-color" content="#070b12" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23070b12'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle'%3E%F0%9F%94%BA%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/athlete.css" />
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark">🔺</span><span class="brand-name">THREE<b>TRI</b></span></a>
+    <nav class="topnav" id="athlete-nav" aria-label="Athletes"></nav>
+    <div class="topbar-right"><a class="ghost-btn" href="index.html">← Home</a></div>
+  </header>
+
+  <main>
+    <section class="ath-hero" id="ath-hero"></section>
+
+    <section class="block">
+      <div class="block-head"><h2>Season totals</h2><p class="block-sub" id="season-sub"></p></div>
+      <div class="sport-cards" id="sport-cards"></div>
+    </section>
+
+    <section class="block">
+      <div class="block-head"><h2>This week vs last</h2></div>
+      <div class="wcompare card" id="wcompare"></div>
+    </section>
+
+    <section class="block">
+      <div class="block-head"><h2>Weekly volume</h2><div class="tabs" id="ath-trend-tabs"></div></div>
+      <div class="chart-wrap card"><div id="ath-trend-chart" class="trend-chart"></div></div>
+    </section>
+
+    <section class="block" id="readiness-block" hidden>
+      <div class="block-head"><h2>Readiness</h2><p class="block-sub">Latest Garmin recovery signals.</p></div>
+      <div class="readiness-grid" id="readiness-grid"></div>
+    </section>
+
+    <section class="block">
+      <div class="block-head"><h2>Badges</h2><p class="block-sub" id="badge-sub"></p></div>
+      <div class="badge-grid" id="badge-grid"></div>
+    </section>
+
+    <section class="block">
+      <div class="block-head"><h2>Recent sessions</h2></div>
+      <div class="feed" id="ath-feed"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-row">
+      <a class="ig-link" href="https://www.instagram.com/ebi.n.94/" target="_blank" rel="noopener"><span class="ig-glyph">📸</span> Follow <b>@ebi.n.94</b></a>
+      <span id="footer-updated"></span>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" hidden></div>
+  <script type="module" src="assets/js/athlete.js"></script>
+</body>
+</html>

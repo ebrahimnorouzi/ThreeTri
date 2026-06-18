@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>ThreeTri — Ebi · Sia · Alborz · Road to Mallorca '26</title>
+  <meta name="description" content="Live training HUD for Ebi, Sia and Alborz — swim, bike and run stats compared head-to-head on the road to the Triathlon Port de Palma de Mallorca, 20 Sep 2026." />
+  <meta name="theme-color" content="#070b12" />
+
+  <!-- Social / link sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ThreeTri — Road to Mallorca '26" />
+  <meta property="og:description" content="Three athletes. Three sports. One finish line. Live swim/bike/run leaderboard and countdown to race day." />
+  <meta property="og:url" content="https://ebrahimnorouzi.github.io/ThreeTri/" />
+  <meta property="og:image" content="https://ebrahimnorouzi.github.io/ThreeTri/assets/img/og.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- favicon: inline SVG, no extra request -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23070b12'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle'%3E%F0%9F%94%BA%3C/text%3E%3C/svg%3E" />
+
+  <!-- Fonts: Rajdhani (HUD display), Inter (body), JetBrains Mono (telemetry numbers).
+       Fall back gracefully to system fonts if offline. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- animated telemetry background -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- ====================== TOP BAR ====================== -->
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">🔺</span>
+      <span class="brand-name">THREE<b>TRI</b></span>
+    </a>
+    <nav class="topnav" id="athlete-nav" aria-label="Athletes"></nav>
+    <div class="topbar-right">
+      <a class="ghost-btn" href="qr.html" title="Race-day QR card">◳ QR</a>
+      <span class="updated" id="updated" title="Last data refresh"></span>
+    </div>
+  </header>
+
+  <main>
+    <!-- ====================== HERO + COUNTDOWN ====================== -->
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+        <div class="phase-chip" id="phase-chip">RACE PHASE</div>
+        <h1 class="hero-title">
+          <span class="hero-kicker">THE ROAD TO</span>
+          <span class="hero-race" id="race-short">MALLORCA '26</span>
+        </h1>
+        <p class="hero-sub" id="race-meta">Triathlon · Port de Palma de Mallorca</p>
+
+        <div class="countdown" id="countdown" role="timer" aria-live="off">
+          <div class="cd-block"><span class="cd-num" id="cd-days">––</span><span class="cd-label">days</span></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-block"><span class="cd-num" id="cd-hours">––</span><span class="cd-label">hrs</span></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-block"><span class="cd-num" id="cd-mins">––</span><span class="cd-label">min</span></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-block"><span class="cd-num" id="cd-secs">––</span><span class="cd-label">sec</span></div>
+        </div>
+
+        <a class="hero-link" id="race-link" href="#" target="_blank" rel="noopener">
+          <span id="race-date-line">20 Sep 2026 · Palma, Spain</span> <span class="arrow">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ====================== STANDINGS / PODIUM ====================== -->
+    <section class="block" id="standings-block">
+      <div class="block-head">
+        <h2>Overall standings</h2>
+        <p class="block-sub">Ranked by ThreeTri points — distance, climbing, consistency &amp; streaks combined.</p>
+      </div>
+      <div class="podium" id="podium"></div>
+    </section>
+
+    <!-- ====================== THIS WEEK HEAD-TO-HEAD ====================== -->
+    <section class="block" id="thisweek-block">
+      <div class="block-head">
+        <h2>This week · head to head</h2>
+        <p class="block-sub">Who's putting in the work right now.</p>
+      </div>
+      <div class="h2h-grid" id="h2h-grid"></div>
+    </section>
+
+    <!-- ====================== TEAM CHALLENGE ====================== -->
+    <section class="block" id="challenge-block">
+      <div class="challenge card">
+        <div class="challenge-top">
+          <h3 id="challenge-label">Road to Mallorca</h3>
+          <span class="challenge-pct" id="challenge-pct">0%</span>
+        </div>
+        <div class="bar-track big"><div class="bar-fill team" id="challenge-bar"></div></div>
+        <p class="challenge-sub" id="challenge-sub"></p>
+      </div>
+    </section>
+
+    <!-- ====================== SEASON LEADERBOARDS ====================== -->
+    <section class="block" id="leaderboard-block">
+      <div class="block-head">
+        <h2>Season leaderboard</h2>
+        <div class="tabs" id="lb-tabs" role="tablist"></div>
+      </div>
+      <div class="lb-chart" id="lb-chart"></div>
+    </section>
+
+    <!-- ====================== WEEKLY TRENDS ====================== -->
+    <section class="block" id="trends-block">
+      <div class="block-head">
+        <h2>Weekly volume trend</h2>
+        <div class="tabs" id="trend-tabs" role="tablist"></div>
+      </div>
+      <div class="chart-wrap card">
+        <div id="trend-chart" class="trend-chart"></div>
+        <div class="legend" id="trend-legend"></div>
+      </div>
+    </section>
+
+    <!-- ====================== HIGHLIGHTS ====================== -->
+    <section class="block" id="highlights-block">
+      <div class="block-head"><h2>Highlights</h2><p class="block-sub">The stories in the numbers.</p></div>
+      <div class="highlight-grid" id="highlight-grid"></div>
+    </section>
+
+    <!-- ====================== CONSISTENCY CALENDAR ====================== -->
+    <section class="block" id="calendar-block">
+      <div class="block-head">
+        <h2>Consistency</h2>
+        <p class="block-sub">Every dot is a session. Don't break the chain.</p>
+      </div>
+      <div class="calendar card" id="calendar"></div>
+    </section>
+
+    <!-- ====================== RECENT FEED ====================== -->
+    <section class="block" id="feed-block">
+      <div class="block-head"><h2>Latest sessions</h2></div>
+      <div class="feed" id="feed"></div>
+    </section>
+  </main>
+
+  <!-- ====================== FOOTER ====================== -->
+  <footer class="footer">
+    <div class="footer-row">
+      <span>ThreeTri · Ebi · Sia · Alborz</span>
+      <a class="ig-link" href="https://www.instagram.com/ebi.n.94/" target="_blank" rel="noopener" aria-label="Follow on Instagram">
+        <span class="ig-glyph">📸</span> Follow <b>@ebi.n.94</b>
+      </a>
+    </div>
+    <div class="footer-row dim">
+      <span>Built for the <a id="footer-race-link" href="#" target="_blank" rel="noopener">Triathlon Port de Palma de Mallorca</a>.</span>
+      <span id="footer-sources"></span>
+    </div>
+    <div class="footer-row dim">
+      <span>Data via Strava &amp; Garmin · updated nightly · <span id="footer-updated"></span></span>
+    </div>
+  </footer>
+
+  <!-- error / loading toast -->
+  <div class="toast" id="toast" hidden></div>
+
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

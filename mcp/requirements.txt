@@ -1,0 +1,3 @@
+# ThreeTri MCP server ("Ask Your Own Data"). Official MCP Python SDK.
+# Python >= 3.10.  Install:  pip install -r mcp/requirements.txt
+mcp[cli]>=1.2

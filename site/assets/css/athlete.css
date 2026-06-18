@@ -1,0 +1,67 @@
+/* Athlete profile page — extends the HUD design system. */
+
+.ath-hero {
+  --accent: var(--c-ebi);
+  position: relative; display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+  margin-top: 26px; padding: 24px; border-radius: var(--radius); overflow: hidden;
+  background: var(--panel); border: 1px solid var(--border); border-left: 4px solid var(--accent);
+}
+.ath-hero::before {
+  content: ""; position: absolute; right: -60px; top: -60px; width: 280px; height: 280px;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 24%, transparent), transparent 70%);
+}
+.ath-avatar {
+  width: 84px; height: 84px; border-radius: 20px; display: grid; place-items: center; font-size: 2.6rem;
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  border: 2px solid var(--accent); box-shadow: 0 0 28px color-mix(in srgb, var(--accent) 45%, transparent);
+}
+.ath-id { flex: 1; min-width: 220px; }
+.ath-name { font-family: var(--font-display); font-size: clamp(1.8rem, 7vw, 2.8rem); font-weight: 700; line-height: 1; }
+.ath-tag { color: var(--muted); margin: 4px 0 12px; }
+.ath-chips { display: flex; gap: 8px; flex-wrap: wrap; }
+.ath-chip { font-family: var(--font-mono); font-size: 0.78rem; padding: 5px 11px; border-radius: 999px;
+  border: 1px solid var(--border-strong); color: var(--text); }
+.ath-chip b { color: var(--accent); }
+.ath-points { text-align: right; }
+.ath-points .n { font-family: var(--font-mono); font-size: 2.4rem; font-weight: 700; color: var(--accent); }
+.ath-points .l { display: block; font-size: 0.66rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--dim); }
+
+.sport-cards { display: grid; grid-template-columns: 1fr; gap: 13px; }
+.sport-card { --sc: var(--c-run); padding: 16px; border-radius: var(--radius); background: var(--panel);
+  border: 1px solid var(--border); border-top: 3px solid var(--sc); }
+.sport-card .sc-head { display: flex; align-items: center; gap: 9px; font-family: var(--font-display);
+  font-size: 1.1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
+.sport-card .sc-head .ico { font-size: 1.3rem; }
+.sport-card .sc-big { font-family: var(--font-mono); font-size: 1.9rem; font-weight: 700; margin: 10px 0 2px; }
+.sport-card .sc-big .u { font-size: 0.9rem; color: var(--dim); }
+.sport-card .sc-sub { display: flex; gap: 14px; flex-wrap: wrap; font-size: 0.78rem; color: var(--muted); }
+.sport-card .sc-sub b { color: var(--text); font-family: var(--font-mono); }
+
+.wcompare { padding: 18px; display: grid; gap: 14px; }
+.wc-row { display: grid; grid-template-columns: 70px 1fr 1fr; align-items: center; gap: 12px; }
+.wc-label { font-size: 0.85rem; color: var(--muted); }
+.wc-seg { display: flex; flex-direction: column; gap: 4px; }
+.wc-bar { height: 14px; border-radius: 999px; background: rgba(255,255,255,0.06); overflow: hidden; }
+.wc-bar > span { display: block; height: 100%; border-radius: 999px; width: 0; transition: width 0.9s ease; }
+.wc-now > span { background: var(--accent); box-shadow: 0 0 10px var(--accent); }
+.wc-prev > span { background: rgba(255,255,255,0.22); }
+.wc-cap { font-size: 0.72rem; font-family: var(--font-mono); color: var(--muted); }
+
+.readiness-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.rd-card { padding: 14px 16px; border-radius: var(--radius-sm); background: var(--panel); border: 1px solid var(--border); }
+.rd-card .k { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; }
+.rd-card .v { font-family: var(--font-mono); font-size: 1.5rem; font-weight: 700; margin-top: 3px; }
+.rd-card .v small { font-size: 0.8rem; color: var(--muted); }
+
+.badge-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+.badge { padding: 14px; border-radius: var(--radius-sm); background: var(--panel); border: 1px solid var(--border); text-align: center; }
+.badge.locked { opacity: 0.38; filter: grayscale(0.7); }
+.badge .b-ico { font-size: 1.8rem; }
+.badge .b-name { font-family: var(--font-display); font-weight: 700; font-size: 0.92rem; margin-top: 6px; text-transform: uppercase; letter-spacing: 0.03em; }
+.badge .b-desc { font-size: 0.72rem; color: var(--muted); margin-top: 3px; }
+.badge.earned { border-color: color-mix(in srgb, var(--gold) 40%, transparent); box-shadow: 0 0 16px rgba(255,211,77,0.12); }
+
+@media (min-width: 620px) {
+  .sport-cards { grid-template-columns: repeat(3, 1fr); }
+  .readiness-grid { grid-template-columns: repeat(4, 1fr); }
+}
