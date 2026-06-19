@@ -7,8 +7,11 @@ name: Telegram bot
 # First-time: run once with action=setup to register the / command menu.
 
 on:
-  schedule:
-    - cron: "*/5 * * * *"   # every 5 minutes (the minimum GitHub allows)
+  # Polling is DISABLED in favour of the instant Cloudflare Worker webhook
+  # (see webhook/README.md) — Telegram allows only one of webhook OR polling.
+  # To go back to polling, uncomment the schedule below AND deleteWebhook.
+  # schedule:
+  #   - cron: "*/5 * * * *"
   workflow_dispatch:
     inputs:
       action:
