@@ -22,6 +22,7 @@ async function init() {
   document.title = `ThreeTri · ${ATH.name}`;
   renderNav(map);
   renderHero();
+  renderRaceReadiness();
   renderSportCards();
   renderWeekCompare();
   renderTrendTabs();
@@ -48,6 +49,7 @@ function renderHero() {
   hero.style.setProperty("--accent", ATH.color);
   clear(hero);
   const chips = el("div", { class: "ath-chips" },
+    ATH.race ? el("span", { class: "ath-chip", html: `🏁 <b>${ATH.race.label}</b>` }) : null,
     el("span", { class: "ath-chip", html: `LV <b>${ATH.level}</b> · ${ATH.xp.xp_pct}% to next` }),
     el("span", { class: "ath-chip", html: `🔥 <b>${ATH.streak.current_days}</b> day streak` }),
     el("span", { class: "ath-chip", html: `longest <b>${ATH.streak.longest_days}</b>d` }),
@@ -64,6 +66,26 @@ function renderHero() {
     el("div", { class: "ath-points" }, el("span", { class: "n" }, comma(ATH.points)), el("span", { class: "l" }, "points")),
   );
   byId("season-sub").textContent = `Since ${DATA.meta.season_start} · ${ATH.totals.all.activities} sessions · ${comma(ATH.totals.all.distance_km)} km · ${oneDp(ATH.totals.all.moving_h)} h`;
+}
+
+function renderRaceReadiness() {
+  const wrap = byId("race-ready");
+  clear(wrap);
+  const r = ATH.race, dr = ATH.distance_readiness;
+  if (!r || !dr) return;
+  byId("race-sub").textContent = `Targeting the ${r.label} distance — your longest single session vs each race leg.`;
+  for (const s of ["swim", "bike", "run"]) {
+    const leg = dr[s];
+    const ready = leg.pct >= 100;
+    const fill = el("div", { class: `bar-fill${ready ? " leader" : ""}`, "--accent": SPORTS[s].color, style: `background:${SPORTS[s].color}` });
+    wrap.appendChild(el("div", { class: "ready-card", style: `--sc:${SPORTS[s].color}` },
+      el("div", { class: "ready-head" },
+        el("span", { class: "ico" }, sportIcon(s)), SPORTS[s].label,
+        el("span", { class: `ready-pct${ready ? " done" : ""}` }, ready ? "✓ race-ready" : `${leg.pct}%`)),
+      el("div", { class: "bar-track" }, fill),
+      el("div", { class: "ready-cap" }, `longest ${oneDp(leg.longest_km)} km · race ${oneDp(leg.target_km)} km`)));
+    requestAnimationFrame(() => { fill.style.width = `${leg.pct}%`; });
+  }
 }
 
 function renderSportCards() {

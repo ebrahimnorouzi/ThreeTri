@@ -108,6 +108,8 @@ function renderPodium() {
 
     const nameRow = el("div", { class: "pod-name-row" },
       el("span", { class: "pod-name" }, a.name),
+      a.race ? el("span", { class: "race-badge", "--accent": a.color,
+        title: `Targeting ${a.race.label}: ${a.race.legs.swim} / ${a.race.legs.bike} / ${a.race.legs.run} km` }, a.race.label) : null,
       el("span", { class: "pod-lvl" }, `LV ${a.level}`),
     );
 

@@ -26,6 +26,14 @@ RACE = {
 # Stats are aggregated from this date forward (the "season").
 SEASON_START = "2026-01-01"
 
+# Triathlon race formats each athlete is targeting (leg distances in km).
+RACE_DISTANCES = {
+    "sprint": {"label": "Sprint", "swim": 0.75, "bike": 20.0, "run": 5.0},
+    "olympic": {"label": "Olympic", "swim": 1.5, "bike": 40.0, "run": 10.0},
+    "70.3": {"label": "Half (70.3)", "swim": 1.9, "bike": 90.0, "run": 21.1},
+    "ironman": {"label": "Ironman", "swim": 3.8, "bike": 180.0, "run": 42.2},
+}
+
 # A shared team challenge: combined distance across all three of us, all sports,
 # this season. A stretch goal for three triathletes over a year — tune it so the
 # progress bar stays motivating (somewhere short of 100% until close to race day).
@@ -49,6 +57,7 @@ ATHLETES = [
         "emoji": "🐬",
         "color": "#22d3ee",  # electric cyan
         "tagline": "The engine",
+        "race_type": "olympic",  # 1.5 km swim · 40 km bike · 10 km run
         "strava_secret": "STRAVA_REFRESH_TOKEN_EBI",
         "garmin_secret": "GARMIN_TOKEN_EBI",
     },
@@ -59,6 +68,7 @@ ATHLETES = [
         "emoji": "⚡",
         "color": "#f0398b",  # hot magenta
         "tagline": "The metronome",
+        "race_type": "sprint",  # 0.75 km swim · 20 km bike · 5 km run
         "strava_secret": "STRAVA_REFRESH_TOKEN_SIA",
         "garmin_secret": "GARMIN_TOKEN_SIA",
     },
@@ -69,6 +79,7 @@ ATHLETES = [
         "emoji": "🦅",
         "color": "#a3e635",  # lime
         "tagline": "The climber",
+        "race_type": "sprint",  # 0.75 km swim · 20 km bike · 5 km run
         "strava_secret": "STRAVA_REFRESH_TOKEN_ALBORZ",
         "garmin_secret": "GARMIN_TOKEN_ALBORZ",
     },

@@ -131,6 +131,32 @@
       "emoji": "🐬",
       "color": "#22d3ee",
       "tagline": "The engine",
+      "race": {
+        "type": "olympic",
+        "label": "Olympic",
+        "legs": {
+          "swim": 1.5,
+          "bike": 40.0,
+          "run": 10.0
+        }
+      },
+      "distance_readiness": {
+        "swim": {
+          "longest_km": 3.3,
+          "target_km": 1.5,
+          "pct": 100
+        },
+        "bike": {
+          "longest_km": 134.78,
+          "target_km": 40.0,
+          "pct": 100
+        },
+        "run": {
+          "longest_km": 31.84,
+          "target_km": 10.0,
+          "pct": 100
+        }
+      },
       "totals": {
         "all": {
           "distance_km": 479.9,
@@ -452,6 +478,32 @@
       "emoji": "⚡",
       "color": "#f0398b",
       "tagline": "The metronome",
+      "race": {
+        "type": "sprint",
+        "label": "Sprint",
+        "legs": {
+          "swim": 0.75,
+          "bike": 20.0,
+          "run": 5.0
+        }
+      },
+      "distance_readiness": {
+        "swim": {
+          "longest_km": 3.74,
+          "target_km": 0.75,
+          "pct": 100
+        },
+        "bike": {
+          "longest_km": 136.54,
+          "target_km": 20.0,
+          "pct": 100
+        },
+        "run": {
+          "longest_km": 23.63,
+          "target_km": 5.0,
+          "pct": 100
+        }
+      },
       "totals": {
         "all": {
           "distance_km": 0.0,
@@ -642,6 +694,32 @@
       "emoji": "🦅",
       "color": "#a3e635",
       "tagline": "The climber",
+      "race": {
+        "type": "sprint",
+        "label": "Sprint",
+        "legs": {
+          "swim": 0.75,
+          "bike": 20.0,
+          "run": 5.0
+        }
+      },
+      "distance_readiness": {
+        "swim": {
+          "longest_km": 2.9,
+          "target_km": 0.75,
+          "pct": 100
+        },
+        "bike": {
+          "longest_km": 127.71,
+          "target_km": 20.0,
+          "pct": 100
+        },
+        "run": {
+          "longest_km": 14.61,
+          "target_km": 5.0,
+          "pct": 100
+        }
+      },
       "totals": {
         "all": {
           "distance_km": 82.7,

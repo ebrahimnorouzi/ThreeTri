@@ -61,7 +61,17 @@
 .badge .b-desc { font-size: 0.72rem; color: var(--muted); margin-top: 3px; }
 .badge.earned { border-color: color-mix(in srgb, var(--gold) 40%, transparent); box-shadow: 0 0 16px rgba(255,211,77,0.12); }
 
+/* race readiness (longest session vs race-leg distance) */
+.ready-grid { display: grid; grid-template-columns: 1fr; gap: 13px; }
+.ready-card { padding: 16px; border-radius: var(--radius); background: var(--panel); border: 1px solid var(--border); border-top: 3px solid var(--sc); }
+.ready-head { display: flex; align-items: center; gap: 9px; font-family: var(--font-display); font-weight: 700; font-size: 1.02rem; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 12px; }
+.ready-head .ico { font-size: 1.2rem; }
+.ready-pct { margin-left: auto; font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); }
+.ready-pct.done { color: var(--ok); }
+.ready-cap { margin-top: 10px; font-size: 0.78rem; color: var(--muted); font-family: var(--font-mono); }
+
 @media (min-width: 620px) {
   .sport-cards { grid-template-columns: repeat(3, 1fr); }
   .readiness-grid { grid-template-columns: repeat(4, 1fr); }
+  .ready-grid { grid-template-columns: repeat(3, 1fr); }
 }

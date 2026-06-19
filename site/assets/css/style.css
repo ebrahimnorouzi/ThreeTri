@@ -236,6 +236,12 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 16px 72px; }
   margin-left: auto; font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent);
   border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); padding: 2px 8px; border-radius: 999px;
 }
+.race-badge {
+  font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+  padding: 2px 8px; border-radius: 999px; color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+}
 .pod-stats { display: flex; gap: 14px; margin-top: 6px; flex-wrap: wrap; }
 .pod-stat { font-size: 0.78rem; color: var(--muted); }
 .pod-stat b { color: var(--text); font-family: var(--font-mono); font-weight: 700; }

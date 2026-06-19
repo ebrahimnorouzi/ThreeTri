@@ -17,6 +17,7 @@ from datetime import datetime, date, timedelta
 
 from config import (
     RACE,
+    RACE_DISTANCES,
     SEASON_START,
     SITE_URL,
     TEAM_GOAL_KM,
@@ -389,6 +390,22 @@ def _cumulative(trends: dict, target_km: float) -> dict:
             "cumulative_km": cum, "target_km": target_km}
 
 
+def _distance_readiness(acts: list[Activity], race_type: str) -> dict:
+    """Per leg: the athlete's longest single session vs their race-leg distance.
+    'Have you covered the race distance in one go yet?'"""
+    legs = RACE_DISTANCES.get(race_type, RACE_DISTANCES["sprint"])
+    out = {}
+    for s in SPORT_ORDER:
+        longest = max((a.distance_km for a in acts if a.sport == s), default=0.0)
+        target = legs[s]
+        out[s] = {
+            "longest_km": round(longest, 2),
+            "target_km": target,
+            "pct": round(min(100.0, longest / target * 100)) if target else 0,
+        }
+    return out
+
+
 def _consistency_pct(acts: list[Activity], today: date, window: int = 56) -> int:
     """Fraction of the last `window` days (default 8 weeks) with ≥1 session."""
     start = today - timedelta(days=window - 1)
@@ -581,6 +598,8 @@ def assemble_dashboard(activities: list[Activity], wellness: list[DailyWellness]
         level = _level_info(points)
         badges = _evaluate_badges(acts, season_t, streak)
         readiness = _readiness(wellness_by_ath.get(aid, []), today)
+        race_type = meta.get("race_type", "sprint")
+        race_legs = RACE_DISTANCES.get(race_type, RACE_DISTANCES["sprint"])
 
         season_totals_by_ath[aid] = season_t
         week_totals_by_ath[aid] = week_t
@@ -595,6 +614,12 @@ def assemble_dashboard(activities: list[Activity], wellness: list[DailyWellness]
                 "emoji": meta["emoji"],
                 "color": meta["color"],
                 "tagline": meta["tagline"],
+                "race": {
+                    "type": race_type,
+                    "label": race_legs["label"],
+                    "legs": {s: race_legs[s] for s in SPORT_ORDER},
+                },
+                "distance_readiness": _distance_readiness(acts, race_type),
                 "totals": season_t,
                 "this_week": week_t,
                 "last_week": last_t,
