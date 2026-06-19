@@ -61,6 +61,13 @@
 .badge .b-desc { font-size: 0.72rem; color: var(--muted); margin-top: 3px; }
 .badge.earned { border-color: color-mix(in srgb, var(--gold) 40%, transparent); box-shadow: 0 0 16px rgba(255,211,77,0.12); }
 
+/* coach's weekly read */
+.coach-summary { padding: 18px 20px; border-left: 3px solid var(--accent); }
+.cs-head { display: flex; align-items: center; gap: 9px; font-family: var(--font-display); font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.95rem; color: var(--accent); margin-bottom: 8px; }
+.cs-ico { font-size: 1.2rem; filter: drop-shadow(0 0 6px color-mix(in srgb, var(--accent) 50%, transparent)); }
+.cs-text { margin: 0; font-size: 0.98rem; line-height: 1.55; color: var(--text); }
+
 /* race readiness (longest session vs race-leg distance) */
 .ready-grid { display: grid; grid-template-columns: 1fr; gap: 13px; }
 .ready-card { padding: 16px; border-radius: var(--radius); background: var(--panel); border: 1px solid var(--border); border-top: 3px solid var(--sc); }

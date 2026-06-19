@@ -1,0 +1,57 @@
+name: Social & notifications
+
+# Posts varied ThreeTri updates to Bluesky / Discord / Telegram through the day,
+# and emails a daily coach digest. Reads the committed dashboard.json + content.json
+# (it does NOT run the data pipeline). Every channel is opt-in: a run with no
+# matching secrets simply does nothing. Safe to leave enabled.
+
+on:
+  schedule:
+    # Posts — a different kind each hour (see posts.HOUR_ROTATION). UTC.
+    - cron: "0 5,7,9,11,13,15,17,19,21 * * *"
+    # Daily coach-digest email.
+    - cron: "30 5 * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "post or email"
+        default: "post"
+      kind:
+        description: "post kind (auto/quote/recap/tip/leaderboard/legend/song/video/challenge/countdown/streak)"
+        default: "auto"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "social"
+  cancel-in-progress: false
+
+jobs:
+  broadcast:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+
+      - name: Daily email digest
+        if: ${{ github.event.schedule == '30 5 * * *' || (github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'email') }}
+        env:
+          EMAIL_USER: ${{ secrets.EMAIL_USER }}
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+        run: python pipeline/social.py --email
+
+      - name: Post update
+        if: ${{ github.event.schedule != '30 5 * * *' && !(github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'email') }}
+        env:
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python pipeline/social.py --kind "${{ github.event.inputs.kind || 'auto' }}"

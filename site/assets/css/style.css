@@ -369,6 +369,16 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 16px 72px; }
 .ig-link:hover { border-color: var(--c-sia); box-shadow: 0 0 16px rgba(240,57,149,0.35); transform: translateY(-1px); }
 .ig-link b { background: linear-gradient(100deg, #f0398b, #fb923c); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .ig-glyph { filter: drop-shadow(0 0 5px rgba(240,57,149,0.5)); }
+.socials { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+.bsky-link {
+  display: inline-flex; align-items: center; gap: 7px; font-weight: 600; font-size: 0.86rem;
+  padding: 6px 14px; border-radius: 999px; color: var(--text) !important;
+  border: 1px solid var(--border-strong);
+  background: linear-gradient(100deg, rgba(34,211,238,0.16), rgba(56,189,248,0.16) 60%, rgba(99,102,241,0.16));
+  transition: all 0.15s;
+}
+.bsky-link:hover { border-color: #38bdf8; box-shadow: 0 0 16px rgba(56,189,248,0.35); transform: translateY(-1px); }
+.bsky-link b { color: #38bdf8; }
 
 /* ============================ TOAST / STATES ============================== */
 .toast {

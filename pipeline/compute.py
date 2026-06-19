@@ -554,8 +554,9 @@ def _race_phase(days_to_go: int) -> str:
 # --------------------------------------------------------------------------- #
 # Main entry point
 # --------------------------------------------------------------------------- #
-def assemble_dashboard(activities: list[Activity], wellness: list[DailyWellness], now: datetime, notes: dict | None = None) -> dict:
+def assemble_dashboard(activities: list[Activity], wellness: list[DailyWellness], now: datetime, notes: dict | None = None, summaries: dict | None = None) -> dict:
     notes = notes or {}
+    summaries = summaries or {}
     today = now.date()
     season_start = date.fromisoformat(SEASON_START)
     race_date = date.fromisoformat(RACE["date"])
@@ -631,6 +632,7 @@ def assemble_dashboard(activities: list[Activity], wellness: list[DailyWellness]
                 "badges": badges,
                 "badge_count": sum(1 for b in badges if b["earned"]),
                 "readiness": readiness,
+                "weekly_summary": summaries.get(aid),
                 "recent_activities": _recent(acts, notes),
             }
         )

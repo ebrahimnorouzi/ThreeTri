@@ -68,6 +68,16 @@ CREATE TABLE IF NOT EXISTS coach_notes (
     created_at    TEXT,
     PRIMARY KEY (source, activity_id)
 );
+
+-- Weekly per-athlete AI summaries (one per ISO week).
+CREATE TABLE IF NOT EXISTS summaries (
+    athlete_id    TEXT    NOT NULL,
+    week_key      TEXT    NOT NULL,        -- e.g. 2026-W25
+    text          TEXT    NOT NULL,
+    model         TEXT,
+    created_at    TEXT,
+    PRIMARY KEY (athlete_id, week_key)
+);
 """
 
 
@@ -137,3 +147,26 @@ def save_notes(conn: sqlite3.Connection, notes: dict[tuple[str, str], str], mode
     )
     conn.commit()
     return len(rows)
+
+
+def load_summaries(conn: sqlite3.Connection) -> dict[tuple[str, str], str]:
+    """Map (athlete_id, week_key) → weekly summary text."""
+    cur = conn.execute("SELECT athlete_id, week_key, text FROM summaries")
+    return {(r["athlete_id"], r["week_key"]): r["text"] for r in cur.fetchall()}
+
+
+def save_summary(conn: sqlite3.Connection, athlete_id: str, week_key: str, text: str, model: str, when: str) -> None:
+    conn.execute(
+        "INSERT OR REPLACE INTO summaries (athlete_id, week_key, text, model, created_at) VALUES (?, ?, ?, ?, ?)",
+        (athlete_id, week_key, text, model, when),
+    )
+    conn.commit()
+
+
+def latest_summaries(conn: sqlite3.Connection) -> dict[str, str]:
+    """Most recent summary text per athlete (by week_key)."""
+    cur = conn.execute(
+        "SELECT athlete_id, text FROM summaries WHERE (athlete_id, week_key) IN "
+        "(SELECT athlete_id, MAX(week_key) FROM summaries GROUP BY athlete_id)"
+    )
+    return {r["athlete_id"]: r["text"] for r in cur.fetchall()}

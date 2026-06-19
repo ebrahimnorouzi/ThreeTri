@@ -46,17 +46,34 @@ Names must match **exactly** (referenced in [.github/workflows/update.yml](.gith
 That's it — **three secrets**. Each is a base64 "token blob" that lets the
 nightly job read that athlete's Garmin data with no password and no MFA.
 
-### Optional 4th secret — AI coaching notes 🧠
+### Optional extras — AI coach, social posts, email & notifications
 
-| Secret name | Who | What it does |
+Everything below is **optional and opt-in** — add a secret to switch a feature on,
+omit it and that feature stays off. None can break the data pipeline.
+
+**🧠 AI coaching (per-activity reads + weekly summaries).** Pick ONE backend:
+
+| Secret | Backend | Notes |
 |---|---|---|
-| `ANTHROPIC_API_KEY` | Ebi (optional) | Generates a short **coach's read** for each new activity (shown on the dashboard) |
+| `ANTHROPIC_API_KEY` | Claude (recommended) | Cheapest model `claude-haiku-4-5`, analysed **once** per activity (cached) — ~$0.002/activity → **~$1–2 for the whole season**. Best quality. Get a key at [console.anthropic.com](https://console.anthropic.com). |
+| `HF_TOKEN` | Hugging Face (free-ish) | Free open models via HF Inference Providers. ⚠️ HF's free tier is only **~$0.10/month** of credit — fine for light daily use, not unlimited. Token needs the "Make calls to Inference Providers" scope. |
 
-Get a key at [console.anthropic.com](https://console.anthropic.com). It uses the
-cheapest model (`claude-haiku-4-5`) and analyses each activity **once** (cached
-in the DB) — roughly **$0.002/activity**, so a whole season for all three of you
-is about **$1–2**. No key → the feature is simply off. Override the model with a
-`COACH_MODEL` repo *variable* (e.g. `claude-opus-4-8`) for deeper reads.
+Auto-detects (Claude if its key is set, else HF). Override with the `COACH_BACKEND`
+variable (`anthropic`/`hf`/`off`) and `COACH_MODEL` / `COACH_MODEL_HF`.
+
+**📣 Daily Bluesky / Discord / Telegram posts + email digest** (the `Social &
+notifications` workflow posts a varied update ~9×/day and emails a daily coach digest):
+
+| Secret(s) | Channel |
+|---|---|
+| `BLUESKY_HANDLE` (`norouzi-iut.bsky.social`) + `BLUESKY_APP_PASSWORD` | Bluesky — use an **App Password** (Settings → App Passwords), not your main password |
+| `DISCORD_WEBHOOK_URL` | Discord (Server Settings → Integrations → Webhooks) |
+| `TELEGRAM_BOT_TOKEN` + `TELEGRAM_CHAT_ID` | Telegram (create a bot via @BotFather) |
+| `EMAIL_USER` + `EMAIL_PASSWORD` + `EMAIL_TO` | Daily coach-digest email (Gmail: use an **App Password**; `EMAIL_TO` is comma-separated). Optional: `EMAIL_FROM`, `EMAIL_HOST`, `EMAIL_PORT`. |
+
+Each channel only fires if its secrets exist. Post cadence/types are tuned in
+`pipeline/posts.py` (`HOUR_ROTATION`); test any post type from **Actions → Social
+& notifications → Run workflow**.
 
 > 🔒 The blob grants access to your Garmin account — treat it like a password.
 > It lives only in GitHub Secrets, never in the code or on the site. Send it to

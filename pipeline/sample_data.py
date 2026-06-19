@@ -246,7 +246,12 @@ def main() -> None:
 
     now = datetime(SAMPLE_TODAY.year, SAMPLE_TODAY.month, SAMPLE_TODAY.day, 3, 14)
     notes = _sample_notes(activities, random.Random(SEED + 1))
-    dashboard = assemble_dashboard(activities, wellness, now, notes=notes)
+    summaries = {
+        "ebi": "Big aerobic week — bike volume is exactly where an Olympic build wants it and your easy runs stayed honest. Watch the back-to-back hard days. Next week: hold the volume but add one race-pace brick.",
+        "sia": "Beautifully consistent — you touched all three sports and the run frequency is paying off. Swim volume is light for race sharpness. Next week: add a second swim and some open-water sighting.",
+        "alborz": "Strong climbing block and a solid long ride, but the streak slipped — the easy days matter more than the big ones. Next week: prioritise frequency, two easy runs to rebuild the chain.",
+    }
+    dashboard = assemble_dashboard(activities, wellness, now, notes=notes, summaries=summaries)
 
     SITE_DATA.mkdir(parents=True, exist_ok=True)
     out = SITE_DATA / "dashboard.json"

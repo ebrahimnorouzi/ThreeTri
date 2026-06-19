@@ -25,7 +25,7 @@ import json
 import sys
 from datetime import datetime, timedelta, timezone, date
 
-from config import ATHLETES, SEASON_START
+from config import ATHLETES, SEASON_START, RACE_DISTANCES
 import store
 import garmin
 import coach
@@ -84,6 +84,23 @@ def main() -> int:
         store.save_notes(conn, new_notes, model, when)
     notes = store.load_notes(conn)
 
+    # Weekly per-athlete AI summary (once per ISO week, cached).
+    y, w, _ = today.isocalendar()
+    week_key = f"{y}-W{w:02d}"
+    week_start = today - timedelta(days=today.isoweekday() - 1)
+    existing_sum = store.load_summaries(conn)
+    for ath in ATHLETES:
+        if (ath["id"], week_key) in existing_sum:
+            continue
+        wk_acts = [a for a in activities if a.athlete_id == ath["id"] and a.day >= week_start]
+        if not wk_acts:
+            continue
+        label = RACE_DISTANCES.get(ath.get("race_type", "sprint"), RACE_DISTANCES["sprint"])["label"]
+        text = coach.summarize_week(ath["name"], label, wk_acts)
+        if text:
+            store.save_summary(conn, ath["id"], week_key, text, coach.model_label(), when)
+    summaries = store.latest_summaries(conn)
+
     conn.close()
 
     if not activities:
@@ -98,7 +115,7 @@ def main() -> int:
         return 0
 
     now = datetime.now(timezone.utc).replace(tzinfo=None)
-    dashboard = assemble_dashboard(activities, wellness, now, notes=notes)
+    dashboard = assemble_dashboard(activities, wellness, now, notes=notes, summaries=summaries)
 
     SITE_DATA.mkdir(parents=True, exist_ok=True)
     out = SITE_DATA / "dashboard.json"

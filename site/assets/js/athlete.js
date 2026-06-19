@@ -22,6 +22,7 @@ async function init() {
   document.title = `ThreeTri · ${ATH.name}`;
   renderNav(map);
   renderHero();
+  renderSummary();
   renderRaceReadiness();
   renderSportCards();
   renderWeekCompare();
@@ -66,6 +67,18 @@ function renderHero() {
     el("div", { class: "ath-points" }, el("span", { class: "n" }, comma(ATH.points)), el("span", { class: "l" }, "points")),
   );
   byId("season-sub").textContent = `Since ${DATA.meta.season_start} · ${ATH.totals.all.activities} sessions · ${comma(ATH.totals.all.distance_km)} km · ${oneDp(ATH.totals.all.moving_h)} h`;
+}
+
+function renderSummary() {
+  if (!ATH.weekly_summary) return;
+  byId("summary-block").hidden = false;
+  const card = byId("coach-summary");
+  card.style.setProperty("--accent", ATH.color);
+  clear(card);
+  card.append(
+    el("div", { class: "cs-head" }, el("span", { class: "cs-ico" }, "🧠"), "Coach's weekly read"),
+    el("p", { class: "cs-text" }, ATH.weekly_summary),
+  );
 }
 
 function renderRaceReadiness() {
