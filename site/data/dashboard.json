@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-06-19T13:24:04Z",
-    "generated_at_human": "19 Jun 2026, 13:24 UTC",
+    "generated_at": "2026-06-19T13:49:15Z",
+    "generated_at_human": "19 Jun 2026, 13:49 UTC",
     "season_start": "2026-01-01",
     "site_url": "https://ebrahimnorouzi.github.io/ThreeTri/",
     "data_sources": [
@@ -142,19 +142,19 @@
       },
       "distance_readiness": {
         "swim": {
-          "longest_km": 3.3,
+          "longest_km": 2.55,
           "target_km": 1.5,
           "pct": 100
         },
         "bike": {
-          "longest_km": 134.78,
+          "longest_km": 62.37,
           "target_km": 40.0,
           "pct": 100
         },
         "run": {
-          "longest_km": 31.84,
+          "longest_km": 7.1,
           "target_km": 10.0,
-          "pct": 100
+          "pct": 71
         }
       },
       "totals": {
@@ -348,7 +348,7 @@
         "body_battery": 9.0,
         "garmin_readiness": null
       },
-      "weekly_summary": "Big aerobic week — bike volume is exactly where an Olympic build wants it and your easy runs stayed honest. Watch the back-to-back hard days. Next week: hold the volume but add one race-pace brick.",
+      "weekly_summary": null,
       "recent_activities": [
         {
           "athlete_id": "ebi",
@@ -490,19 +490,19 @@
       },
       "distance_readiness": {
         "swim": {
-          "longest_km": 3.74,
+          "longest_km": 0.0,
           "target_km": 0.75,
-          "pct": 100
+          "pct": 0
         },
         "bike": {
-          "longest_km": 136.54,
+          "longest_km": 0.0,
           "target_km": 20.0,
-          "pct": 100
+          "pct": 0
         },
         "run": {
-          "longest_km": 23.63,
+          "longest_km": 0.0,
           "target_km": 5.0,
-          "pct": 100
+          "pct": 0
         }
       },
       "totals": {
@@ -684,141 +684,10 @@
           "earned": false
         }
       ],
-      "badge_count": 8,
-      "readiness": {
-        "status": "amber",
-        "date": "2026-06-18",
-        "hrv": 59.9,
-        "hrv_7d": 63.1,
-        "rhr": 47.0,
-        "sleep_hours": 6.2,
-        "sleep_score": 68,
-        "body_battery": 53,
-        "garmin_readiness": 79
-      },
-      "weekly_summary": "Beautifully consistent — you touched all three sports and the run frequency is paying off. Swim volume is light for race sharpness. Next week: add a second swim and some open-water sighting.",
-      "recent_activities": [
-        {
-          "athlete_id": "sia",
-          "date": "2026-06-18",
-          "datetime": "2026-06-18T17:49:00",
-          "sport": "bike",
-          "name": "Café spin",
-          "distance_km": 56.69,
-          "moving_min": 110,
-          "elevation_m": 528,
-          "avg_hr": 140,
-          "pace": "31.0 km/h",
-          "kudos": 2,
-          "source": "garmin",
-          "coach_note": "Nice tempo block. Cadence looked smooth; next key session add 3x8 min at threshold to extend the diesel."
-        },
-        {
-          "athlete_id": "sia",
-          "date": "2026-06-17",
-          "datetime": "2026-06-17T19:24:00",
-          "sport": "swim",
-          "name": "Threshold swim",
-          "distance_km": 2.2,
-          "moving_min": 37,
-          "elevation_m": 0,
-          "avg_hr": 121,
-          "pace": "1:39 /100m",
-          "kudos": 11,
-          "source": "garmin",
-          "coach_note": "Smooth aerobic swim, stroke held together to the end. Add 4x50 build next session to sharpen turnover before the open-water leg."
-        },
-        {
-          "athlete_id": "sia",
-          "date": "2026-06-16",
-          "datetime": "2026-06-16T19:55:00",
-          "sport": "bike",
-          "name": "Café spin",
-          "distance_km": 42.25,
-          "moving_min": 97,
-          "elevation_m": 409,
-          "avg_hr": 136,
-          "pace": "26.2 km/h",
-          "kudos": 20,
-          "source": "garmin",
-          "coach_note": "Nice tempo block. Cadence looked smooth; next key session add 3x8 min at threshold to extend the diesel."
-        },
-        {
-          "athlete_id": "sia",
-          "date": "2026-06-15",
-          "datetime": "2026-06-15T17:57:00",
-          "sport": "run",
-          "name": "Recovery jog",
-          "distance_km": 11.49,
-          "moving_min": 53,
-          "elevation_m": 48,
-          "avg_hr": 160,
-          "pace": "4:37 /km",
-          "kudos": 22,
-          "source": "garmin",
-          "coach_note": "Good tempo execution, pace held when it got hard. One more like this and threshold will feel easier."
-        },
-        {
-          "athlete_id": "sia",
-          "date": "2026-06-14",
-          "datetime": "2026-06-14T07:06:00",
-          "sport": "run",
-          "name": "Long run",
-          "distance_km": 9.62,
-          "moving_min": 46,
-          "elevation_m": 52,
-          "avg_hr": 167,
-          "pace": "4:47 /km",
-          "kudos": 14,
-          "source": "garmin",
-          "coach_note": "Honest run off tired legs — that's the brick adaptation working. Keep the next one easy to absorb it."
-        },
-        {
-          "athlete_id": "sia",
-          "date": "2026-06-12",
-          "datetime": "2026-06-12T18:19:00",
-          "sport": "run",
-          "name": "Brick run",
-          "distance_km": 17.33,
-          "moving_min": 84,
-          "elevation_m": 120,
-          "avg_hr": 162,
-          "pace": "4:51 /km",
-          "kudos": 32,
-          "source": "garmin",
-          "coach_note": "Honest run off tired legs — that's the brick adaptation working. Keep the next one easy to absorb it."
-        },
-        {
-          "athlete_id": "sia",
-          "date": "2026-06-11",
-          "datetime": "2026-06-11T07:03:00",
-          "sport": "run",
-          "name": "Intervals",
-          "distance_km": 15.99,
-          "moving_min": 77,
-          "elevation_m": 134,
-          "avg_hr": 146,
-          "pace": "4:47 /km",
-          "kudos": 0,
-          "source": "garmin",
-          "coach_note": null
-        },
-        {
-          "athlete_id": "sia",
-          "date": "2026-06-10",
-          "datetime": "2026-06-10T19:09:00",
-          "sport": "bike",
-          "name": "Hill repeats",
-          "distance_km": 32.47,
-          "moving_min": 72,
-          "elevation_m": 174,
-          "avg_hr": 150,
-          "pace": "27.1 km/h",
-          "kudos": 22,
-          "source": "garmin",
-          "coach_note": null
-        }
-      ]
+      "badge_count": 0,
+      "readiness": null,
+      "weekly_summary": null,
+      "recent_activities": []
     },
     {
       "id": "alborz",
@@ -838,19 +707,19 @@
       },
       "distance_readiness": {
         "swim": {
-          "longest_km": 2.9,
+          "longest_km": 1.6,
           "target_km": 0.75,
           "pct": 100
         },
         "bike": {
-          "longest_km": 127.71,
+          "longest_km": 32.41,
           "target_km": 20.0,
           "pct": 100
         },
         "run": {
-          "longest_km": 14.61,
+          "longest_km": 3.47,
           "target_km": 5.0,
-          "pct": 100
+          "pct": 69
         }
       },
       "totals": {
@@ -1044,7 +913,7 @@
         "body_battery": 63.0,
         "garmin_readiness": 68.0
       },
-      "weekly_summary": "Strong climbing block and a solid long ride, but the streak slipped — the easy days matter more than the big ones. Next week: prioritise frequency, two easy runs to rebuild the chain.",
+      "weekly_summary": null,
       "recent_activities": [
         {
           "athlete_id": "alborz",
