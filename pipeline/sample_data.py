@@ -60,6 +60,35 @@ PROFILES = {
 
 START_HOURS = [6, 7, 7, 8, 12, 17, 18, 19]  # bias toward mornings/evenings
 
+# Canned "coach's read" notes for the demo (the real pipeline generates these
+# per-activity with Claude when ANTHROPIC_API_KEY is set).
+COACH_SAMPLES = {
+    "swim": [
+        "Smooth aerobic swim, stroke held together to the end. Add 4x50 build next session to sharpen turnover before the open-water leg.",
+        "Solid technique day — pace even across the set. Next time throw in some sighting drills to prep for race conditions.",
+        "Good steady effort, HR controlled. Your back-half held; keep building this base before adding speed.",
+    ],
+    "bike": [
+        "Strong endurance ride, power and HR both steady — exactly the durability work the bike split needs. Hold this discipline on the long ones.",
+        "Nice tempo block. Cadence looked smooth; next key session add 3x8 min at threshold to extend the diesel.",
+        "Controlled climbing effort without redlining. That patience is what saves your legs for the run.",
+    ],
+    "run": [
+        "Controlled easy run, nicely capped under your Zone 2 ceiling. Protect this easy day — resist the urge to drift faster tomorrow.",
+        "Good tempo execution, pace held when it got hard. One more like this and threshold will feel easier.",
+        "Honest run off tired legs — that's the brick adaptation working. Keep the next one easy to absorb it.",
+    ],
+}
+
+
+def _sample_notes(activities, rng):
+    """Attach canned coach notes to the most recent activities for the demo."""
+    notes = {}
+    recent = sorted(activities, key=lambda a: a.start_local, reverse=True)[:18]
+    for a in recent:
+        notes[(a.source, a.activity_id)] = rng.choice(COACH_SAMPLES[a.sport])
+    return notes
+
 # Sample training spots (real data fills these from Garmin GPS). Clustered around
 # one city so the demo map looks populated; coords rounded to ~1 km like real data.
 TRAIN_SPOTS = [
@@ -216,7 +245,8 @@ def main() -> None:
     conn.close()
 
     now = datetime(SAMPLE_TODAY.year, SAMPLE_TODAY.month, SAMPLE_TODAY.day, 3, 14)
-    dashboard = assemble_dashboard(activities, wellness, now)
+    notes = _sample_notes(activities, random.Random(SEED + 1))
+    dashboard = assemble_dashboard(activities, wellness, now, notes=notes)
 
     SITE_DATA.mkdir(parents=True, exist_ok=True)
     out = SITE_DATA / "dashboard.json"

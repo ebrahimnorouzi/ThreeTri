@@ -90,6 +90,25 @@ export async function loadDashboard() {
   return res.json();
 }
 
+// ---- time-of-day theme ----------------------------------------------------
+export function timeOfDay(d = new Date()) {
+  const h = d.getHours();
+  if (h >= 22 || h < 5) return "night";
+  if (h < 8) return "dawn";
+  if (h < 17) return "day";
+  return "dusk";
+}
+export const THEME_GLYPH = { dawn: "🌅", day: "☀️", dusk: "🌆", night: "🌙" };
+export const THEME_LABEL = { dawn: "Dawn", day: "Daytime", dusk: "Dusk", night: "Night" };
+
+/** Set <html data-theme> from the local clock so the palette shifts through the
+ *  day. Returns the current mode. */
+export function applyTimeTheme() {
+  const t = timeOfDay();
+  document.documentElement.dataset.theme = t;
+  return t;
+}
+
 // Daily content library (quotes, tips, legends, messages). Optional — the site
 // works without it. Returns null on failure.
 export async function loadContent() {

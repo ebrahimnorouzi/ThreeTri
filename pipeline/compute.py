@@ -158,8 +158,9 @@ def _pace_str(a: Activity) -> str | None:
     return f"{int(sec_per_km // 60)}:{int(sec_per_km % 60):02d} /km"
 
 
-def _activity_view(a: Activity) -> dict:
+def _activity_view(a: Activity, notes: dict | None = None) -> dict:
     return {
+        "athlete_id": a.athlete_id,
         "date": a.day.isoformat(),
         "datetime": a.start_local,
         "sport": a.sport,
@@ -171,12 +172,13 @@ def _activity_view(a: Activity) -> dict:
         "pace": _pace_str(a),
         "kudos": a.kudos,
         "source": a.source,
+        "coach_note": (notes or {}).get((a.source, a.activity_id)),
     }
 
 
-def _recent(acts: list[Activity], limit: int = RECENT_LIMIT) -> list[dict]:
+def _recent(acts: list[Activity], notes: dict | None = None, limit: int = RECENT_LIMIT) -> list[dict]:
     ordered = sorted(acts, key=lambda a: a.start_local, reverse=True)
-    return [_activity_view(a) for a in ordered[:limit]]
+    return [_activity_view(a, notes) for a in ordered[:limit]]
 
 
 # --------------------------------------------------------------------------- #
@@ -394,6 +396,37 @@ def _consistency_pct(acts: list[Activity], today: date, window: int = 56) -> int
     return round(len(days) / window * 100)
 
 
+def _day_label(d: date, today: date) -> str:
+    delta = (today - d).days
+    if delta == 0:
+        return "Today"
+    if delta == 1:
+        return "Yesterday"
+    if delta < 7:
+        return d.strftime("%A")
+    return d.strftime("%a %d %b")
+
+
+def _digest(season_acts: list[Activity], notes: dict, today: date, days: int = 12) -> list[dict]:
+    """Recent activity grouped by day — 'who did what', so the three can see
+    each other's training at a glance."""
+    start = today - timedelta(days=days - 1)
+    by_day: dict[date, list[Activity]] = defaultdict(list)
+    for a in season_acts:
+        if a.day >= start:
+            by_day[a.day].append(a)
+    out = []
+    for d in sorted(by_day, reverse=True):
+        acts = sorted(by_day[d], key=lambda a: a.start_local, reverse=True)
+        out.append({
+            "date": d.isoformat(),
+            "label": _day_label(d, today),
+            "athletes_active": sorted({a.athlete_id for a in acts}),
+            "activities": [_activity_view(a, notes) for a in acts],
+        })
+    return out
+
+
 # --------------------------------------------------------------------------- #
 # Highlights — auto-written "interesting stats" cards
 # --------------------------------------------------------------------------- #
@@ -504,7 +537,8 @@ def _race_phase(days_to_go: int) -> str:
 # --------------------------------------------------------------------------- #
 # Main entry point
 # --------------------------------------------------------------------------- #
-def assemble_dashboard(activities: list[Activity], wellness: list[DailyWellness], now: datetime) -> dict:
+def assemble_dashboard(activities: list[Activity], wellness: list[DailyWellness], now: datetime, notes: dict | None = None) -> dict:
+    notes = notes or {}
     today = now.date()
     season_start = date.fromisoformat(SEASON_START)
     race_date = date.fromisoformat(RACE["date"])
@@ -572,7 +606,7 @@ def assemble_dashboard(activities: list[Activity], wellness: list[DailyWellness]
                 "badges": badges,
                 "badge_count": sum(1 for b in badges if b["earned"]),
                 "readiness": readiness,
-                "recent_activities": _recent(acts),
+                "recent_activities": _recent(acts, notes),
             }
         )
 
@@ -623,6 +657,7 @@ def assemble_dashboard(activities: list[Activity], wellness: list[DailyWellness]
         "locations": _locations(season_acts),
         "patterns": _patterns(season_acts),
         "cumulative": _cumulative(trends, TEAM_GOAL_KM),
+        "digest": _digest(season_acts, notes, today),
     }
 
     leaderboards = {

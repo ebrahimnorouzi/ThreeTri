@@ -54,6 +54,9 @@ jobs:
           GARMIN_TOKEN_EBI: ${{ secrets.GARMIN_TOKEN_EBI }}
           GARMIN_TOKEN_SIA: ${{ secrets.GARMIN_TOKEN_SIA }}
           GARMIN_TOKEN_ALBORZ: ${{ secrets.GARMIN_TOKEN_ALBORZ }}
+          # Optional: per-activity AI coaching notes (omit to disable). Cheap — see SETUP.md.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # COACH_MODEL: claude-haiku-4-5   # default; set to claude-opus-4-8 for deeper reads
         run: python pipeline/run.py
 
       - name: Commit refreshed data

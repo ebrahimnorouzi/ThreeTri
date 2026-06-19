@@ -46,6 +46,18 @@ Names must match **exactly** (referenced in [.github/workflows/update.yml](.gith
 That's it — **three secrets**. Each is a base64 "token blob" that lets the
 nightly job read that athlete's Garmin data with no password and no MFA.
 
+### Optional 4th secret — AI coaching notes 🧠
+
+| Secret name | Who | What it does |
+|---|---|---|
+| `ANTHROPIC_API_KEY` | Ebi (optional) | Generates a short **coach's read** for each new activity (shown on the dashboard) |
+
+Get a key at [console.anthropic.com](https://console.anthropic.com). It uses the
+cheapest model (`claude-haiku-4-5`) and analyses each activity **once** (cached
+in the DB) — roughly **$0.002/activity**, so a whole season for all three of you
+is about **$1–2**. No key → the feature is simply off. Override the model with a
+`COACH_MODEL` repo *variable* (e.g. `claude-opus-4-8`) for deeper reads.
+
 > 🔒 The blob grants access to your Garmin account — treat it like a password.
 > It lives only in GitHub Secrets, never in the code or on the site. Send it to
 > the repo admin (Ebi) **privately**. Never share your actual Garmin password.

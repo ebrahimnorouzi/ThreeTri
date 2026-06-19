@@ -58,6 +58,16 @@ CREATE TABLE IF NOT EXISTS wellness (
     readiness     REAL,
     PRIMARY KEY (athlete_id, date)
 );
+
+-- AI coaching notes, kept separate so activity upserts never clobber them.
+CREATE TABLE IF NOT EXISTS coach_notes (
+    source        TEXT    NOT NULL,
+    activity_id   TEXT    NOT NULL,
+    note          TEXT    NOT NULL,
+    model         TEXT,
+    created_at    TEXT,
+    PRIMARY KEY (source, activity_id)
+);
 """
 
 
@@ -111,3 +121,19 @@ def load_activities(conn: sqlite3.Connection) -> list[Activity]:
 def load_wellness(conn: sqlite3.Connection) -> list[DailyWellness]:
     cur = conn.execute(f"SELECT {', '.join(_WELLNESS_COLS)} FROM wellness")
     return [DailyWellness.from_row(dict(r)) for r in cur.fetchall()]
+
+
+def load_notes(conn: sqlite3.Connection) -> dict[tuple[str, str], str]:
+    """Map (source, activity_id) → coaching note."""
+    cur = conn.execute("SELECT source, activity_id, note FROM coach_notes")
+    return {(r["source"], r["activity_id"]): r["note"] for r in cur.fetchall()}
+
+
+def save_notes(conn: sqlite3.Connection, notes: dict[tuple[str, str], str], model: str, when: str) -> int:
+    rows = [(src, aid, note, model, when) for (src, aid), note in notes.items()]
+    conn.executemany(
+        "INSERT OR REPLACE INTO coach_notes (source, activity_id, note, model, created_at) VALUES (?, ?, ?, ?, ?)",
+        rows,
+    )
+    conn.commit()
+    return len(rows)

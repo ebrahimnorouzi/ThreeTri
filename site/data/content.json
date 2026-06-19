@@ -1100,5 +1100,393 @@
       "You don't have to be fast today. You just have to be there.",
       "Look how far you've come. Now go add one more brick to it."
     ]
+  },
+  "media": {
+    "videos": [
+      {
+        "title": "Freestyle Catch Technique Tips: Swim Faster With Less Effort",
+        "channel": "Phil Mosley - MyProCoach Triathlon Training",
+        "youtube_id": "azOzj-MipQE",
+        "url": "https://www.youtube.com/watch?v=azOzj-MipQE",
+        "topic": "swim",
+        "verified": true
+      },
+      {
+        "title": "Freestyle Swimming Catch: This One Thing That Will Make You A Better Swimmer!",
+        "channel": "Global Triathlon Network",
+        "youtube_id": "Yd1FqE7bNNg",
+        "url": "https://www.youtube.com/watch?v=Yd1FqE7bNNg",
+        "topic": "swim",
+        "verified": true
+      },
+      {
+        "title": "The Four Key Positions For An Epic Catch And Pull",
+        "channel": "Effortless Swimming",
+        "youtube_id": "Q5thjxmqLnY",
+        "url": "https://www.youtube.com/watch?v=Q5thjxmqLnY",
+        "topic": "swim",
+        "verified": true
+      },
+      {
+        "title": "Open Water Swimming Technique - Sighting Demonstration",
+        "channel": "SteelCityEndurance",
+        "youtube_id": "MSTIlY2kodk",
+        "url": "https://www.youtube.com/watch?v=MSTIlY2kodk",
+        "topic": "swim",
+        "verified": true
+      },
+      {
+        "title": "Open Water Sighting Techniques",
+        "channel": "Chloe Sutton",
+        "youtube_id": "odSdnGgFmy4",
+        "url": "https://www.youtube.com/watch?v=odSdnGgFmy4",
+        "topic": "swim",
+        "verified": true
+      },
+      {
+        "title": "How To Sight Whilst Open Water Swimming | Swim Sighting Technique & Tips",
+        "channel": "Global Triathlon Network",
+        "youtube_id": "w7iIf192S4w",
+        "url": "https://www.youtube.com/watch?v=w7iIf192S4w",
+        "topic": "swim",
+        "verified": true
+      },
+      {
+        "title": "How To Sight In Open Water Swimming!",
+        "channel": "Global Triathlon Network",
+        "youtube_id": "KK-f3IrGTQQ",
+        "url": "https://www.youtube.com/watch?v=KK-f3IrGTQQ",
+        "topic": "swim",
+        "verified": true
+      },
+      {
+        "title": "Cadence Training To Improve Pedalling | 25 Minute Indoor Cycling Workout",
+        "channel": "GCN Training",
+        "youtube_id": "4YHC0MVCg0c",
+        "url": "https://www.youtube.com/watch?v=4YHC0MVCg0c",
+        "topic": "bike",
+        "verified": true
+      },
+      {
+        "title": "Super High Cadence Sprints! | 20 Minute HITT Indoor Cycling Workout",
+        "channel": "GCN Training",
+        "youtube_id": "DtDmBV412Qc",
+        "url": "https://www.youtube.com/watch?v=DtDmBV412Qc",
+        "topic": "bike",
+        "verified": true
+      },
+      {
+        "title": "How to Ride Faster Without Pushing Harder",
+        "channel": "ROUVY",
+        "youtube_id": "Yw6CcI6ITp8",
+        "url": "https://www.youtube.com/watch?v=Yw6CcI6ITp8",
+        "topic": "bike",
+        "verified": true
+      },
+      {
+        "title": "Climbing Made Easy | GCN's Cycling Tips",
+        "channel": "Global Cycling Network",
+        "youtube_id": "8ugzB6PDKKY",
+        "url": "https://www.youtube.com/watch?v=8ugzB6PDKKY",
+        "topic": "bike",
+        "verified": true
+      },
+      {
+        "title": "6 Climbing Mistakes To Avoid When Cycling | GCN Pro Tips",
+        "channel": "Global Cycling Network",
+        "youtube_id": "RQuKrzJKxWo",
+        "url": "https://www.youtube.com/watch?v=RQuKrzJKxWo",
+        "topic": "bike",
+        "verified": true
+      },
+      {
+        "title": "5 EASY Tips To Ride Long Climbs Faster",
+        "channel": "Global Cycling Network",
+        "youtube_id": "Cp5uuxT1V1Q",
+        "url": "https://www.youtube.com/watch?v=Cp5uuxT1V1Q",
+        "topic": "bike",
+        "verified": true
+      },
+      {
+        "title": "PERFECT RUNNING FORM - 5 Easy Tips for Running Faster Pain Free",
+        "channel": "James Dunne",
+        "youtube_id": "sScNDZu2MWk",
+        "url": "https://www.youtube.com/watch?v=sScNDZu2MWk",
+        "topic": "run",
+        "verified": true
+      },
+      {
+        "title": "Running Form: Correct Technique and Tips to Avoid Injury",
+        "channel": "Mark's Daily Apple",
+        "youtube_id": "gsUL3a1CxUQ",
+        "url": "https://www.youtube.com/watch?v=gsUL3a1CxUQ",
+        "topic": "run",
+        "verified": true
+      },
+      {
+        "title": "What Is Perfect Running Form? (Tips for All Runners)",
+        "channel": "Nicklas Rossner",
+        "youtube_id": "u5EMsxkfswA",
+        "url": "https://www.youtube.com/watch?v=u5EMsxkfswA",
+        "topic": "run",
+        "verified": true
+      },
+      {
+        "title": "What Is Perfect Running Form? | Run Technique Tips For All Runners",
+        "channel": "Global Triathlon Network",
+        "youtube_id": "brFHyOtTwH4",
+        "url": "https://www.youtube.com/watch?v=brFHyOtTwH4",
+        "topic": "run",
+        "verified": true
+      },
+      {
+        "title": "9 Minutes To Fix Your Running Form",
+        "channel": "Nicklas Rossner",
+        "youtube_id": "Byjy-LzSNc0",
+        "url": "https://www.youtube.com/watch?v=Byjy-LzSNc0",
+        "topic": "run",
+        "verified": true
+      },
+      {
+        "title": "How to Run with PERFECT FORM | Coach Explains",
+        "channel": "Runna TV",
+        "youtube_id": "btKgKarX5CY",
+        "url": "https://www.youtube.com/watch?v=btKgKarX5CY",
+        "topic": "run",
+        "verified": true
+      },
+      {
+        "title": "How To Run Properly | Running Technique Explained",
+        "channel": "Global Triathlon Network",
+        "youtube_id": "_kGESn8ArrU",
+        "url": "https://www.youtube.com/watch?v=_kGESn8ArrU",
+        "topic": "run",
+        "verified": true
+      },
+      {
+        "title": "PERFECT Running Form Routine to Fix Your Sh*t (5 min/day)",
+        "channel": "Nicklas Rossner",
+        "youtube_id": "L6FKruHwGe8",
+        "url": "https://www.youtube.com/watch?v=L6FKruHwGe8",
+        "topic": "run",
+        "verified": true
+      },
+      {
+        "title": "How to Pace Your 5K: Become a FASTER Runner in Just 4 Weeks",
+        "channel": "Lee Grantham",
+        "youtube_id": "07wZeSeCb2Q",
+        "url": "https://www.youtube.com/watch?v=07wZeSeCb2Q",
+        "topic": "run",
+        "verified": true
+      },
+      {
+        "title": "Run Faster In A Triathlon With This Brick Workout",
+        "channel": "Global Triathlon Network",
+        "youtube_id": "fFTUPkGTh_A",
+        "url": "https://www.youtube.com/watch?v=fFTUPkGTh_A",
+        "topic": "triathlon",
+        "verified": true
+      },
+      {
+        "title": "Triathlon 101: What is a 'brick' workout?",
+        "channel": "Tommy Allore",
+        "youtube_id": "opeKZ6FEoU8",
+        "url": "https://www.youtube.com/watch?v=opeKZ6FEoU8",
+        "topic": "triathlon",
+        "verified": true
+      },
+      {
+        "title": "Are Brick Sessions Ruining Your Triathlon Run?",
+        "channel": "Global Triathlon Network",
+        "youtube_id": "yeve_k1GJag",
+        "url": "https://www.youtube.com/watch?v=yeve_k1GJag",
+        "topic": "triathlon",
+        "verified": true
+      },
+      {
+        "title": "Ironman Motivation- What it takes",
+        "channel": "Craig Bester",
+        "youtube_id": "lf4ODs3VlYg",
+        "url": "https://www.youtube.com/watch?v=lf4ODs3VlYg",
+        "topic": "motivation",
+        "verified": true
+      },
+      {
+        "title": "Ironman Triathlon Motivation - Mind Of A Beast",
+        "channel": "Tri Tobi",
+        "youtube_id": "gKXr2nt2pbA",
+        "url": "https://www.youtube.com/watch?v=gKXr2nt2pbA",
+        "topic": "motivation",
+        "verified": true
+      },
+      {
+        "title": "IRONMAN - Be Inspired",
+        "channel": "IRONMANEurope",
+        "youtube_id": "tiDb--kwnmw",
+        "url": "https://www.youtube.com/watch?v=tiDb--kwnmw",
+        "topic": "motivation",
+        "verified": true
+      },
+      {
+        "title": "IRONMAN: Anything Is Possible",
+        "channel": "IRONMAN Triathlon",
+        "youtube_id": "qjxxYoL7nSU",
+        "url": "https://www.youtube.com/watch?v=qjxxYoL7nSU",
+        "topic": "motivation",
+        "verified": true
+      },
+      {
+        "title": "IRONMAN | Do You Dare?",
+        "channel": "IRONMAN Triathlon",
+        "youtube_id": "WKZ8AGAifds",
+        "url": "https://www.youtube.com/watch?v=WKZ8AGAifds",
+        "topic": "motivation",
+        "verified": true
+      },
+      {
+        "title": "Men's Pro Race Recap | 2024 VinFast IRONMAN World Championship, Kona, Men's Edition",
+        "channel": "IRONMAN Triathlon",
+        "youtube_id": "A97oKSQV5hY",
+        "url": "https://www.youtube.com/watch?v=A97oKSQV5hY",
+        "topic": "motivation",
+        "verified": true
+      },
+      {
+        "title": "Drama At Women's Ironman World Championships 2025 | GTN Race Recap",
+        "channel": "Global Triathlon Network",
+        "youtube_id": "bV1URQmb3mE",
+        "url": "https://www.youtube.com/watch?v=bV1URQmb3mE",
+        "topic": "motivation",
+        "verified": true
+      }
+    ],
+    "playlists": [
+      {
+        "title": "Running 180 BPM 🏃‍♂️",
+        "by": "Pixel Aesthetic",
+        "url": "https://open.spotify.com/playlist/5ymkuBk3C1Iu4KTdJBK9vy",
+        "kind": "run",
+        "verified": true
+      },
+      {
+        "title": "Running: 170 - 180 bpm",
+        "by": "Excelsior Recordings",
+        "url": "https://open.spotify.com/playlist/4wy0yhEY64Yb0AohEdSAE4",
+        "kind": "run",
+        "verified": true
+      },
+      {
+        "title": "180 bpm Playlist - Running Explained",
+        "by": "Running Explained",
+        "url": "https://open.spotify.com/playlist/3o5dUyYWk9Yxw6LRjrHQvP",
+        "kind": "run",
+        "verified": true
+      },
+      {
+        "title": "180 BPM running music",
+        "by": "Chris Guldbakke",
+        "url": "https://open.spotify.com/playlist/7cHCEBEJwQ9MnjftwTOLPQ",
+        "kind": "run",
+        "verified": true
+      },
+      {
+        "title": "Running fast 180 - 190 BPM",
+        "by": "Low Key Bops",
+        "url": "https://open.spotify.com/playlist/4QQakWxHfZGxCo4BwQUJ0q",
+        "kind": "run",
+        "verified": true
+      },
+      {
+        "title": "Running 180 BPM",
+        "by": "Markus Felldin",
+        "url": "https://open.spotify.com/playlist/5YzyWDTnlkUlgeTj7hj7PU",
+        "kind": "run",
+        "verified": true
+      },
+      {
+        "title": "Marathon Motivation - Hours of Running Music For 42km runs",
+        "by": "Fearless Motivation",
+        "url": "https://open.spotify.com/playlist/1sDh6R7CUPDIdCSSZtRjs7",
+        "kind": "hype",
+        "verified": true
+      },
+      {
+        "title": "CYCLING SONGS 2026 🚴‍♂️ CYCLING MUSIC 🚴‍♂️ CYCLING WORKOUT 🚴‍♂️ CYCLING MOTIVATION 🚴‍♂️ CYCLING PLAYLIST",
+        "by": "MusicUp",
+        "url": "https://open.spotify.com/playlist/0ZjGxyLa9FXXYQbqP2Hp2V",
+        "kind": "bike",
+        "verified": true
+      },
+      {
+        "title": "Cycling 2026 | Spinning Workout Music",
+        "by": "House Culture",
+        "url": "https://open.spotify.com/playlist/3tf5eWwAFKf0m8yaLP0DzJ",
+        "kind": "bike",
+        "verified": true
+      },
+      {
+        "title": "The 100 Most Motivating Indoor Cycling Workout Songs of All Time",
+        "by": "Alex Jan",
+        "url": "https://open.spotify.com/playlist/4SIebwDeZHVrZqtmuGGQ3E",
+        "kind": "bike",
+        "verified": true
+      },
+      {
+        "title": "The best CYCLING playlist",
+        "by": "pierreagnoletti",
+        "url": "https://open.spotify.com/playlist/3Lyzctj8dddQ9O5u82T90a",
+        "kind": "bike",
+        "verified": true
+      },
+      {
+        "title": "Red Bull Bike Mix",
+        "by": "Red Bull",
+        "url": "https://open.spotify.com/playlist/6PBCU4a29leZpSU7Jnn8xw",
+        "kind": "bike",
+        "verified": true
+      },
+      {
+        "title": "Really good \"Indoor cycling playlist\"  trust me",
+        "by": "Jaimy Wie Anders",
+        "url": "https://open.spotify.com/playlist/5N0RY0qX6ZsWI2bOZaNEbh",
+        "kind": "bike",
+        "verified": true
+      },
+      {
+        "title": "Workout Motivation 2026 💪",
+        "by": "Workout Music",
+        "url": "https://open.spotify.com/playlist/2237sMNMlXS4wWLgdQ1UuV",
+        "kind": "hype",
+        "verified": true
+      },
+      {
+        "title": "Workout Songs For The Gym 2026",
+        "by": "Spotify",
+        "url": "https://open.spotify.com/playlist/2YLYJT19TUBMD4eDQEnivw",
+        "kind": "hype",
+        "verified": true
+      },
+      {
+        "title": "Swim Meet Pump Up Songs!",
+        "by": "Swimmers Eat",
+        "url": "https://open.spotify.com/playlist/4WiQzBf1xDNqudHjAUWqcu",
+        "kind": "hype",
+        "verified": true
+      },
+      {
+        "title": "Actual good swimming/workout",
+        "by": "Kiran Jacob Pereira",
+        "url": "https://open.spotify.com/playlist/2y3A9P3ZfH9xkoA2T1yeyA",
+        "kind": "hype",
+        "verified": true
+      },
+      {
+        "title": "Swimming Playlist (Clean)",
+        "by": "madison.batkiewicz",
+        "url": "https://open.spotify.com/playlist/6u2w7PXBeGuNaxKe4BnavA",
+        "kind": "hype",
+        "verified": true
+      }
+    ]
   }
 }

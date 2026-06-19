@@ -28,6 +28,7 @@ from datetime import datetime, timedelta, timezone, date
 from config import ATHLETES, SEASON_START
 import store
 import garmin
+import coach
 from compute import assemble_dashboard
 from sample_data import SITE_DATA  # reuse the canonical output path
 
@@ -75,6 +76,14 @@ def main() -> int:
 
     activities = store.load_activities(conn)
     wellness = store.load_wellness(conn)
+
+    # Optional per-activity AI coaching (no-op without ANTHROPIC_API_KEY).
+    existing_notes = store.load_notes(conn)
+    new_notes, model, when = coach.analyze(activities, existing_notes)
+    if new_notes:
+        store.save_notes(conn, new_notes, model, when)
+    notes = store.load_notes(conn)
+
     conn.close()
 
     if not activities:
@@ -89,7 +98,7 @@ def main() -> int:
         return 0
 
     now = datetime.now(timezone.utc).replace(tzinfo=None)
-    dashboard = assemble_dashboard(activities, wellness, now)
+    dashboard = assemble_dashboard(activities, wellness, now, notes=notes)
 
     SITE_DATA.mkdir(parents=True, exist_ok=True)
     out = SITE_DATA / "dashboard.json"

@@ -4,3 +4,4 @@ requests>=2.31,<3            # Strava REST API
 garminconnect==0.3.6         # PINNED: tokens are minted with this version; CI must match so loads() understands the blob
 curl_cffi>=0.7               # TLS impersonation curl_cffi backend used by garminconnect 0.3.x
 segno>=1.6                   # QR code generation (pure-python, SVG + PNG)
+anthropic>=0.40              # optional per-activity AI coaching (only used if ANTHROPIC_API_KEY is set)

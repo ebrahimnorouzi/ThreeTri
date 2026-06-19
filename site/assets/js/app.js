@@ -3,6 +3,7 @@ import {
   byId, el, clear, comma, km, oneDp, relDate,
   countUp, startCountdown, loadDashboard, toast, athleteMap,
   loadContent, pickDaily, dayIndex, enableTips,
+  applyTimeTheme, THEME_GLYPH, THEME_LABEL,
 } from "./util.js";
 
 const SPORT_TABS = [
@@ -38,10 +39,17 @@ async function init() {
   SPORTS = DATA.sports;
   CONTENT = content;
 
+  const ind = byId("theme-ind");
+  const setTheme = () => { const t = applyTimeTheme(); if (ind) { ind.textContent = THEME_GLYPH[t]; ind.title = `${THEME_LABEL[t]} theme · follows your local time`; } };
+  setTheme();
+  setInterval(setTheme, 15 * 60 * 1000);
+
   renderNav();
   renderHero();
   renderMilestoneBanner();
   renderBriefing();
+  renderMedia();
+  renderDigest();
   renderPodium();
   renderHeadToHead();
   renderChallenge();
@@ -355,7 +363,7 @@ function renderFeed() {
   all.sort((x, y) => (x.datetime < y.datetime ? 1 : -1));
   all.slice(0, 12).forEach((act) => {
     const a = act.athlete;
-    feed.appendChild(el("div", { class: "feed-item", "--accent": a.color },
+    const item = el("div", { class: "feed-item", "--accent": a.color },
       el("div", { class: "feed-ico" }, sportIcon(act.sport)),
       el("div", { class: "feed-main" },
         el("div", { class: "feed-name" }, act.name),
@@ -365,7 +373,9 @@ function renderFeed() {
         el("div", { class: "d" }, `${oneDp(act.distance_km)} km`),
         el("div", { class: "p" }, act.pace || `${act.moving_min} min`),
       ),
-    ));
+    );
+    if (act.coach_note) item.appendChild(el("div", { class: "feed-note" }, `🧠 ${act.coach_note}`));
+    feed.appendChild(item);
   });
 }
 
@@ -437,6 +447,77 @@ function renderBriefing() {
       el("span", { class: "nudge-who" }, `${a.emoji} ${a.name}`),
       el("span", { class: "nudge-text" }, n)));
   });
+}
+
+// ---- daily Watch & Listen -------------------------------------------------- //
+function renderMedia() {
+  const row = byId("media-row");
+  if (!row) return;
+  clear(row);
+  const media = CONTENT && CONTENT.media;
+  if (!media) { row.remove(); return; }
+
+  const vids = media.videos || [];
+  const lists = media.playlists || [];
+  if (vids.length) {
+    const v = vids[dayIndex() % vids.length];
+    const thumb = `https://i.ytimg.com/vi/${v.youtube_id}/hqdefault.jpg`;
+    row.appendChild(el("a", { class: "media-card video", href: v.url, target: "_blank", rel: "noopener" },
+      el("div", { class: "media-thumb", style: `background-image:url('${thumb}')` }, el("span", { class: "play" }, "▶")),
+      el("div", { class: "media-meta" },
+        el("div", { class: "media-kind" }, `▶ Watch today · ${v.topic}`),
+        el("div", { class: "media-title" }, v.title),
+        el("div", { class: "media-by" }, v.channel)),
+    ));
+  }
+  if (lists.length) {
+    const p = lists[(dayIndex() + 1) % lists.length];
+    row.appendChild(el("a", { class: "media-card audio", href: p.url, target: "_blank", rel: "noopener" },
+      el("div", { class: "media-spotify" }, "🎧"),
+      el("div", { class: "media-meta" },
+        el("div", { class: "media-kind" }, `Listen today · ${p.kind || "mix"}`),
+        el("div", { class: "media-title" }, p.title),
+        el("div", { class: "media-by" }, `${p.by} · Spotify ↗`)),
+    ));
+  }
+  if (!row.children.length) row.remove();
+}
+
+// ---- daily digest timeline (who did what) --------------------------------- //
+function renderDigest() {
+  const wrap = byId("timeline");
+  if (!wrap) return;
+  clear(wrap);
+  const digest = (DATA.team && DATA.team.digest) || [];
+  if (!digest.length) { byId("digest-block").hidden = true; return; }
+
+  for (const day of digest) {
+    const dots = day.athletes_active.map((id) =>
+      el("span", { class: "tl-dot", "--accent": A[id] ? A[id].color : "var(--c-ebi)", title: A[id] ? A[id].name : id }));
+    const head = el("div", { class: "tl-day" },
+      el("span", { class: "tl-label" }, day.label),
+      el("span", { class: "tl-dots" }, ...dots),
+      el("span", { class: "tl-count" }, `${day.activities.length} session${day.activities.length === 1 ? "" : "s"}`));
+    const items = el("div", { class: "tl-items" });
+    for (const act of day.activities) {
+      const a = A[act.athlete_id] || { name: act.athlete_id, color: "var(--c-ebi)" };
+      const row = el("div", { class: "tl-item", "--accent": a.color });
+      const main = el("div", { class: "tl-main" },
+        el("span", { class: "tl-ico" }, sportIcon(act.sport)),
+        el("span", { class: "tl-who" }, a.name),
+        el("span", { class: "tl-name" }, act.name),
+        el("span", { class: "tl-fig" }, `${oneDp(act.distance_km)} km${act.pace ? " · " + act.pace : ""}`));
+      row.appendChild(main);
+      if (act.coach_note) {
+        const note = el("div", { class: "tl-note", hidden: true }, el("span", { class: "tl-note-ico" }, "🧠"), act.coach_note);
+        main.appendChild(el("button", { class: "tl-toggle", title: "Coach's read",
+          onclick: () => { note.hidden = !note.hidden; } }, "🧠"));
+        row.appendChild(note);
+      }
+      items.appendChild(row);
+    }
+    wrap.appendChild(el("div", { class: "tl-group" }, head, items));
+  }
 }
 
 // ---- team contribution breakdown ------------------------------------------ //
