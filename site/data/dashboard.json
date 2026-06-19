@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-06-19T14:56:32Z",
-    "generated_at_human": "19 Jun 2026, 14:56 UTC",
+    "generated_at": "2026-06-19T21:50:43Z",
+    "generated_at_human": "19 Jun 2026, 21:50 UTC",
     "season_start": "2026-01-01",
     "site_url": "https://ebrahimnorouzi.github.io/ThreeTri/",
     "data_sources": [
@@ -152,17 +152,17 @@
           "pct": 100
         },
         "run": {
-          "longest_km": 7.1,
+          "longest_km": 10.46,
           "target_km": 10.0,
-          "pct": 71
+          "pct": 100
         }
       },
       "totals": {
         "all": {
-          "distance_km": 479.9,
-          "moving_h": 37.9,
-          "activities": 45,
-          "elevation_m": 3675
+          "distance_km": 490.4,
+          "moving_h": 39.0,
+          "activities": 46,
+          "elevation_m": 3787
         },
         "swim": {
           "distance_km": 23.9,
@@ -177,18 +177,18 @@
           "elevation_m": 2789
         },
         "run": {
-          "distance_km": 69.4,
-          "moving_h": 7.8,
-          "activities": 13,
-          "elevation_m": 886
+          "distance_km": 79.9,
+          "moving_h": 9.0,
+          "activities": 14,
+          "elevation_m": 998
         }
       },
       "this_week": {
         "all": {
-          "distance_km": 20.7,
-          "moving_h": 3.0,
-          "activities": 3,
-          "elevation_m": 0
+          "distance_km": 31.2,
+          "moving_h": 4.2,
+          "activities": 4,
+          "elevation_m": 112
         },
         "swim": {
           "distance_km": 4.2,
@@ -203,10 +203,10 @@
           "elevation_m": 0
         },
         "run": {
-          "distance_km": 0.0,
-          "moving_h": 0.0,
-          "activities": 0,
-          "elevation_m": 0
+          "distance_km": 10.5,
+          "moving_h": 1.2,
+          "activities": 1,
+          "elevation_m": 112
         }
       },
       "last_week": {
@@ -242,13 +242,13 @@
         "active_days_this_week": 2
       },
       "consistency_pct": 48,
-      "points": 1139,
+      "points": 1179,
       "level": 2,
       "xp": {
         "level": 2,
-        "xp_into": 339,
+        "xp_into": 379,
         "xp_per_level": 800,
-        "xp_pct": 42.4
+        "xp_pct": 47.4
       },
       "badges": [
         {
@@ -353,6 +353,21 @@
         {
           "athlete_id": "ebi",
           "date": "2026-06-19",
+          "datetime": "2026-06-19T19:07:08",
+          "sport": "run",
+          "name": "Baden-Baden - 5 × 2 min Threshold Intervals",
+          "distance_km": 10.46,
+          "moving_min": 71,
+          "elevation_m": 112,
+          "avg_hr": 145,
+          "pace": "6:48 /km",
+          "kudos": 0,
+          "source": "garmin",
+          "coach_note": null
+        },
+        {
+          "athlete_id": "ebi",
+          "date": "2026-06-19",
           "datetime": "2026-06-19T10:47:13",
           "sport": "swim",
           "name": "Posture & Breath Progression (1",
@@ -451,21 +466,6 @@
           "elevation_m": 0,
           "avg_hr": 127,
           "pace": "3:46 /100m",
-          "kudos": 0,
-          "source": "garmin",
-          "coach_note": null
-        },
-        {
-          "athlete_id": "ebi",
-          "date": "2026-06-10",
-          "datetime": "2026-06-10T21:06:59",
-          "sport": "run",
-          "name": "Karlsruhe - 45 min Long Run",
-          "distance_km": 6.4,
-          "moving_min": 45,
-          "elevation_m": 45,
-          "avg_hr": 126,
-          "pace": "7:02 /km",
           "kudos": 0,
           "source": "garmin",
           "coach_note": null
@@ -1043,7 +1043,7 @@
       "all": [
         {
           "athlete_id": "ebi",
-          "value": 479.9,
+          "value": 490.4,
           "unit": "km",
           "rank": 1
         },
@@ -1103,7 +1103,7 @@
       "run": [
         {
           "athlete_id": "ebi",
-          "value": 69.4,
+          "value": 79.9,
           "unit": "km",
           "rank": 1
         },
@@ -1123,7 +1123,7 @@
       "hours": [
         {
           "athlete_id": "ebi",
-          "value": 37.9,
+          "value": 39.0,
           "unit": "h",
           "rank": 1
         },
@@ -1143,7 +1143,7 @@
       "elevation": [
         {
           "athlete_id": "ebi",
-          "value": 3675,
+          "value": 3787,
           "unit": "m",
           "rank": 1
         },
@@ -1165,7 +1165,7 @@
       "all": [
         {
           "athlete_id": "ebi",
-          "value": 20.7,
+          "value": 31.2,
           "unit": "km",
           "rank": 1
         },
@@ -1225,7 +1225,7 @@
       "run": [
         {
           "athlete_id": "ebi",
-          "value": 0.0,
+          "value": 10.5,
           "unit": "km",
           "rank": 1
         },
@@ -1245,7 +1245,7 @@
       "hours": [
         {
           "athlete_id": "ebi",
-          "value": 3.0,
+          "value": 4.2,
           "unit": "h",
           "rank": 1
         },
@@ -1265,7 +1265,7 @@
       "elevation": [
         {
           "athlete_id": "ebi",
-          "value": 0,
+          "value": 112,
           "unit": "m",
           "rank": 1
         },
@@ -1286,7 +1286,7 @@
     "points": [
       {
         "athlete_id": "ebi",
-        "value": 1139.0,
+        "value": 1179.0,
         "unit": "pts",
         "rank": 1
       },
@@ -1349,7 +1349,7 @@
       "all": {
         "leader": "ebi",
         "values": {
-          "ebi": 20.7,
+          "ebi": 31.2,
           "sia": 0.0,
           "alborz": 1.6
         },
@@ -1374,9 +1374,9 @@
         "unit": "km"
       },
       "run": {
-        "leader": null,
+        "leader": "ebi",
         "values": {
-          "ebi": 0.0,
+          "ebi": 10.5,
           "sia": 0.0,
           "alborz": 0.0
         },
@@ -1493,7 +1493,7 @@
           7.2,
           89.4,
           48.7,
-          20.7
+          31.2
         ],
         "swim_km": [
           0.0,
@@ -1574,7 +1574,7 @@
           0.0,
           10.5,
           15.2,
-          0.0
+          10.5
         ],
         "hours": [
           0.0,
@@ -1601,7 +1601,7 @@
           1.6,
           6.4,
           5.6,
-          3.0
+          4.2
         ]
       },
       "sia": {
@@ -1882,34 +1882,34 @@
   },
   "team": {
     "totals": {
-      "distance_km": 562.6,
-      "moving_h": 45.9,
-      "activities": 58,
-      "elevation_m": 3920
+      "distance_km": 573.1,
+      "moving_h": 47.0,
+      "activities": 59,
+      "elevation_m": 4032
     },
     "this_week": {
-      "distance_km": 22.3,
-      "moving_h": 3.8,
-      "activities": 4,
-      "elevation_m": 0
+      "distance_km": 32.8,
+      "moving_h": 5.0,
+      "activities": 5,
+      "elevation_m": 112
     },
     "by_sport": {
       "swim": 29.8,
       "bike": 456.5,
-      "run": 76.3
+      "run": 86.8
     },
     "challenge": {
       "label": "Road to Mallorca — 15,000 km as a team",
       "target_km": 15000,
-      "done_km": 562.6,
+      "done_km": 573.1,
       "pct": 3.8,
-      "remaining_km": 14437.4,
+      "remaining_km": 14426.9,
       "contributions": [
         {
           "athlete_id": "ebi",
-          "km": 479.9,
-          "pct_of_done": 85.3,
-          "pct_of_goal": 3.2
+          "km": 490.4,
+          "pct_of_done": 85.6,
+          "pct_of_goal": 3.3
         },
         {
           "athlete_id": "sia",
@@ -1920,7 +1920,7 @@
         {
           "athlete_id": "alborz",
           "km": 82.7,
-          "pct_of_done": 14.7,
+          "pct_of_done": 14.4,
           "pct_of_goal": 0.6
         }
       ]
@@ -3195,13 +3195,22 @@
       },
       {
         "date": "2026-06-19",
-        "total": 2,
-        "ebi": 1,
+        "total": 3,
+        "ebi": 2,
         "sia": 0,
         "alborz": 1
       }
     ],
-    "locations": [],
+    "locations": [
+      {
+        "lat": 48.78,
+        "lng": 8.18,
+        "count": 1,
+        "athletes": [
+          "ebi"
+        ]
+      }
+    ],
     "patterns": {
       "dow_labels": [
         "Mon",
@@ -3217,7 +3226,7 @@
         12,
         5,
         10,
-        7,
+        8,
         11,
         8
       ],
@@ -3245,7 +3254,7 @@
           6,
           1,
           3,
-          1,
+          2,
           3,
           0
         ]
@@ -3270,7 +3279,7 @@
         2,
         5,
         9,
-        5,
+        6,
         4,
         3,
         1,
@@ -3384,7 +3393,7 @@
         8.4,
         89.4,
         51.0,
-        22.3
+        32.8
       ],
       "cumulative_km": [
         0.0,
@@ -3411,7 +3420,7 @@
         399.8,
         489.2,
         540.2,
-        562.5
+        573.0
       ],
       "target_km": 15000
     },
@@ -3424,6 +3433,21 @@
           "ebi"
         ],
         "activities": [
+          {
+            "athlete_id": "ebi",
+            "date": "2026-06-19",
+            "datetime": "2026-06-19T19:07:08",
+            "sport": "run",
+            "name": "Baden-Baden - 5 × 2 min Threshold Intervals",
+            "distance_km": 10.46,
+            "moving_min": 71,
+            "elevation_m": 112,
+            "avg_hr": 145,
+            "pace": "6:48 /km",
+            "kudos": 0,
+            "source": "garmin",
+            "coach_note": null
+          },
           {
             "athlete_id": "ebi",
             "date": "2026-06-19",
@@ -3731,7 +3755,7 @@
       "icon": "👑",
       "title": "This week's leader",
       "athlete_id": "ebi",
-      "text": "Ebi tops the team with 20.7 km across all sports this week."
+      "text": "Ebi tops the team with 31.2 km across all sports this week."
     },
     {
       "icon": "🚴",
@@ -3743,13 +3767,13 @@
       "icon": "🏝️",
       "title": "Road to Mallorca",
       "athlete_id": null,
-      "text": "Together you've covered 562.6 of 15000 km (3.8%) toward the team goal."
+      "text": "Together you've covered 573.1 of 15000 km (3.8%) toward the team goal."
     },
     {
       "icon": "🤝",
       "title": "Team effort",
       "athlete_id": null,
-      "text": "4 sessions and 22.3 km logged between you this week. Compounding."
+      "text": "5 sessions and 32.8 km logged between you this week. Compounding."
     },
     {
       "icon": "⚖️",
