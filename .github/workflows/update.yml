@@ -10,7 +10,7 @@ name: Update data & deploy
 
 on:
   schedule:
-    - cron: "17 5 * * *"   # daily 05:17 UTC (cron is always UTC; off-the-hour for reliability)
+    - cron: "0 23 * * *"   # daily 05:17 UTC (cron is always UTC; off-the-hour for reliability)
   workflow_dispatch: {}     # lets you run it on demand from the Actions tab
   push:
     branches: [main]
