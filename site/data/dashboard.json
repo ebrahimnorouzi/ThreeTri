@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-06-19T09:55:11Z",
-    "generated_at_human": "19 Jun 2026, 09:55 UTC",
+    "generated_at": "2026-06-19T10:01:15Z",
+    "generated_at_human": "19 Jun 2026, 10:01 UTC",
     "season_start": "2026-01-01",
     "site_url": "https://ebrahimnorouzi.github.io/ThreeTri/",
     "data_sources": [
@@ -541,41 +541,41 @@
       "tagline": "The climber",
       "totals": {
         "all": {
-          "distance_km": 0.0,
-          "moving_h": 0.0,
-          "activities": 0,
-          "elevation_m": 0
+          "distance_km": 82.7,
+          "moving_h": 8.0,
+          "activities": 13,
+          "elevation_m": 245
         },
         "swim": {
-          "distance_km": 0.0,
-          "moving_h": 0.0,
-          "activities": 0,
+          "distance_km": 5.9,
+          "moving_h": 3.0,
+          "activities": 8,
           "elevation_m": 0
         },
         "bike": {
-          "distance_km": 0.0,
-          "moving_h": 0.0,
-          "activities": 0,
-          "elevation_m": 0
+          "distance_km": 69.9,
+          "moving_h": 4.1,
+          "activities": 3,
+          "elevation_m": 236
         },
         "run": {
-          "distance_km": 0.0,
-          "moving_h": 0.0,
-          "activities": 0,
-          "elevation_m": 0
+          "distance_km": 6.9,
+          "moving_h": 0.8,
+          "activities": 2,
+          "elevation_m": 9
         }
       },
       "this_week": {
         "all": {
-          "distance_km": 0.0,
-          "moving_h": 0.0,
-          "activities": 0,
+          "distance_km": 1.6,
+          "moving_h": 0.8,
+          "activities": 1,
           "elevation_m": 0
         },
         "swim": {
-          "distance_km": 0.0,
-          "moving_h": 0.0,
-          "activities": 0,
+          "distance_km": 1.6,
+          "moving_h": 0.8,
+          "activities": 1,
           "elevation_m": 0
         },
         "bike": {
@@ -593,15 +593,15 @@
       },
       "last_week": {
         "all": {
-          "distance_km": 0.0,
-          "moving_h": 0.0,
-          "activities": 0,
+          "distance_km": 2.3,
+          "moving_h": 1.2,
+          "activities": 3,
           "elevation_m": 0
         },
         "swim": {
-          "distance_km": 0.0,
-          "moving_h": 0.0,
-          "activities": 0,
+          "distance_km": 2.3,
+          "moving_h": 1.2,
+          "activities": 3,
           "elevation_m": 0
         },
         "bike": {
@@ -618,18 +618,18 @@
         }
       },
       "streak": {
-        "current_days": 0,
-        "longest_days": 0,
-        "last_active": null,
-        "active_days_this_week": 0
+        "current_days": 1,
+        "longest_days": 2,
+        "last_active": "2026-06-19",
+        "active_days_this_week": 1
       },
-      "points": 0,
+      "points": 236,
       "level": 1,
       "xp": {
         "level": 1,
-        "xp_into": 0,
+        "xp_into": 236,
         "xp_per_level": 800,
-        "xp_pct": 0.0
+        "xp_pct": 29.5
       },
       "badges": [
         {
@@ -718,8 +718,123 @@
         }
       ],
       "badge_count": 0,
-      "readiness": null,
-      "recent_activities": []
+      "readiness": {
+        "status": "green",
+        "date": "2026-06-19",
+        "hrv": null,
+        "hrv_7d": 47.5,
+        "rhr": 59.0,
+        "sleep_hours": null,
+        "sleep_score": null,
+        "body_battery": 63.0,
+        "garmin_readiness": 68.0
+      },
+      "recent_activities": [
+        {
+          "date": "2026-06-19",
+          "datetime": "2026-06-19T10:47:08",
+          "sport": "swim",
+          "name": "Pool Swim",
+          "distance_km": 1.6,
+          "moving_min": 47,
+          "elevation_m": 0,
+          "avg_hr": 124,
+          "pace": "2:57 /100m",
+          "kudos": 0,
+          "source": "garmin"
+        },
+        {
+          "date": "2026-06-12",
+          "datetime": "2026-06-12T09:47:49",
+          "sport": "swim",
+          "name": "Pool Swim",
+          "distance_km": 0.5,
+          "moving_min": 15,
+          "elevation_m": 0,
+          "avg_hr": 126,
+          "pace": "2:58 /100m",
+          "kudos": 0,
+          "source": "garmin"
+        },
+        {
+          "date": "2026-06-12",
+          "datetime": "2026-06-12T09:15:21",
+          "sport": "swim",
+          "name": "Pool Swim",
+          "distance_km": 0.78,
+          "moving_min": 26,
+          "elevation_m": 0,
+          "avg_hr": 124,
+          "pace": "3:21 /100m",
+          "kudos": 0,
+          "source": "garmin"
+        },
+        {
+          "date": "2026-06-11",
+          "datetime": "2026-06-11T17:27:14",
+          "sport": "swim",
+          "name": "Pool Swim",
+          "distance_km": 1.0,
+          "moving_min": 32,
+          "elevation_m": 0,
+          "avg_hr": 114,
+          "pace": "3:09 /100m",
+          "kudos": 0,
+          "source": "garmin"
+        },
+        {
+          "date": "2026-05-31",
+          "datetime": "2026-05-31T12:18:32",
+          "sport": "swim",
+          "name": "Eggenstein-Leopoldshafen Open Water Swimming",
+          "distance_km": 0.08,
+          "moving_min": 4,
+          "elevation_m": 0,
+          "avg_hr": 148,
+          "pace": "4:30 /100m",
+          "kudos": 0,
+          "source": "garmin"
+        },
+        {
+          "date": "2026-05-26",
+          "datetime": "2026-05-26T09:59:46",
+          "sport": "swim",
+          "name": "Pool Swim",
+          "distance_km": 0.95,
+          "moving_min": 26,
+          "elevation_m": 0,
+          "avg_hr": 111,
+          "pace": "2:46 /100m",
+          "kudos": 0,
+          "source": "garmin"
+        },
+        {
+          "date": "2026-05-26",
+          "datetime": "2026-05-26T09:39:23",
+          "sport": "swim",
+          "name": "Pool Swim",
+          "distance_km": 0.2,
+          "moving_min": 6,
+          "elevation_m": 0,
+          "avg_hr": 109,
+          "pace": "2:51 /100m",
+          "kudos": 0,
+          "source": "garmin"
+        },
+        {
+          "date": "2026-05-24",
+          "datetime": "2026-05-24T14:31:56",
+          "sport": "swim",
+          "name": "Pool Swim",
+          "distance_km": 0.8,
+          "moving_min": 23,
+          "elevation_m": 0,
+          "avg_hr": 121,
+          "pace": "2:55 /100m",
+          "kudos": 0,
+          "source": "garmin"
+        }
+      ]
     }
   ],
   "leaderboards": {
@@ -732,13 +847,13 @@
           "rank": 1
         },
         {
-          "athlete_id": "sia",
-          "value": 0.0,
+          "athlete_id": "alborz",
+          "value": 82.7,
           "unit": "km",
           "rank": 2
         },
         {
-          "athlete_id": "alborz",
+          "athlete_id": "sia",
           "value": 0.0,
           "unit": "km",
           "rank": 3
@@ -752,13 +867,13 @@
           "rank": 1
         },
         {
-          "athlete_id": "sia",
-          "value": 0.0,
+          "athlete_id": "alborz",
+          "value": 5.9,
           "unit": "km",
           "rank": 2
         },
         {
-          "athlete_id": "alborz",
+          "athlete_id": "sia",
           "value": 0.0,
           "unit": "km",
           "rank": 3
@@ -772,13 +887,13 @@
           "rank": 1
         },
         {
-          "athlete_id": "sia",
-          "value": 0.0,
+          "athlete_id": "alborz",
+          "value": 69.9,
           "unit": "km",
           "rank": 2
         },
         {
-          "athlete_id": "alborz",
+          "athlete_id": "sia",
           "value": 0.0,
           "unit": "km",
           "rank": 3
@@ -792,13 +907,13 @@
           "rank": 1
         },
         {
-          "athlete_id": "sia",
-          "value": 0.0,
+          "athlete_id": "alborz",
+          "value": 6.9,
           "unit": "km",
           "rank": 2
         },
         {
-          "athlete_id": "alborz",
+          "athlete_id": "sia",
           "value": 0.0,
           "unit": "km",
           "rank": 3
@@ -812,13 +927,13 @@
           "rank": 1
         },
         {
-          "athlete_id": "sia",
-          "value": 0.0,
+          "athlete_id": "alborz",
+          "value": 8.0,
           "unit": "h",
           "rank": 2
         },
         {
-          "athlete_id": "alborz",
+          "athlete_id": "sia",
           "value": 0.0,
           "unit": "h",
           "rank": 3
@@ -832,13 +947,13 @@
           "rank": 1
         },
         {
-          "athlete_id": "sia",
-          "value": 0,
+          "athlete_id": "alborz",
+          "value": 245,
           "unit": "m",
           "rank": 2
         },
         {
-          "athlete_id": "alborz",
+          "athlete_id": "sia",
           "value": 0,
           "unit": "m",
           "rank": 3
@@ -854,13 +969,13 @@
           "rank": 1
         },
         {
-          "athlete_id": "sia",
-          "value": 0.0,
+          "athlete_id": "alborz",
+          "value": 1.6,
           "unit": "km",
           "rank": 2
         },
         {
-          "athlete_id": "alborz",
+          "athlete_id": "sia",
           "value": 0.0,
           "unit": "km",
           "rank": 3
@@ -874,13 +989,13 @@
           "rank": 1
         },
         {
-          "athlete_id": "sia",
-          "value": 0.0,
+          "athlete_id": "alborz",
+          "value": 1.6,
           "unit": "km",
           "rank": 2
         },
         {
-          "athlete_id": "alborz",
+          "athlete_id": "sia",
           "value": 0.0,
           "unit": "km",
           "rank": 3
@@ -934,13 +1049,13 @@
           "rank": 1
         },
         {
-          "athlete_id": "sia",
-          "value": 0.0,
+          "athlete_id": "alborz",
+          "value": 0.8,
           "unit": "h",
           "rank": 2
         },
         {
-          "athlete_id": "alborz",
+          "athlete_id": "sia",
           "value": 0.0,
           "unit": "h",
           "rank": 3
@@ -975,13 +1090,13 @@
         "rank": 1
       },
       {
-        "athlete_id": "sia",
-        "value": 0.0,
+        "athlete_id": "alborz",
+        "value": 236.0,
         "unit": "pts",
         "rank": 2
       },
       {
-        "athlete_id": "alborz",
+        "athlete_id": "sia",
         "value": 0.0,
         "unit": "pts",
         "rank": 3
@@ -995,13 +1110,13 @@
         "rank": 1
       },
       {
-        "athlete_id": "sia",
-        "value": 0.0,
+        "athlete_id": "alborz",
+        "value": 1.0,
         "unit": "days",
         "rank": 2
       },
       {
-        "athlete_id": "alborz",
+        "athlete_id": "sia",
         "value": 0.0,
         "unit": "days",
         "rank": 3
@@ -1015,7 +1130,7 @@
         "values": {
           "ebi": 20.7,
           "sia": 0.0,
-          "alborz": 0.0
+          "alborz": 1.6
         },
         "unit": "km"
       },
@@ -1024,7 +1139,7 @@
         "values": {
           "ebi": 4.2,
           "sia": 0.0,
-          "alborz": 0.0
+          "alborz": 1.6
         },
         "unit": "km"
       },
@@ -1415,23 +1530,23 @@
           0.0,
           0.0,
           0.0,
+          32.4,
           0.0,
           0.0,
           0.0,
           0.0,
+          10.9,
           0.0,
           0.0,
           0.0,
+          26.5,
           0.0,
           0.0,
+          7.7,
+          1.2,
           0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0
+          2.3,
+          1.6
         ],
         "swim_km": [
           0.0,
@@ -1454,11 +1569,11 @@
           0.0,
           0.0,
           0.0,
+          0.8,
+          1.2,
           0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0
+          2.3,
+          1.6
         ],
         "bike_km": [
           0.0,
@@ -1469,16 +1584,16 @@
           0.0,
           0.0,
           0.0,
+          32.4,
           0.0,
           0.0,
           0.0,
           0.0,
+          10.9,
           0.0,
           0.0,
           0.0,
-          0.0,
-          0.0,
-          0.0,
+          26.5,
           0.0,
           0.0,
           0.0,
@@ -1508,7 +1623,7 @@
           0.0,
           0.0,
           0.0,
-          0.0,
+          6.9,
           0.0,
           0.0,
           0.0,
@@ -1523,51 +1638,51 @@
           0.0,
           0.0,
           0.0,
+          2.0,
           0.0,
           0.0,
           0.0,
           0.0,
+          0.6,
           0.0,
           0.0,
           0.0,
+          1.6,
           0.0,
           0.0,
+          1.2,
+          0.6,
           0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0
+          1.2,
+          0.8
         ]
       }
     }
   },
   "team": {
     "totals": {
-      "distance_km": 479.9,
-      "moving_h": 37.9,
-      "activities": 45,
-      "elevation_m": 3675
+      "distance_km": 562.6,
+      "moving_h": 45.9,
+      "activities": 58,
+      "elevation_m": 3920
     },
     "this_week": {
-      "distance_km": 20.7,
-      "moving_h": 3.0,
-      "activities": 3,
+      "distance_km": 22.3,
+      "moving_h": 3.8,
+      "activities": 4,
       "elevation_m": 0
     },
     "by_sport": {
-      "swim": 23.9,
-      "bike": 386.6,
-      "run": 69.4
+      "swim": 29.8,
+      "bike": 456.5,
+      "run": 76.3
     },
     "challenge": {
       "label": "Road to Mallorca — 15,000 km as a team",
       "target_km": 15000,
-      "done_km": 479.9,
-      "pct": 3.2,
-      "remaining_km": 14520.1
+      "done_km": 562.6,
+      "pct": 3.8,
+      "remaining_km": 14437.4
     },
     "calendar": [
       {
@@ -2069,10 +2184,10 @@
       },
       {
         "date": "2026-03-01",
-        "total": 0,
+        "total": 1,
         "ebi": 0,
         "sia": 0,
-        "alborz": 0
+        "alborz": 1
       },
       {
         "date": "2026-03-02",
@@ -2314,10 +2429,10 @@
       },
       {
         "date": "2026-04-05",
-        "total": 0,
+        "total": 1,
         "ebi": 0,
         "sia": 0,
-        "alborz": 0
+        "alborz": 1
       },
       {
         "date": "2026-04-06",
@@ -2510,10 +2625,10 @@
       },
       {
         "date": "2026-05-03",
-        "total": 1,
+        "total": 2,
         "ebi": 1,
         "sia": 0,
-        "alborz": 0
+        "alborz": 1
       },
       {
         "date": "2026-05-04",
@@ -2622,10 +2737,10 @@
       },
       {
         "date": "2026-05-19",
-        "total": 0,
+        "total": 1,
         "ebi": 0,
         "sia": 0,
-        "alborz": 0
+        "alborz": 1
       },
       {
         "date": "2026-05-20",
@@ -2636,10 +2751,10 @@
       },
       {
         "date": "2026-05-21",
-        "total": 2,
+        "total": 3,
         "ebi": 2,
         "sia": 0,
-        "alborz": 0
+        "alborz": 1
       },
       {
         "date": "2026-05-22",
@@ -2657,10 +2772,10 @@
       },
       {
         "date": "2026-05-24",
-        "total": 0,
+        "total": 1,
         "ebi": 0,
         "sia": 0,
-        "alborz": 0
+        "alborz": 1
       },
       {
         "date": "2026-05-25",
@@ -2671,10 +2786,10 @@
       },
       {
         "date": "2026-05-26",
-        "total": 1,
+        "total": 3,
         "ebi": 1,
         "sia": 0,
-        "alborz": 0
+        "alborz": 2
       },
       {
         "date": "2026-05-27",
@@ -2706,10 +2821,10 @@
       },
       {
         "date": "2026-05-31",
-        "total": 0,
+        "total": 1,
         "ebi": 0,
         "sia": 0,
-        "alborz": 0
+        "alborz": 1
       },
       {
         "date": "2026-06-01",
@@ -2783,17 +2898,17 @@
       },
       {
         "date": "2026-06-11",
-        "total": 1,
+        "total": 2,
         "ebi": 1,
         "sia": 0,
-        "alborz": 0
+        "alborz": 1
       },
       {
         "date": "2026-06-12",
-        "total": 0,
+        "total": 2,
         "ebi": 0,
         "sia": 0,
-        "alborz": 0
+        "alborz": 2
       },
       {
         "date": "2026-06-13",
@@ -2839,10 +2954,10 @@
       },
       {
         "date": "2026-06-19",
-        "total": 1,
+        "total": 2,
         "ebi": 1,
         "sia": 0,
-        "alborz": 0
+        "alborz": 1
       }
     ]
   },
@@ -2863,7 +2978,7 @@
       "icon": "🏝️",
       "title": "Road to Mallorca",
       "athlete_id": null,
-      "text": "Together you've covered 479.9 of 15000 km (3.2%) toward the team goal."
+      "text": "Together you've covered 562.6 of 15000 km (3.8%) toward the team goal."
     }
   ]
 }
