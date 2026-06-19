@@ -73,7 +73,20 @@ notifications` workflow posts a varied update ~9×/day and emails a daily coach 
 
 Each channel only fires if its secrets exist. Post cadence/types are tuned in
 `pipeline/posts.py` (`HOUR_ROTATION`); test any post type from **Actions → Social
-& notifications → Run workflow**.
+& notifications → Run workflow** (set `kind: all` to blast every type at once).
+
+**🤖 Interactive Telegram bot** (`@ThreeTriBot`) — reply to commands on demand.
+Uses the same `TELEGRAM_BOT_TOKEN`; a GitHub Action polls every ~5 min (free, no
+server), so replies land within a few minutes. `/ask` and `/coach` use the AI
+coach backend (needs `ANTHROPIC_API_KEY` or `HF_TOKEN`).
+
+Commands: `/help /standings /today /week /coach [name] /readiness /countdown
+/challenge /streak /quote /tip [sport] /song /video /ask <question>`.
+
+One-time: **Actions → Telegram bot → Run workflow → action `setup`** to register
+the `/` autocomplete menu. After that the poll runs automatically. (For *instant*
+replies instead of ~5-min polling, the bot can be moved to a free serverless
+webhook — ask if you want that.)
 
 > 🔒 The blob grants access to your Garmin account — treat it like a password.
 > It lives only in GitHub Secrets, never in the code or on the site. Send it to

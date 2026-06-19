@@ -57,6 +57,15 @@ def model_label() -> str:
     return {"anthropic": MODEL_ANTHROPIC, "hf": MODEL_HF}.get(backend(), "none")
 
 
+def available() -> bool:
+    return backend() != "off"
+
+
+def chat(system: str, user: str, max_tokens: int = 400) -> str:
+    """Public one-shot completion (used by the interactive bot's /ask)."""
+    return _complete(system, user, max_tokens)
+
+
 def _complete(system: str, user: str, max_tokens: int = 200) -> str:
     b = backend()
     if b == "anthropic":
