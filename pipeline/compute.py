@@ -334,6 +334,67 @@ def _calendar(season_acts: list[Activity], today: date) -> list[dict]:
 
 
 # --------------------------------------------------------------------------- #
+# Training locations (for the map), training patterns, cumulative-to-goal,
+# and per-athlete consistency.
+# --------------------------------------------------------------------------- #
+def _locations(acts: list[Activity]) -> list[dict]:
+    """Aggregate rounded start points into {lat, lng, count} for the map."""
+    counts: dict[tuple, int] = defaultdict(int)
+    by_ath: dict[tuple, set] = defaultdict(set)
+    for a in acts:
+        if a.start_lat is not None and a.start_lng is not None:
+            counts[(a.start_lat, a.start_lng)] += 1
+            by_ath[(a.start_lat, a.start_lng)].add(a.athlete_id)
+    pts = [
+        {"lat": lat, "lng": lng, "count": n, "athletes": sorted(by_ath[(lat, lng)])}
+        for (lat, lng), n in counts.items()
+    ]
+    pts.sort(key=lambda p: p["count"], reverse=True)
+    return pts
+
+
+DOW_LABELS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+
+
+def _patterns(acts: list[Activity]) -> dict:
+    """When does the team train? Day-of-week and hour-of-day histograms."""
+    dow = [0] * 7
+    hod = [0] * 24
+    dow_by_sport = {s: [0] * 7 for s in SPORT_ORDER}
+    for a in acts:
+        wd = a.day.weekday()  # Mon=0
+        dow[wd] += 1
+        dow_by_sport[a.sport][wd] += 1
+        hod[a.hour] += 1
+    return {"dow_labels": DOW_LABELS, "day_of_week": dow,
+            "day_of_week_by_sport": dow_by_sport, "hour_of_day": hod}
+
+
+def _cumulative(trends: dict, target_km: float) -> dict:
+    """Team combined distance per week and its running total (vs the goal)."""
+    weeks = len(trends["labels"])
+    weekly = [0.0] * weeks
+    for series in trends["athletes"].values():
+        for i, v in enumerate(series["all_km"]):
+            weekly[i] += v
+    cum, run = [], 0.0
+    for v in weekly:
+        run += v
+        cum.append(round(run, 1))
+    return {"labels": trends["labels"], "short": trends["short"],
+            "week_starts": trends["week_starts"],
+            "weekly_km": [round(v, 1) for v in weekly],
+            "cumulative_km": cum, "target_km": target_km}
+
+
+def _consistency_pct(acts: list[Activity], today: date, window: int = 56) -> int:
+    """Fraction of the last `window` days (default 8 weeks) with ≥1 session."""
+    start = today - timedelta(days=window - 1)
+    days = {a.day for a in acts if a.day >= start}
+    return round(len(days) / window * 100)
+
+
+# --------------------------------------------------------------------------- #
 # Highlights — auto-written "interesting stats" cards
 # --------------------------------------------------------------------------- #
 def _name(aid: str) -> str:
@@ -389,7 +450,38 @@ def _highlights(athletes_out: list[dict], h2h: dict, team: dict, season_acts: li
         cards.append({"icon": "⛰️", "title": "King of the mountains", "athlete_id": aid,
                       "text": f"{_name(aid)} climbed {climb[aid]:.0f} m this week — the most of anyone."})
 
-    return cards[:6]
+    # 7) Most consistent (last 8 weeks)
+    cons = [(a["id"], a.get("consistency_pct", 0)) for a in athletes_out]
+    aid, pct = max(cons, key=lambda kv: kv[1], default=(None, 0))
+    if aid and pct >= 50:
+        cards.append({"icon": "🧱", "title": "Mr. Consistent", "athlete_id": aid,
+                      "text": f"{_name(aid)} has trained {pct}% of days over the last 8 weeks — relentless."})
+
+    # 8) Team output this week
+    tw_km = team["this_week"]["distance_km"]
+    tw_n = team["this_week"]["activities"]
+    if tw_n:
+        cards.append({"icon": "🤝", "title": "Team effort", "athlete_id": None,
+                      "text": f"{tw_n} sessions and {tw_km:g} km logged between you this week. Compounding."})
+
+    # 9) Most balanced triathlete (closest split across the 3 sports, season)
+    def _balance(a):
+        vals = [a["totals"][s]["distance_km"] for s in SPORT_ORDER]
+        tot = sum(vals)
+        return (max(vals) - min(vals)) / tot if tot else 9.9
+    ranked_bal = sorted([a for a in athletes_out if a["totals"]["all"]["distance_km"] > 50], key=_balance)
+    if ranked_bal:
+        b = ranked_bal[0]
+        cards.append({"icon": "⚖️", "title": "Most balanced", "athlete_id": b["id"],
+                      "text": f"{b['name']}'s swim/bike/run split is the most even — a true triathlete's engine."})
+
+    # 10) Biggest week of the season (any athlete, by hours)
+    big_week = max(athletes_out, key=lambda a: a["this_week"]["all"]["moving_h"], default=None)
+    if big_week and big_week["this_week"]["all"]["moving_h"] >= 8:
+        cards.append({"icon": "⏱️", "title": "Putting in the hours", "athlete_id": big_week["id"],
+                      "text": f"{big_week['name']} has trained {big_week['this_week']['all']['moving_h']:g} h this week."})
+
+    return cards[:8]
 
 
 # --------------------------------------------------------------------------- #
@@ -473,6 +565,7 @@ def assemble_dashboard(activities: list[Activity], wellness: list[DailyWellness]
                 "this_week": week_t,
                 "last_week": last_t,
                 "streak": streak,
+                "consistency_pct": _consistency_pct(acts, today),
                 "points": points,
                 "level": level["level"],
                 "xp": level,
@@ -500,7 +593,20 @@ def assemble_dashboard(activities: list[Activity], wellness: list[DailyWellness]
         team_week["activities"] += t["all"]["activities"]
         team_week["elevation_m"] += t["all"]["elevation_m"]
 
+    trends = _weekly_trends(acts_by_ath, season_start, today)
+
     done_km = round(team_all["distance_km"], 1)
+    contributions = []
+    for meta in ATHLETES:
+        aid = meta["id"]
+        akm = season_totals_by_ath[aid]["all"]["distance_km"]
+        contributions.append({
+            "athlete_id": aid,
+            "km": akm,
+            "pct_of_done": round(akm / done_km * 100, 1) if done_km else 0.0,
+            "pct_of_goal": round(akm / TEAM_GOAL_KM * 100, 1),
+        })
+
     team = {
         "totals": _round_totals(team_all),
         "this_week": _round_totals(team_week),
@@ -511,8 +617,12 @@ def assemble_dashboard(activities: list[Activity], wellness: list[DailyWellness]
             "done_km": done_km,
             "pct": round(min(100.0, done_km / TEAM_GOAL_KM * 100), 1),
             "remaining_km": round(max(0.0, TEAM_GOAL_KM - done_km), 1),
+            "contributions": contributions,
         },
         "calendar": _calendar(season_acts, today),
+        "locations": _locations(season_acts),
+        "patterns": _patterns(season_acts),
+        "cumulative": _cumulative(trends, TEAM_GOAL_KM),
     }
 
     leaderboards = {
@@ -520,9 +630,9 @@ def assemble_dashboard(activities: list[Activity], wellness: list[DailyWellness]
         "this_week": _leaderboards(week_totals_by_ath),
         "points": _rank({k: float(v) for k, v in points_board.items()}, "pts"),
         "streak": _rank({k: float(v) for k, v in streak_board.items()}, "days"),
+        "consistency": _rank({a["id"]: float(a["consistency_pct"]) for a in athletes_out}, "%"),
     }
     h2h = {"this_week": _head_to_head(week_totals_by_ath)}
-    trends = _weekly_trends(acts_by_ath, season_start, today)
     highlights = _highlights(athletes_out, h2h["this_week"], team, season_acts, today)
 
     sources = sorted({a.source for a in season_acts}) or ["garmin"]
@@ -551,6 +661,14 @@ def assemble_dashboard(activities: list[Activity], wellness: list[DailyWellness]
             "phase": _race_phase(days_to_go),
         },
         "sports": {s: {"label": SPORTS[s]["label"], "icon": SPORTS[s]["icon"], "color": SPORTS[s]["color"]} for s in SPORT_ORDER},
+        "scoring": {
+            "points_per_km": {s: SPORTS[s]["points_per_km"] for s in SPORT_ORDER},
+            "elevation_per_m": POINTS["elevation_per_m"],
+            "per_activity": POINTS["per_activity"],
+            "streak_day": POINTS["streak_day"],
+            "level_size": int(POINTS["level_size"]),
+            "badges": BADGES,
+        },
         "athletes": athletes_out,
         "leaderboards": leaderboards,
         "head_to_head": h2h,

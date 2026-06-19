@@ -32,6 +32,10 @@ class Activity:
     avg_speed: float | None   # m/s
     suffer_score: float | None
     kudos: int
+    # Start location, ROUNDED to ~1 km for privacy (the DB is committed to a
+    # public repo). Enough to map "where we train", not enough to pin a home.
+    start_lat: float | None = None
+    start_lng: float | None = None
 
     @property
     def day(self) -> date:
@@ -83,6 +87,8 @@ class Activity:
             avg_speed=_f(a.get("average_speed")),
             suffer_score=_f(a.get("suffer_score")),
             kudos=int(a.get("kudos_count", 0) or 0),
+            start_lat=_coord((a.get("start_latlng") or [None, None])[0]),
+            start_lng=_coord((a.get("start_latlng") or [None, None])[1]),
         )
 
     @classmethod
@@ -114,6 +120,8 @@ class Activity:
             avg_speed=_f(a.get("averageSpeed")),
             suffer_score=_f(a.get("activityTrainingLoad")),
             kudos=0,
+            start_lat=_coord(a.get("startLatitude")),
+            start_lng=_coord(a.get("startLongitude")),
         )
 
 
@@ -145,3 +153,10 @@ def _f(v) -> float | None:
         return float(v) if v is not None else None
     except (TypeError, ValueError):
         return None
+
+
+def _coord(v) -> float | None:
+    """Round a GPS coordinate to ~1 km (2 dp). The store is committed publicly,
+    so we never persist precise locations."""
+    f = _f(v)
+    return round(f, 2) if f is not None else None

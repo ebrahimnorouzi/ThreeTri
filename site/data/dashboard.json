@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-06-19T10:01:15Z",
-    "generated_at_human": "19 Jun 2026, 10:01 UTC",
+    "generated_at": "2026-06-18T03:14:00Z",
+    "generated_at_human": "18 Jun 2026, 03:14 UTC",
     "season_start": "2026-01-01",
     "site_url": "https://ebrahimnorouzi.github.io/ThreeTri/",
     "data_sources": [
@@ -17,8 +17,8 @@
     "date_human": "20 Sep 2026",
     "location": "Port de Palma de Mallorca, Palma, Spain",
     "url": "https://worldsmarathons.com/de/marathon/triathlon-port-de-palma-de-mallorca",
-    "days_to_go": 93,
-    "weeks_to_go": 13.3,
+    "days_to_go": 94,
+    "weeks_to_go": 13.4,
     "phase": "Build"
   },
   "sports": {
@@ -38,6 +38,91 @@
       "color": "#34d399"
     }
   },
+  "scoring": {
+    "points_per_km": {
+      "swim": 6.0,
+      "bike": 1.0,
+      "run": 3.0
+    },
+    "elevation_per_m": 0.01,
+    "per_activity": 8.0,
+    "streak_day": 4.0,
+    "level_size": 800,
+    "badges": [
+      {
+        "id": "streak-7",
+        "icon": "🔥",
+        "label": "Week Warrior",
+        "desc": "7-day activity streak"
+      },
+      {
+        "id": "streak-14",
+        "icon": "🔥🔥",
+        "label": "Fortnight Beast",
+        "desc": "14-day activity streak"
+      },
+      {
+        "id": "streak-30",
+        "icon": "🌋",
+        "label": "Unbreakable",
+        "desc": "30-day activity streak"
+      },
+      {
+        "id": "century-ride",
+        "icon": "💯",
+        "label": "Centurion",
+        "desc": "A single ride of 100 km+"
+      },
+      {
+        "id": "half-run",
+        "icon": "🥈",
+        "label": "Half Hero",
+        "desc": "A single run of 21.1 km+"
+      },
+      {
+        "id": "marathon-run",
+        "icon": "🏅",
+        "label": "Marathoner",
+        "desc": "A single run of 42.2 km+"
+      },
+      {
+        "id": "swim-3k",
+        "icon": "🦈",
+        "label": "Open Water",
+        "desc": "A single swim of 3 km+"
+      },
+      {
+        "id": "triple-day",
+        "icon": "🎯",
+        "label": "Triple Threat",
+        "desc": "Swam, biked and ran on the same day"
+      },
+      {
+        "id": "everester",
+        "icon": "⛰️",
+        "label": "Sky High",
+        "desc": "5,000 m+ climbed this season"
+      },
+      {
+        "id": "early-bird",
+        "icon": "🌅",
+        "label": "Early Bird",
+        "desc": "Started a session before 6am"
+      },
+      {
+        "id": "big-week",
+        "icon": "📈",
+        "label": "Big Week",
+        "desc": "12+ hours of training in one week"
+      },
+      {
+        "id": "iron-volume",
+        "icon": "🛡️",
+        "label": "Iron Volume",
+        "desc": "1,000 km+ across all sports this season"
+      }
+    ]
+  },
   "athletes": [
     {
       "id": "ebi",
@@ -48,95 +133,706 @@
       "tagline": "The engine",
       "totals": {
         "all": {
-          "distance_km": 479.9,
-          "moving_h": 37.9,
-          "activities": 45,
-          "elevation_m": 3675
+          "distance_km": 4524.9,
+          "moving_h": 214.1,
+          "activities": 163,
+          "elevation_m": 43096
         },
         "swim": {
-          "distance_km": 23.9,
-          "moving_h": 9.3,
-          "activities": 16,
+          "distance_km": 71.4,
+          "moving_h": 22.1,
+          "activities": 28,
           "elevation_m": 0
         },
         "bike": {
-          "distance_km": 386.6,
-          "moving_h": 20.8,
-          "activities": 16,
-          "elevation_m": 2789
+          "distance_km": 3766.8,
+          "moving_h": 133.8,
+          "activities": 76,
+          "elevation_m": 38003
         },
         "run": {
-          "distance_km": 69.4,
-          "moving_h": 7.8,
-          "activities": 13,
-          "elevation_m": 886
+          "distance_km": 686.6,
+          "moving_h": 58.3,
+          "activities": 59,
+          "elevation_m": 5093
         }
       },
       "this_week": {
         "all": {
-          "distance_km": 20.7,
-          "moving_h": 3.0,
+          "distance_km": 88.9,
+          "moving_h": 5.0,
           "activities": 3,
-          "elevation_m": 0
+          "elevation_m": 865
         },
         "swim": {
-          "distance_km": 4.2,
-          "moving_h": 2.2,
-          "activities": 2,
-          "elevation_m": 0
-        },
-        "bike": {
-          "distance_km": 16.6,
-          "moving_h": 0.8,
+          "distance_km": 2.9,
+          "moving_h": 0.9,
           "activities": 1,
           "elevation_m": 0
         },
+        "bike": {
+          "distance_km": 71.1,
+          "moving_h": 2.9,
+          "activities": 1,
+          "elevation_m": 726
+        },
         "run": {
-          "distance_km": 0.0,
-          "moving_h": 0.0,
-          "activities": 0,
-          "elevation_m": 0
+          "distance_km": 14.9,
+          "moving_h": 1.2,
+          "activities": 1,
+          "elevation_m": 140
         }
       },
       "last_week": {
         "all": {
-          "distance_km": 48.7,
-          "moving_h": 5.6,
-          "activities": 8,
-          "elevation_m": 91
+          "distance_km": 223.4,
+          "moving_h": 12.0,
+          "activities": 7,
+          "elevation_m": 1844
         },
         "swim": {
-          "distance_km": 4.0,
-          "moving_h": 2.3,
-          "activities": 4,
+          "distance_km": 0.0,
+          "moving_h": 0.0,
+          "activities": 0,
           "elevation_m": 0
         },
         "bike": {
-          "distance_km": 29.5,
-          "moving_h": 1.7,
-          "activities": 1,
-          "elevation_m": 0
+          "distance_km": 154.7,
+          "moving_h": 6.0,
+          "activities": 3,
+          "elevation_m": 1450
         },
         "run": {
-          "distance_km": 15.2,
-          "moving_h": 1.6,
-          "activities": 3,
-          "elevation_m": 91
+          "distance_km": 68.7,
+          "moving_h": 5.9,
+          "activities": 4,
+          "elevation_m": 394
         }
       },
       "streak": {
-        "current_days": 1,
-        "longest_days": 11,
-        "last_active": "2026-06-19",
-        "active_days_this_week": 2
+        "current_days": 14,
+        "longest_days": 19,
+        "last_active": "2026-06-17",
+        "active_days_this_week": 3
       },
-      "points": 1139,
-      "level": 2,
+      "consistency_pct": 89,
+      "points": 8046,
+      "level": 11,
       "xp": {
-        "level": 2,
-        "xp_into": 339,
+        "level": 11,
+        "xp_into": 46,
         "xp_per_level": 800,
-        "xp_pct": 42.4
+        "xp_pct": 5.8
+      },
+      "badges": [
+        {
+          "id": "streak-7",
+          "icon": "🔥",
+          "label": "Week Warrior",
+          "desc": "7-day activity streak",
+          "earned": true
+        },
+        {
+          "id": "streak-14",
+          "icon": "🔥🔥",
+          "label": "Fortnight Beast",
+          "desc": "14-day activity streak",
+          "earned": true
+        },
+        {
+          "id": "streak-30",
+          "icon": "🌋",
+          "label": "Unbreakable",
+          "desc": "30-day activity streak",
+          "earned": false
+        },
+        {
+          "id": "century-ride",
+          "icon": "💯",
+          "label": "Centurion",
+          "desc": "A single ride of 100 km+",
+          "earned": true
+        },
+        {
+          "id": "half-run",
+          "icon": "🥈",
+          "label": "Half Hero",
+          "desc": "A single run of 21.1 km+",
+          "earned": true
+        },
+        {
+          "id": "marathon-run",
+          "icon": "🏅",
+          "label": "Marathoner",
+          "desc": "A single run of 42.2 km+",
+          "earned": false
+        },
+        {
+          "id": "swim-3k",
+          "icon": "🦈",
+          "label": "Open Water",
+          "desc": "A single swim of 3 km+",
+          "earned": true
+        },
+        {
+          "id": "triple-day",
+          "icon": "🎯",
+          "label": "Triple Threat",
+          "desc": "Swam, biked and ran on the same day",
+          "earned": false
+        },
+        {
+          "id": "everester",
+          "icon": "⛰️",
+          "label": "Sky High",
+          "desc": "5,000 m+ climbed this season",
+          "earned": true
+        },
+        {
+          "id": "early-bird",
+          "icon": "🌅",
+          "label": "Early Bird",
+          "desc": "Started a session before 6am",
+          "earned": true
+        },
+        {
+          "id": "big-week",
+          "icon": "📈",
+          "label": "Big Week",
+          "desc": "12+ hours of training in one week",
+          "earned": true
+        },
+        {
+          "id": "iron-volume",
+          "icon": "🛡️",
+          "label": "Iron Volume",
+          "desc": "1,000 km+ across all sports this season",
+          "earned": true
+        }
+      ],
+      "badge_count": 9,
+      "readiness": {
+        "status": "amber",
+        "date": "2026-06-18",
+        "hrv": 77.9,
+        "hrv_7d": 70.7,
+        "rhr": 49.6,
+        "sleep_hours": 6.2,
+        "sleep_score": 56,
+        "body_battery": 83,
+        "garmin_readiness": 56
+      },
+      "recent_activities": [
+        {
+          "date": "2026-06-17",
+          "datetime": "2026-06-17T06:10:00",
+          "sport": "swim",
+          "name": "Threshold swim",
+          "distance_km": 2.88,
+          "moving_min": 56,
+          "elevation_m": 0,
+          "avg_hr": 126,
+          "pace": "1:57 /100m",
+          "kudos": 15,
+          "source": "garmin"
+        },
+        {
+          "date": "2026-06-16",
+          "datetime": "2026-06-16T05:10:00",
+          "sport": "run",
+          "name": "Brick run",
+          "distance_km": 14.93,
+          "moving_min": 75,
+          "elevation_m": 140,
+          "avg_hr": 154,
+          "pace": "5:00 /km",
+          "kudos": 8,
+          "source": "garmin"
+        },
+        {
+          "date": "2026-06-15",
+          "datetime": "2026-06-15T06:47:00",
+          "sport": "bike",
+          "name": "Long ride",
+          "distance_km": 71.12,
+          "moving_min": 172,
+          "elevation_m": 726,
+          "avg_hr": 140,
+          "pace": "24.8 km/h",
+          "kudos": 6,
+          "source": "garmin"
+        },
+        {
+          "date": "2026-06-14",
+          "datetime": "2026-06-14T07:48:00",
+          "sport": "run",
+          "name": "Brick run",
+          "distance_km": 31.84,
+          "moving_min": 174,
+          "elevation_m": 87,
+          "avg_hr": 163,
+          "pace": "5:27 /km",
+          "kudos": 7,
+          "source": "garmin"
+        },
+        {
+          "date": "2026-06-13",
+          "datetime": "2026-06-13T07:15:00",
+          "sport": "run",
+          "name": "Tempo run",
+          "distance_km": 12.86,
+          "moving_min": 65,
+          "elevation_m": 144,
+          "avg_hr": 166,
+          "pace": "5:02 /km",
+          "kudos": 25,
+          "source": "garmin"
+        },
+        {
+          "date": "2026-06-12",
+          "datetime": "2026-06-12T19:02:00",
+          "sport": "run",
+          "name": "Easy run",
+          "distance_km": 14.69,
+          "moving_min": 71,
+          "elevation_m": 76,
+          "avg_hr": 144,
+          "pace": "4:50 /km",
+          "kudos": 31,
+          "source": "garmin"
+        },
+        {
+          "date": "2026-06-11",
+          "datetime": "2026-06-11T12:28:00",
+          "sport": "bike",
+          "name": "Brick bike",
+          "distance_km": 54.67,
+          "moving_min": 135,
+          "elevation_m": 530,
+          "avg_hr": 131,
+          "pace": "24.3 km/h",
+          "kudos": 28,
+          "source": "garmin"
+        },
+        {
+          "date": "2026-06-10",
+          "datetime": "2026-06-10T07:34:00",
+          "sport": "bike",
+          "name": "Endurance ride",
+          "distance_km": 46.51,
+          "moving_min": 94,
+          "elevation_m": 446,
+          "avg_hr": 142,
+          "pace": "29.6 km/h",
+          "kudos": 15,
+          "source": "garmin"
+        }
+      ]
+    },
+    {
+      "id": "sia",
+      "name": "Sia",
+      "initials": "SI",
+      "emoji": "⚡",
+      "color": "#f0398b",
+      "tagline": "The metronome",
+      "totals": {
+        "all": {
+          "distance_km": 3074.0,
+          "moving_h": 176.3,
+          "activities": 171,
+          "elevation_m": 19987
+        },
+        "swim": {
+          "distance_km": 150.5,
+          "moving_h": 44.8,
+          "activities": 55,
+          "elevation_m": 0
+        },
+        "bike": {
+          "distance_km": 2267.2,
+          "moving_h": 79.7,
+          "activities": 57,
+          "elevation_m": 16118
+        },
+        "run": {
+          "distance_km": 656.3,
+          "moving_h": 51.8,
+          "activities": 59,
+          "elevation_m": 3870
+        }
+      },
+      "this_week": {
+        "all": {
+          "distance_km": 112.6,
+          "moving_h": 4.9,
+          "activities": 4,
+          "elevation_m": 985
+        },
+        "swim": {
+          "distance_km": 2.2,
+          "moving_h": 0.6,
+          "activities": 1,
+          "elevation_m": 0
+        },
+        "bike": {
+          "distance_km": 98.9,
+          "moving_h": 3.4,
+          "activities": 2,
+          "elevation_m": 937
+        },
+        "run": {
+          "distance_km": 11.5,
+          "moving_h": 0.9,
+          "activities": 1,
+          "elevation_m": 48
+        }
+      },
+      "last_week": {
+        "all": {
+          "distance_km": 135.6,
+          "moving_h": 7.7,
+          "activities": 6,
+          "elevation_m": 928
+        },
+        "swim": {
+          "distance_km": 3.1,
+          "moving_h": 0.9,
+          "activities": 1,
+          "elevation_m": 0
+        },
+        "bike": {
+          "distance_km": 89.6,
+          "moving_h": 3.3,
+          "activities": 2,
+          "elevation_m": 622
+        },
+        "run": {
+          "distance_km": 42.9,
+          "moving_h": 3.5,
+          "activities": 3,
+          "elevation_m": 306
+        }
+      },
+      "streak": {
+        "current_days": 5,
+        "longest_days": 28,
+        "last_active": "2026-06-18",
+        "active_days_this_week": 4
+      },
+      "consistency_pct": 93,
+      "points": 6727,
+      "level": 9,
+      "xp": {
+        "level": 9,
+        "xp_into": 327,
+        "xp_per_level": 800,
+        "xp_pct": 40.9
+      },
+      "badges": [
+        {
+          "id": "streak-7",
+          "icon": "🔥",
+          "label": "Week Warrior",
+          "desc": "7-day activity streak",
+          "earned": true
+        },
+        {
+          "id": "streak-14",
+          "icon": "🔥🔥",
+          "label": "Fortnight Beast",
+          "desc": "14-day activity streak",
+          "earned": true
+        },
+        {
+          "id": "streak-30",
+          "icon": "🌋",
+          "label": "Unbreakable",
+          "desc": "30-day activity streak",
+          "earned": false
+        },
+        {
+          "id": "century-ride",
+          "icon": "💯",
+          "label": "Centurion",
+          "desc": "A single ride of 100 km+",
+          "earned": true
+        },
+        {
+          "id": "half-run",
+          "icon": "🥈",
+          "label": "Half Hero",
+          "desc": "A single run of 21.1 km+",
+          "earned": true
+        },
+        {
+          "id": "marathon-run",
+          "icon": "🏅",
+          "label": "Marathoner",
+          "desc": "A single run of 42.2 km+",
+          "earned": false
+        },
+        {
+          "id": "swim-3k",
+          "icon": "🦈",
+          "label": "Open Water",
+          "desc": "A single swim of 3 km+",
+          "earned": true
+        },
+        {
+          "id": "triple-day",
+          "icon": "🎯",
+          "label": "Triple Threat",
+          "desc": "Swam, biked and ran on the same day",
+          "earned": false
+        },
+        {
+          "id": "everester",
+          "icon": "⛰️",
+          "label": "Sky High",
+          "desc": "5,000 m+ climbed this season",
+          "earned": true
+        },
+        {
+          "id": "early-bird",
+          "icon": "🌅",
+          "label": "Early Bird",
+          "desc": "Started a session before 6am",
+          "earned": true
+        },
+        {
+          "id": "big-week",
+          "icon": "📈",
+          "label": "Big Week",
+          "desc": "12+ hours of training in one week",
+          "earned": false
+        },
+        {
+          "id": "iron-volume",
+          "icon": "🛡️",
+          "label": "Iron Volume",
+          "desc": "1,000 km+ across all sports this season",
+          "earned": true
+        }
+      ],
+      "badge_count": 8,
+      "readiness": {
+        "status": "amber",
+        "date": "2026-06-18",
+        "hrv": 59.9,
+        "hrv_7d": 63.1,
+        "rhr": 47.0,
+        "sleep_hours": 6.2,
+        "sleep_score": 68,
+        "body_battery": 53,
+        "garmin_readiness": 79
+      },
+      "recent_activities": [
+        {
+          "date": "2026-06-18",
+          "datetime": "2026-06-18T17:49:00",
+          "sport": "bike",
+          "name": "Café spin",
+          "distance_km": 56.69,
+          "moving_min": 110,
+          "elevation_m": 528,
+          "avg_hr": 140,
+          "pace": "31.0 km/h",
+          "kudos": 2,
+          "source": "garmin"
+        },
+        {
+          "date": "2026-06-17",
+          "datetime": "2026-06-17T19:24:00",
+          "sport": "swim",
+          "name": "Threshold swim",
+          "distance_km": 2.2,
+          "moving_min": 37,
+          "elevation_m": 0,
+          "avg_hr": 121,
+          "pace": "1:39 /100m",
+          "kudos": 11,
+          "source": "garmin"
+        },
+        {
+          "date": "2026-06-16",
+          "datetime": "2026-06-16T19:55:00",
+          "sport": "bike",
+          "name": "Café spin",
+          "distance_km": 42.25,
+          "moving_min": 97,
+          "elevation_m": 409,
+          "avg_hr": 136,
+          "pace": "26.2 km/h",
+          "kudos": 20,
+          "source": "garmin"
+        },
+        {
+          "date": "2026-06-15",
+          "datetime": "2026-06-15T17:57:00",
+          "sport": "run",
+          "name": "Recovery jog",
+          "distance_km": 11.49,
+          "moving_min": 53,
+          "elevation_m": 48,
+          "avg_hr": 160,
+          "pace": "4:37 /km",
+          "kudos": 22,
+          "source": "garmin"
+        },
+        {
+          "date": "2026-06-14",
+          "datetime": "2026-06-14T07:06:00",
+          "sport": "run",
+          "name": "Long run",
+          "distance_km": 9.62,
+          "moving_min": 46,
+          "elevation_m": 52,
+          "avg_hr": 167,
+          "pace": "4:47 /km",
+          "kudos": 14,
+          "source": "garmin"
+        },
+        {
+          "date": "2026-06-12",
+          "datetime": "2026-06-12T18:19:00",
+          "sport": "run",
+          "name": "Brick run",
+          "distance_km": 17.33,
+          "moving_min": 84,
+          "elevation_m": 120,
+          "avg_hr": 162,
+          "pace": "4:51 /km",
+          "kudos": 32,
+          "source": "garmin"
+        },
+        {
+          "date": "2026-06-11",
+          "datetime": "2026-06-11T07:03:00",
+          "sport": "run",
+          "name": "Intervals",
+          "distance_km": 15.99,
+          "moving_min": 77,
+          "elevation_m": 134,
+          "avg_hr": 146,
+          "pace": "4:47 /km",
+          "kudos": 0,
+          "source": "garmin"
+        },
+        {
+          "date": "2026-06-10",
+          "datetime": "2026-06-10T19:09:00",
+          "sport": "bike",
+          "name": "Hill repeats",
+          "distance_km": 32.47,
+          "moving_min": 72,
+          "elevation_m": 174,
+          "avg_hr": 150,
+          "pace": "27.1 km/h",
+          "kudos": 22,
+          "source": "garmin"
+        }
+      ]
+    },
+    {
+      "id": "alborz",
+      "name": "Alborz",
+      "initials": "AL",
+      "emoji": "🦅",
+      "color": "#a3e635",
+      "tagline": "The climber",
+      "totals": {
+        "all": {
+          "distance_km": 5032.6,
+          "moving_h": 212.3,
+          "activities": 134,
+          "elevation_m": 82689
+        },
+        "swim": {
+          "distance_km": 40.9,
+          "moving_h": 12.5,
+          "activities": 19,
+          "elevation_m": 0
+        },
+        "bike": {
+          "distance_km": 4600.3,
+          "moving_h": 165.5,
+          "activities": 72,
+          "elevation_m": 77470
+        },
+        "run": {
+          "distance_km": 391.5,
+          "moving_h": 34.3,
+          "activities": 43,
+          "elevation_m": 5220
+        }
+      },
+      "this_week": {
+        "all": {
+          "distance_km": 248.4,
+          "moving_h": 9.6,
+          "activities": 4,
+          "elevation_m": 4514
+        },
+        "swim": {
+          "distance_km": 0.0,
+          "moving_h": 0.0,
+          "activities": 0,
+          "elevation_m": 0
+        },
+        "bike": {
+          "distance_km": 235.5,
+          "moving_h": 8.4,
+          "activities": 3,
+          "elevation_m": 4367
+        },
+        "run": {
+          "distance_km": 13.0,
+          "moving_h": 1.2,
+          "activities": 1,
+          "elevation_m": 147
+        }
+      },
+      "last_week": {
+        "all": {
+          "distance_km": 268.4,
+          "moving_h": 11.9,
+          "activities": 7,
+          "elevation_m": 4716
+        },
+        "swim": {
+          "distance_km": 2.1,
+          "moving_h": 0.7,
+          "activities": 1,
+          "elevation_m": 0
+        },
+        "bike": {
+          "distance_km": 228.1,
+          "moving_h": 8.0,
+          "activities": 3,
+          "elevation_m": 4218
+        },
+        "run": {
+          "distance_km": 38.1,
+          "moving_h": 3.3,
+          "activities": 3,
+          "elevation_m": 497
+        }
+      },
+      "streak": {
+        "current_days": 3,
+        "longest_days": 12,
+        "last_active": "2026-06-18",
+        "active_days_this_week": 3
+      },
+      "consistency_pct": 68,
+      "points": 7931,
+      "level": 10,
+      "xp": {
+        "level": 10,
+        "xp_into": 731,
+        "xp_per_level": 800,
+        "xp_pct": 91.4
       },
       "badges": [
         {
@@ -165,7 +861,7 @@
           "icon": "💯",
           "label": "Centurion",
           "desc": "A single ride of 100 km+",
-          "earned": false
+          "earned": true
         },
         {
           "id": "half-run",
@@ -200,638 +896,145 @@
           "icon": "⛰️",
           "label": "Sky High",
           "desc": "5,000 m+ climbed this season",
-          "earned": false
+          "earned": true
         },
         {
           "id": "early-bird",
           "icon": "🌅",
           "label": "Early Bird",
           "desc": "Started a session before 6am",
-          "earned": false
+          "earned": true
         },
         {
           "id": "big-week",
           "icon": "📈",
           "label": "Big Week",
           "desc": "12+ hours of training in one week",
-          "earned": false
+          "earned": true
         },
         {
           "id": "iron-volume",
           "icon": "🛡️",
           "label": "Iron Volume",
           "desc": "1,000 km+ across all sports this season",
-          "earned": false
+          "earned": true
         }
       ],
-      "badge_count": 1,
+      "badge_count": 6,
       "readiness": {
-        "status": "red",
-        "date": "2026-06-19",
-        "hrv": null,
-        "hrv_7d": null,
-        "rhr": 48.0,
-        "sleep_hours": 6.02,
-        "sleep_score": 62.0,
-        "body_battery": 9.0,
-        "garmin_readiness": null
+        "status": "green",
+        "date": "2026-06-17",
+        "hrv": 61.1,
+        "hrv_7d": 56.5,
+        "rhr": 52.0,
+        "sleep_hours": 8.2,
+        "sleep_score": 86,
+        "body_battery": 62,
+        "garmin_readiness": 50
       },
       "recent_activities": [
         {
-          "date": "2026-06-19",
-          "datetime": "2026-06-19T10:47:13",
-          "sport": "swim",
-          "name": "Posture & Breath Progression (1",
-          "distance_km": 1.6,
-          "moving_min": 45,
-          "elevation_m": 0,
-          "avg_hr": 123,
-          "pace": "2:47 /100m",
-          "kudos": 0,
-          "source": "garmin"
-        },
-        {
-          "date": "2026-06-16",
-          "datetime": "2026-06-16T20:39:52",
+          "date": "2026-06-18",
+          "datetime": "2026-06-18T19:47:00",
           "sport": "bike",
-          "name": "4 × 1 min On/Off Fast Intervals",
-          "distance_km": 16.58,
-          "moving_min": 48,
-          "elevation_m": 0,
-          "avg_hr": 125,
-          "pace": "20.6 km/h",
-          "kudos": 0,
+          "name": "Café spin",
+          "distance_km": 84.1,
+          "moving_min": 165,
+          "elevation_m": 1522,
+          "avg_hr": 144,
+          "pace": "30.6 km/h",
+          "kudos": 9,
+          "source": "garmin"
+        },
+        {
+          "date": "2026-06-17",
+          "datetime": "2026-06-17T08:44:00",
+          "sport": "bike",
+          "name": "Endurance ride",
+          "distance_km": 80.66,
+          "moving_min": 163,
+          "elevation_m": 1447,
+          "avg_hr": 151,
+          "pace": "29.7 km/h",
+          "kudos": 26,
           "source": "garmin"
         },
         {
           "date": "2026-06-16",
-          "datetime": "2026-06-16T17:37:11",
-          "sport": "swim",
-          "name": "Finding Comfort in Flotation (18",
-          "distance_km": 2.55,
-          "moving_min": 88,
-          "elevation_m": 0,
-          "avg_hr": 116,
-          "pace": "3:27 /100m",
-          "kudos": 0,
+          "datetime": "2026-06-16T07:49:00",
+          "sport": "bike",
+          "name": "Café spin",
+          "distance_km": 70.69,
+          "moving_min": 174,
+          "elevation_m": 1397,
+          "avg_hr": 133,
+          "pace": "24.3 km/h",
+          "kudos": 16,
+          "source": "garmin"
+        },
+        {
+          "date": "2026-06-16",
+          "datetime": "2026-06-16T05:25:00",
+          "sport": "run",
+          "name": "Tempo run",
+          "distance_km": 12.97,
+          "moving_min": 71,
+          "elevation_m": 147,
+          "avg_hr": 144,
+          "pace": "5:29 /km",
+          "kudos": 16,
           "source": "garmin"
         },
         {
           "date": "2026-06-14",
-          "datetime": "2026-06-14T20:24:36",
+          "datetime": "2026-06-14T06:12:00",
+          "sport": "run",
+          "name": "Easy run",
+          "distance_km": 14.61,
+          "moving_min": 74,
+          "elevation_m": 151,
+          "avg_hr": 150,
+          "pace": "5:02 /km",
+          "kudos": 27,
+          "source": "garmin"
+        },
+        {
+          "date": "2026-06-12",
+          "datetime": "2026-06-12T18:29:00",
           "sport": "bike",
-          "name": "Indoor Cycling",
-          "distance_km": 29.45,
-          "moving_min": 99,
-          "elevation_m": 0,
-          "avg_hr": 127,
-          "pace": "17.8 km/h",
-          "kudos": 0,
-          "source": "garmin"
-        },
-        {
-          "date": "2026-06-13",
-          "datetime": "2026-06-13T09:05:31",
-          "sport": "run",
-          "name": "Karlsruhe - 30 min Steady Run",
-          "distance_km": 5.02,
-          "moving_min": 28,
-          "elevation_m": 32,
-          "avg_hr": 174,
-          "pace": "5:33 /km",
-          "kudos": 0,
-          "source": "garmin"
-        },
-        {
-          "date": "2026-06-11",
-          "datetime": "2026-06-11T17:33:23",
-          "sport": "swim",
-          "name": "Finding Comfort in Flotation (14",
-          "distance_km": 1.75,
-          "moving_min": 69,
-          "elevation_m": 0,
-          "avg_hr": 123,
-          "pace": "3:56 /100m",
-          "kudos": 0,
-          "source": "garmin"
-        },
-        {
-          "date": "2026-06-10",
-          "datetime": "2026-06-10T22:11:55",
-          "sport": "swim",
-          "name": "Pool Swim",
-          "distance_km": 0.25,
-          "moving_min": 9,
-          "elevation_m": 0,
-          "avg_hr": 127,
-          "pace": "3:46 /100m",
-          "kudos": 0,
-          "source": "garmin"
-        },
-        {
-          "date": "2026-06-10",
-          "datetime": "2026-06-10T21:06:59",
-          "sport": "run",
-          "name": "Karlsruhe - 45 min Long Run",
-          "distance_km": 6.4,
-          "moving_min": 45,
-          "elevation_m": 45,
+          "name": "Long ride",
+          "distance_km": 83.71,
+          "moving_min": 188,
+          "elevation_m": 1546,
           "avg_hr": 126,
-          "pace": "7:02 /km",
-          "kudos": 0,
-          "source": "garmin"
-        }
-      ]
-    },
-    {
-      "id": "sia",
-      "name": "Sia",
-      "initials": "SI",
-      "emoji": "⚡",
-      "color": "#f0398b",
-      "tagline": "The metronome",
-      "totals": {
-        "all": {
-          "distance_km": 0.0,
-          "moving_h": 0.0,
-          "activities": 0,
-          "elevation_m": 0
-        },
-        "swim": {
-          "distance_km": 0.0,
-          "moving_h": 0.0,
-          "activities": 0,
-          "elevation_m": 0
-        },
-        "bike": {
-          "distance_km": 0.0,
-          "moving_h": 0.0,
-          "activities": 0,
-          "elevation_m": 0
-        },
-        "run": {
-          "distance_km": 0.0,
-          "moving_h": 0.0,
-          "activities": 0,
-          "elevation_m": 0
-        }
-      },
-      "this_week": {
-        "all": {
-          "distance_km": 0.0,
-          "moving_h": 0.0,
-          "activities": 0,
-          "elevation_m": 0
-        },
-        "swim": {
-          "distance_km": 0.0,
-          "moving_h": 0.0,
-          "activities": 0,
-          "elevation_m": 0
-        },
-        "bike": {
-          "distance_km": 0.0,
-          "moving_h": 0.0,
-          "activities": 0,
-          "elevation_m": 0
-        },
-        "run": {
-          "distance_km": 0.0,
-          "moving_h": 0.0,
-          "activities": 0,
-          "elevation_m": 0
-        }
-      },
-      "last_week": {
-        "all": {
-          "distance_km": 0.0,
-          "moving_h": 0.0,
-          "activities": 0,
-          "elevation_m": 0
-        },
-        "swim": {
-          "distance_km": 0.0,
-          "moving_h": 0.0,
-          "activities": 0,
-          "elevation_m": 0
-        },
-        "bike": {
-          "distance_km": 0.0,
-          "moving_h": 0.0,
-          "activities": 0,
-          "elevation_m": 0
-        },
-        "run": {
-          "distance_km": 0.0,
-          "moving_h": 0.0,
-          "activities": 0,
-          "elevation_m": 0
-        }
-      },
-      "streak": {
-        "current_days": 0,
-        "longest_days": 0,
-        "last_active": null,
-        "active_days_this_week": 0
-      },
-      "points": 0,
-      "level": 1,
-      "xp": {
-        "level": 1,
-        "xp_into": 0,
-        "xp_per_level": 800,
-        "xp_pct": 0.0
-      },
-      "badges": [
-        {
-          "id": "streak-7",
-          "icon": "🔥",
-          "label": "Week Warrior",
-          "desc": "7-day activity streak",
-          "earned": false
-        },
-        {
-          "id": "streak-14",
-          "icon": "🔥🔥",
-          "label": "Fortnight Beast",
-          "desc": "14-day activity streak",
-          "earned": false
-        },
-        {
-          "id": "streak-30",
-          "icon": "🌋",
-          "label": "Unbreakable",
-          "desc": "30-day activity streak",
-          "earned": false
-        },
-        {
-          "id": "century-ride",
-          "icon": "💯",
-          "label": "Centurion",
-          "desc": "A single ride of 100 km+",
-          "earned": false
-        },
-        {
-          "id": "half-run",
-          "icon": "🥈",
-          "label": "Half Hero",
-          "desc": "A single run of 21.1 km+",
-          "earned": false
-        },
-        {
-          "id": "marathon-run",
-          "icon": "🏅",
-          "label": "Marathoner",
-          "desc": "A single run of 42.2 km+",
-          "earned": false
-        },
-        {
-          "id": "swim-3k",
-          "icon": "🦈",
-          "label": "Open Water",
-          "desc": "A single swim of 3 km+",
-          "earned": false
-        },
-        {
-          "id": "triple-day",
-          "icon": "🎯",
-          "label": "Triple Threat",
-          "desc": "Swam, biked and ran on the same day",
-          "earned": false
-        },
-        {
-          "id": "everester",
-          "icon": "⛰️",
-          "label": "Sky High",
-          "desc": "5,000 m+ climbed this season",
-          "earned": false
-        },
-        {
-          "id": "early-bird",
-          "icon": "🌅",
-          "label": "Early Bird",
-          "desc": "Started a session before 6am",
-          "earned": false
-        },
-        {
-          "id": "big-week",
-          "icon": "📈",
-          "label": "Big Week",
-          "desc": "12+ hours of training in one week",
-          "earned": false
-        },
-        {
-          "id": "iron-volume",
-          "icon": "🛡️",
-          "label": "Iron Volume",
-          "desc": "1,000 km+ across all sports this season",
-          "earned": false
-        }
-      ],
-      "badge_count": 0,
-      "readiness": null,
-      "recent_activities": []
-    },
-    {
-      "id": "alborz",
-      "name": "Alborz",
-      "initials": "AL",
-      "emoji": "🦅",
-      "color": "#a3e635",
-      "tagline": "The climber",
-      "totals": {
-        "all": {
-          "distance_km": 82.7,
-          "moving_h": 8.0,
-          "activities": 13,
-          "elevation_m": 245
-        },
-        "swim": {
-          "distance_km": 5.9,
-          "moving_h": 3.0,
-          "activities": 8,
-          "elevation_m": 0
-        },
-        "bike": {
-          "distance_km": 69.9,
-          "moving_h": 4.1,
-          "activities": 3,
-          "elevation_m": 236
-        },
-        "run": {
-          "distance_km": 6.9,
-          "moving_h": 0.8,
-          "activities": 2,
-          "elevation_m": 9
-        }
-      },
-      "this_week": {
-        "all": {
-          "distance_km": 1.6,
-          "moving_h": 0.8,
-          "activities": 1,
-          "elevation_m": 0
-        },
-        "swim": {
-          "distance_km": 1.6,
-          "moving_h": 0.8,
-          "activities": 1,
-          "elevation_m": 0
-        },
-        "bike": {
-          "distance_km": 0.0,
-          "moving_h": 0.0,
-          "activities": 0,
-          "elevation_m": 0
-        },
-        "run": {
-          "distance_km": 0.0,
-          "moving_h": 0.0,
-          "activities": 0,
-          "elevation_m": 0
-        }
-      },
-      "last_week": {
-        "all": {
-          "distance_km": 2.3,
-          "moving_h": 1.2,
-          "activities": 3,
-          "elevation_m": 0
-        },
-        "swim": {
-          "distance_km": 2.3,
-          "moving_h": 1.2,
-          "activities": 3,
-          "elevation_m": 0
-        },
-        "bike": {
-          "distance_km": 0.0,
-          "moving_h": 0.0,
-          "activities": 0,
-          "elevation_m": 0
-        },
-        "run": {
-          "distance_km": 0.0,
-          "moving_h": 0.0,
-          "activities": 0,
-          "elevation_m": 0
-        }
-      },
-      "streak": {
-        "current_days": 1,
-        "longest_days": 2,
-        "last_active": "2026-06-19",
-        "active_days_this_week": 1
-      },
-      "points": 236,
-      "level": 1,
-      "xp": {
-        "level": 1,
-        "xp_into": 236,
-        "xp_per_level": 800,
-        "xp_pct": 29.5
-      },
-      "badges": [
-        {
-          "id": "streak-7",
-          "icon": "🔥",
-          "label": "Week Warrior",
-          "desc": "7-day activity streak",
-          "earned": false
-        },
-        {
-          "id": "streak-14",
-          "icon": "🔥🔥",
-          "label": "Fortnight Beast",
-          "desc": "14-day activity streak",
-          "earned": false
-        },
-        {
-          "id": "streak-30",
-          "icon": "🌋",
-          "label": "Unbreakable",
-          "desc": "30-day activity streak",
-          "earned": false
-        },
-        {
-          "id": "century-ride",
-          "icon": "💯",
-          "label": "Centurion",
-          "desc": "A single ride of 100 km+",
-          "earned": false
-        },
-        {
-          "id": "half-run",
-          "icon": "🥈",
-          "label": "Half Hero",
-          "desc": "A single run of 21.1 km+",
-          "earned": false
-        },
-        {
-          "id": "marathon-run",
-          "icon": "🏅",
-          "label": "Marathoner",
-          "desc": "A single run of 42.2 km+",
-          "earned": false
-        },
-        {
-          "id": "swim-3k",
-          "icon": "🦈",
-          "label": "Open Water",
-          "desc": "A single swim of 3 km+",
-          "earned": false
-        },
-        {
-          "id": "triple-day",
-          "icon": "🎯",
-          "label": "Triple Threat",
-          "desc": "Swam, biked and ran on the same day",
-          "earned": false
-        },
-        {
-          "id": "everester",
-          "icon": "⛰️",
-          "label": "Sky High",
-          "desc": "5,000 m+ climbed this season",
-          "earned": false
-        },
-        {
-          "id": "early-bird",
-          "icon": "🌅",
-          "label": "Early Bird",
-          "desc": "Started a session before 6am",
-          "earned": false
-        },
-        {
-          "id": "big-week",
-          "icon": "📈",
-          "label": "Big Week",
-          "desc": "12+ hours of training in one week",
-          "earned": false
-        },
-        {
-          "id": "iron-volume",
-          "icon": "🛡️",
-          "label": "Iron Volume",
-          "desc": "1,000 km+ across all sports this season",
-          "earned": false
-        }
-      ],
-      "badge_count": 0,
-      "readiness": {
-        "status": "green",
-        "date": "2026-06-19",
-        "hrv": null,
-        "hrv_7d": 47.5,
-        "rhr": 59.0,
-        "sleep_hours": null,
-        "sleep_score": null,
-        "body_battery": 63.0,
-        "garmin_readiness": 68.0
-      },
-      "recent_activities": [
-        {
-          "date": "2026-06-19",
-          "datetime": "2026-06-19T10:47:08",
-          "sport": "swim",
-          "name": "Pool Swim",
-          "distance_km": 1.6,
-          "moving_min": 47,
-          "elevation_m": 0,
-          "avg_hr": 124,
-          "pace": "2:57 /100m",
-          "kudos": 0,
+          "pace": "26.7 km/h",
+          "kudos": 1,
           "source": "garmin"
         },
         {
           "date": "2026-06-12",
-          "datetime": "2026-06-12T09:47:49",
-          "sport": "swim",
-          "name": "Pool Swim",
-          "distance_km": 0.5,
-          "moving_min": 15,
-          "elevation_m": 0,
-          "avg_hr": 126,
-          "pace": "2:58 /100m",
-          "kudos": 0,
-          "source": "garmin"
-        },
-        {
-          "date": "2026-06-12",
-          "datetime": "2026-06-12T09:15:21",
-          "sport": "swim",
-          "name": "Pool Swim",
-          "distance_km": 0.78,
-          "moving_min": 26,
-          "elevation_m": 0,
-          "avg_hr": 124,
-          "pace": "3:21 /100m",
-          "kudos": 0,
+          "datetime": "2026-06-12T05:21:00",
+          "sport": "bike",
+          "name": "Hill repeats",
+          "distance_km": 55.11,
+          "moving_min": 105,
+          "elevation_m": 1109,
+          "avg_hr": 150,
+          "pace": "31.5 km/h",
+          "kudos": 2,
           "source": "garmin"
         },
         {
           "date": "2026-06-11",
-          "datetime": "2026-06-11T17:27:14",
-          "sport": "swim",
-          "name": "Pool Swim",
-          "distance_km": 1.0,
-          "moving_min": 32,
-          "elevation_m": 0,
-          "avg_hr": 114,
-          "pace": "3:09 /100m",
-          "kudos": 0,
-          "source": "garmin"
-        },
-        {
-          "date": "2026-05-31",
-          "datetime": "2026-05-31T12:18:32",
-          "sport": "swim",
-          "name": "Eggenstein-Leopoldshafen Open Water Swimming",
-          "distance_km": 0.08,
-          "moving_min": 4,
-          "elevation_m": 0,
-          "avg_hr": 148,
-          "pace": "4:30 /100m",
-          "kudos": 0,
-          "source": "garmin"
-        },
-        {
-          "date": "2026-05-26",
-          "datetime": "2026-05-26T09:59:46",
-          "sport": "swim",
-          "name": "Pool Swim",
-          "distance_km": 0.95,
-          "moving_min": 26,
-          "elevation_m": 0,
-          "avg_hr": 111,
-          "pace": "2:46 /100m",
-          "kudos": 0,
-          "source": "garmin"
-        },
-        {
-          "date": "2026-05-26",
-          "datetime": "2026-05-26T09:39:23",
-          "sport": "swim",
-          "name": "Pool Swim",
-          "distance_km": 0.2,
-          "moving_min": 6,
-          "elevation_m": 0,
-          "avg_hr": 109,
-          "pace": "2:51 /100m",
-          "kudos": 0,
-          "source": "garmin"
-        },
-        {
-          "date": "2026-05-24",
-          "datetime": "2026-05-24T14:31:56",
-          "sport": "swim",
-          "name": "Pool Swim",
-          "distance_km": 0.8,
-          "moving_min": 23,
-          "elevation_m": 0,
-          "avg_hr": 121,
-          "pace": "2:55 /100m",
-          "kudos": 0,
+          "datetime": "2026-06-11T08:07:00",
+          "sport": "run",
+          "name": "Brick run",
+          "distance_km": 11.74,
+          "moving_min": 60,
+          "elevation_m": 134,
+          "avg_hr": 141,
+          "pace": "5:08 /km",
+          "kudos": 30,
           "source": "garmin"
         }
       ]
@@ -841,60 +1044,60 @@
     "season": {
       "all": [
         {
-          "athlete_id": "ebi",
-          "value": 479.9,
+          "athlete_id": "alborz",
+          "value": 5032.6,
           "unit": "km",
           "rank": 1
         },
         {
-          "athlete_id": "alborz",
-          "value": 82.7,
+          "athlete_id": "ebi",
+          "value": 4524.9,
           "unit": "km",
           "rank": 2
         },
         {
           "athlete_id": "sia",
-          "value": 0.0,
+          "value": 3074.0,
           "unit": "km",
           "rank": 3
         }
       ],
       "swim": [
         {
-          "athlete_id": "ebi",
-          "value": 23.9,
+          "athlete_id": "sia",
+          "value": 150.5,
           "unit": "km",
           "rank": 1
         },
         {
-          "athlete_id": "alborz",
-          "value": 5.9,
+          "athlete_id": "ebi",
+          "value": 71.4,
           "unit": "km",
           "rank": 2
         },
         {
-          "athlete_id": "sia",
-          "value": 0.0,
+          "athlete_id": "alborz",
+          "value": 40.9,
           "unit": "km",
           "rank": 3
         }
       ],
       "bike": [
         {
-          "athlete_id": "ebi",
-          "value": 386.6,
+          "athlete_id": "alborz",
+          "value": 4600.3,
           "unit": "km",
           "rank": 1
         },
         {
-          "athlete_id": "alborz",
-          "value": 69.9,
+          "athlete_id": "ebi",
+          "value": 3766.8,
           "unit": "km",
           "rank": 2
         },
         {
           "athlete_id": "sia",
-          "value": 0.0,
+          "value": 2267.2,
           "unit": "km",
           "rank": 3
         }
@@ -902,19 +1105,19 @@
       "run": [
         {
           "athlete_id": "ebi",
-          "value": 69.4,
+          "value": 686.6,
           "unit": "km",
           "rank": 1
         },
         {
-          "athlete_id": "alborz",
-          "value": 6.9,
+          "athlete_id": "sia",
+          "value": 656.3,
           "unit": "km",
           "rank": 2
         },
         {
-          "athlete_id": "sia",
-          "value": 0.0,
+          "athlete_id": "alborz",
+          "value": 391.5,
           "unit": "km",
           "rank": 3
         }
@@ -922,39 +1125,39 @@
       "hours": [
         {
           "athlete_id": "ebi",
-          "value": 37.9,
+          "value": 214.1,
           "unit": "h",
           "rank": 1
         },
         {
           "athlete_id": "alborz",
-          "value": 8.0,
+          "value": 212.3,
           "unit": "h",
           "rank": 2
         },
         {
           "athlete_id": "sia",
-          "value": 0.0,
+          "value": 176.3,
           "unit": "h",
           "rank": 3
         }
       ],
       "elevation": [
         {
-          "athlete_id": "ebi",
-          "value": 3675,
+          "athlete_id": "alborz",
+          "value": 82689,
           "unit": "m",
           "rank": 1
         },
         {
-          "athlete_id": "alborz",
-          "value": 245,
+          "athlete_id": "ebi",
+          "value": 43096,
           "unit": "m",
           "rank": 2
         },
         {
           "athlete_id": "sia",
-          "value": 0,
+          "value": 19987,
           "unit": "m",
           "rank": 3
         }
@@ -963,20 +1166,20 @@
     "this_week": {
       "all": [
         {
-          "athlete_id": "ebi",
-          "value": 20.7,
+          "athlete_id": "alborz",
+          "value": 248.4,
           "unit": "km",
           "rank": 1
         },
         {
-          "athlete_id": "alborz",
-          "value": 1.6,
+          "athlete_id": "sia",
+          "value": 112.6,
           "unit": "km",
           "rank": 2
         },
         {
-          "athlete_id": "sia",
-          "value": 0.0,
+          "athlete_id": "ebi",
+          "value": 88.9,
           "unit": "km",
           "rank": 3
         }
@@ -984,18 +1187,18 @@
       "swim": [
         {
           "athlete_id": "ebi",
-          "value": 4.2,
+          "value": 2.9,
           "unit": "km",
           "rank": 1
         },
         {
-          "athlete_id": "alborz",
-          "value": 1.6,
+          "athlete_id": "sia",
+          "value": 2.2,
           "unit": "km",
           "rank": 2
         },
         {
-          "athlete_id": "sia",
+          "athlete_id": "alborz",
           "value": 0.0,
           "unit": "km",
           "rank": 3
@@ -1003,20 +1206,20 @@
       ],
       "bike": [
         {
-          "athlete_id": "ebi",
-          "value": 16.6,
+          "athlete_id": "alborz",
+          "value": 235.5,
           "unit": "km",
           "rank": 1
         },
         {
           "athlete_id": "sia",
-          "value": 0.0,
+          "value": 98.9,
           "unit": "km",
           "rank": 2
         },
         {
-          "athlete_id": "alborz",
-          "value": 0.0,
+          "athlete_id": "ebi",
+          "value": 71.1,
           "unit": "km",
           "rank": 3
         }
@@ -1024,59 +1227,59 @@
       "run": [
         {
           "athlete_id": "ebi",
-          "value": 0.0,
+          "value": 14.9,
           "unit": "km",
           "rank": 1
         },
         {
-          "athlete_id": "sia",
-          "value": 0.0,
+          "athlete_id": "alborz",
+          "value": 13.0,
           "unit": "km",
           "rank": 2
         },
         {
-          "athlete_id": "alborz",
-          "value": 0.0,
+          "athlete_id": "sia",
+          "value": 11.5,
           "unit": "km",
           "rank": 3
         }
       ],
       "hours": [
         {
-          "athlete_id": "ebi",
-          "value": 3.0,
+          "athlete_id": "alborz",
+          "value": 9.6,
           "unit": "h",
           "rank": 1
         },
         {
-          "athlete_id": "alborz",
-          "value": 0.8,
+          "athlete_id": "ebi",
+          "value": 5.0,
           "unit": "h",
           "rank": 2
         },
         {
           "athlete_id": "sia",
-          "value": 0.0,
+          "value": 4.9,
           "unit": "h",
           "rank": 3
         }
       ],
       "elevation": [
         {
-          "athlete_id": "ebi",
-          "value": 0,
+          "athlete_id": "alborz",
+          "value": 4514,
           "unit": "m",
           "rank": 1
         },
         {
           "athlete_id": "sia",
-          "value": 0,
+          "value": 985,
           "unit": "m",
           "rank": 2
         },
         {
-          "athlete_id": "alborz",
-          "value": 0,
+          "athlete_id": "ebi",
+          "value": 865,
           "unit": "m",
           "rank": 3
         }
@@ -1085,19 +1288,19 @@
     "points": [
       {
         "athlete_id": "ebi",
-        "value": 1139.0,
+        "value": 8046.0,
         "unit": "pts",
         "rank": 1
       },
       {
         "athlete_id": "alborz",
-        "value": 236.0,
+        "value": 7931.0,
         "unit": "pts",
         "rank": 2
       },
       {
         "athlete_id": "sia",
-        "value": 0.0,
+        "value": 6727.0,
         "unit": "pts",
         "rank": 3
       }
@@ -1105,20 +1308,40 @@
     "streak": [
       {
         "athlete_id": "ebi",
-        "value": 1.0,
+        "value": 14.0,
         "unit": "days",
         "rank": 1
       },
       {
-        "athlete_id": "alborz",
-        "value": 1.0,
+        "athlete_id": "sia",
+        "value": 5.0,
         "unit": "days",
         "rank": 2
       },
       {
-        "athlete_id": "sia",
-        "value": 0.0,
+        "athlete_id": "alborz",
+        "value": 3.0,
         "unit": "days",
+        "rank": 3
+      }
+    ],
+    "consistency": [
+      {
+        "athlete_id": "sia",
+        "value": 93.0,
+        "unit": "%",
+        "rank": 1
+      },
+      {
+        "athlete_id": "ebi",
+        "value": 89.0,
+        "unit": "%",
+        "rank": 2
+      },
+      {
+        "athlete_id": "alborz",
+        "value": 68.0,
+        "unit": "%",
         "rank": 3
       }
     ]
@@ -1126,38 +1349,38 @@
   "head_to_head": {
     "this_week": {
       "all": {
-        "leader": "ebi",
+        "leader": "alborz",
         "values": {
-          "ebi": 20.7,
-          "sia": 0.0,
-          "alborz": 1.6
+          "ebi": 88.9,
+          "sia": 112.6,
+          "alborz": 248.4
         },
         "unit": "km"
       },
       "swim": {
         "leader": "ebi",
         "values": {
-          "ebi": 4.2,
-          "sia": 0.0,
-          "alborz": 1.6
+          "ebi": 2.9,
+          "sia": 2.2,
+          "alborz": 0.0
         },
         "unit": "km"
       },
       "bike": {
-        "leader": "ebi",
+        "leader": "alborz",
         "values": {
-          "ebi": 16.6,
-          "sia": 0.0,
-          "alborz": 0.0
+          "ebi": 71.1,
+          "sia": 98.9,
+          "alborz": 235.5
         },
         "unit": "km"
       },
       "run": {
-        "leader": null,
+        "leader": "ebi",
         "values": {
-          "ebi": 0.0,
-          "sia": 0.0,
-          "alborz": 0.0
+          "ebi": 14.9,
+          "sia": 11.5,
+          "alborz": 13.0
         },
         "unit": "km"
       }
@@ -1248,443 +1471,470 @@
     "athletes": {
       "ebi": {
         "all_km": [
-          0.0,
-          0.0,
-          4.4,
-          13.2,
-          6.3,
-          2.2,
-          7.1,
-          13.9,
-          11.5,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          38.6,
-          0.0,
-          0.0,
-          31.1,
-          47.9,
-          5.5,
-          132.2,
-          7.2,
-          89.4,
-          48.7,
-          20.7
+          48.4,
+          112.9,
+          86.0,
+          297.3,
+          211.9,
+          144.4,
+          113.1,
+          82.5,
+          120.1,
+          61.8,
+          200.1,
+          309.2,
+          193.7,
+          244.8,
+          166.8,
+          251.2,
+          331.8,
+          212.5,
+          230.6,
+          181.5,
+          241.2,
+          238.9,
+          131.8,
+          223.4,
+          88.9
         ],
         "swim_km": [
           0.0,
           0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.3,
-          3.3,
-          7.2,
-          5.0,
+          3.1,
+          3.1,
+          2.0,
+          3.0,
+          2.1,
+          4.5,
           4.0,
-          4.2
+          5.4,
+          11.6,
+          0.0,
+          2.0,
+          2.6,
+          2.7,
+          3.1,
+          0.0,
+          1.9,
+          2.8,
+          2.9,
+          2.1,
+          6.5,
+          3.1,
+          0.0,
+          2.9
         ],
         "bike_km": [
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          13.9,
-          11.5,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          38.6,
-          0.0,
-          0.0,
-          31.1,
-          42.7,
-          0.0,
-          128.9,
-          0.0,
-          73.9,
-          29.5,
-          16.6
+          28.5,
+          83.5,
+          63.4,
+          271.8,
+          199.9,
+          141.4,
+          83.8,
+          61.5,
+          90.2,
+          33.2,
+          165.7,
+          274.9,
+          141.4,
+          216.3,
+          119.3,
+          240.6,
+          290.3,
+          195.7,
+          216.6,
+          136.1,
+          176.8,
+          211.9,
+          98.1,
+          154.7,
+          71.1
         ],
         "run_km": [
+          19.9,
+          29.4,
+          19.5,
+          22.4,
+          10.0,
           0.0,
-          0.0,
-          4.4,
-          13.2,
-          6.3,
-          2.2,
-          7.1,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          5.2,
-          5.2,
-          0.0,
-          0.0,
-          10.5,
-          15.2,
-          0.0
+          27.2,
+          16.4,
+          25.8,
+          23.1,
+          22.8,
+          34.3,
+          50.3,
+          26.0,
+          44.8,
+          7.4,
+          41.5,
+          14.9,
+          11.2,
+          42.6,
+          62.3,
+          20.5,
+          30.6,
+          68.7,
+          14.9
         ],
         "hours": [
-          0.0,
-          0.0,
-          0.6,
-          1.5,
-          0.7,
-          0.2,
-          0.9,
-          0.8,
-          0.7,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          2.6,
-          0.0,
-          0.0,
-          1.8,
           2.9,
-          1.0,
-          7.4,
-          1.6,
-          6.4,
-          5.6,
-          3.0
+          5.5,
+          4.9,
+          12.0,
+          8.7,
+          6.3,
+          5.5,
+          4.7,
+          6.5,
+          4.8,
+          11.7,
+          13.2,
+          9.8,
+          10.9,
+          9.0,
+          10.3,
+          14.0,
+          8.2,
+          9.0,
+          9.4,
+          12.0,
+          11.4,
+          6.7,
+          12.0,
+          5.0
         ]
       },
       "sia": {
         "all_km": [
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0
+          58.7,
+          73.7,
+          115.9,
+          151.5,
+          140.3,
+          173.4,
+          97.1,
+          75.5,
+          116.8,
+          240.2,
+          61.1,
+          188.7,
+          101.4,
+          193.0,
+          84.7,
+          94.8,
+          80.7,
+          32.4,
+          198.2,
+          112.7,
+          169.8,
+          162.1,
+          103.0,
+          135.6,
+          112.6
         ],
         "swim_km": [
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0
+          2.1,
+          12.7,
+          8.3,
+          2.2,
+          7.8,
+          9.0,
+          2.2,
+          2.4,
+          3.2,
+          3.2,
+          7.6,
+          13.0,
+          2.6,
+          10.0,
+          6.5,
+          7.6,
+          8.7,
+          11.7,
+          4.3,
+          5.1,
+          2.7,
+          6.2,
+          5.9,
+          3.1,
+          2.2
         ],
         "bike_km": [
+          33.3,
+          50.5,
+          88.2,
+          111.2,
+          121.7,
+          154.3,
+          57.3,
+          32.7,
+          95.0,
+          207.1,
+          31.8,
+          155.3,
+          42.6,
+          182.9,
+          33.2,
+          63.8,
+          63.2,
           0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0
+          177.6,
+          78.6,
+          128.8,
+          116.6,
+          53.0,
+          89.6,
+          98.9
         ],
         "run_km": [
+          23.2,
+          10.5,
+          19.3,
+          38.0,
+          10.8,
+          10.1,
+          37.6,
+          40.4,
+          18.7,
+          29.8,
+          21.8,
+          20.4,
+          56.3,
           0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0
+          45.1,
+          23.4,
+          8.8,
+          20.7,
+          16.3,
+          28.9,
+          38.3,
+          39.3,
+          44.1,
+          42.9,
+          11.5
         ],
         "hours": [
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0
+          3.9,
+          6.6,
+          7.0,
+          7.6,
+          7.5,
+          8.6,
+          5.7,
+          5.0,
+          5.9,
+          10.6,
+          5.2,
+          10.7,
+          6.9,
+          9.2,
+          6.6,
+          6.0,
+          6.2,
+          4.9,
+          8.6,
+          6.6,
+          8.2,
+          8.8,
+          7.5,
+          7.7,
+          4.9
         ]
       },
       "alborz": {
         "all_km": [
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          32.4,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          10.9,
-          0.0,
-          0.0,
-          0.0,
-          26.5,
-          0.0,
-          0.0,
-          7.7,
-          1.2,
-          0.0,
-          2.3,
-          1.6
+          59.7,
+          230.0,
+          81.0,
+          199.0,
+          184.1,
+          224.5,
+          103.3,
+          178.0,
+          285.6,
+          236.5,
+          113.9,
+          92.3,
+          265.7,
+          335.8,
+          280.9,
+          155.0,
+          156.5,
+          122.0,
+          277.2,
+          156.0,
+          244.6,
+          279.3,
+          254.9,
+          268.4,
+          248.4
         ],
         "swim_km": [
+          2.0,
+          1.8,
+          2.7,
           0.0,
+          1.5,
+          2.1,
           0.0,
+          5.0,
+          4.6,
           0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.8,
-          1.2,
+          2.4,
+          3.7,
+          1.5,
+          2.7,
           0.0,
           2.3,
-          1.6
-        ],
-        "bike_km": [
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          32.4,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          10.9,
-          0.0,
-          0.0,
-          0.0,
-          26.5,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0
-        ],
-        "run_km": [
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          6.9,
-          0.0,
-          0.0,
-          0.0,
-          0.0
-        ],
-        "hours": [
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          2.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.6,
-          0.0,
           0.0,
           0.0,
           1.6,
           0.0,
           0.0,
-          1.2,
-          0.6,
+          2.1,
+          2.6,
+          2.1,
+          0.0
+        ],
+        "bike_km": [
+          52.2,
+          222.0,
+          59.7,
+          182.4,
+          161.0,
+          206.9,
+          90.5,
+          163.0,
+          281.0,
+          227.5,
+          95.5,
+          68.9,
+          264.1,
+          333.1,
+          266.3,
+          132.4,
+          136.1,
+          106.1,
+          238.3,
+          132.5,
+          228.9,
+          257.8,
+          230.5,
+          228.1,
+          235.5
+        ],
+        "run_km": [
+          5.5,
+          6.2,
+          18.5,
+          16.6,
+          21.5,
+          15.5,
+          12.8,
+          10.1,
           0.0,
-          1.2,
-          0.8
+          9.0,
+          16.1,
+          19.7,
+          0.0,
+          0.0,
+          14.6,
+          20.3,
+          20.4,
+          16.0,
+          37.2,
+          23.4,
+          15.7,
+          19.3,
+          21.9,
+          38.1,
+          13.0
+        ],
+        "hours": [
+          2.6,
+          8.4,
+          4.8,
+          7.7,
+          8.5,
+          9.5,
+          4.5,
+          8.9,
+          10.8,
+          8.9,
+          5.5,
+          5.1,
+          10.1,
+          13.2,
+          10.4,
+          6.8,
+          6.3,
+          5.1,
+          12.9,
+          6.9,
+          10.0,
+          12.3,
+          11.7,
+          11.9,
+          9.6
         ]
       }
     }
   },
   "team": {
     "totals": {
-      "distance_km": 562.6,
-      "moving_h": 45.9,
-      "activities": 58,
-      "elevation_m": 3920
+      "distance_km": 12631.5,
+      "moving_h": 602.7,
+      "activities": 468,
+      "elevation_m": 145772
     },
     "this_week": {
-      "distance_km": 22.3,
-      "moving_h": 3.8,
-      "activities": 4,
-      "elevation_m": 0
+      "distance_km": 449.9,
+      "moving_h": 19.5,
+      "activities": 11,
+      "elevation_m": 6364
     },
     "by_sport": {
-      "swim": 29.8,
-      "bike": 456.5,
-      "run": 76.3
+      "swim": 262.8,
+      "bike": 10634.3,
+      "run": 1734.4
     },
     "challenge": {
       "label": "Road to Mallorca — 15,000 km as a team",
       "target_km": 15000,
-      "done_km": 562.6,
-      "pct": 3.8,
-      "remaining_km": 14437.4
+      "done_km": 12631.5,
+      "pct": 84.2,
+      "remaining_km": 2368.5,
+      "contributions": [
+        {
+          "athlete_id": "ebi",
+          "km": 4524.9,
+          "pct_of_done": 35.8,
+          "pct_of_goal": 30.2
+        },
+        {
+          "athlete_id": "sia",
+          "km": 3074.0,
+          "pct_of_done": 24.3,
+          "pct_of_goal": 20.5
+        },
+        {
+          "athlete_id": "alborz",
+          "km": 5032.6,
+          "pct_of_done": 39.8,
+          "pct_of_goal": 33.6
+        }
+      ]
     },
     "calendar": [
+      {
+        "date": "2025-12-19",
+        "total": 0,
+        "ebi": 0,
+        "sia": 0,
+        "alborz": 0
+      },
       {
         "date": "2025-12-20",
         "total": 0,
@@ -1771,1143 +2021,1143 @@
       },
       {
         "date": "2026-01-01",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-01-02",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 4,
+        "ebi": 1,
+        "sia": 2,
+        "alborz": 1
       },
       {
         "date": "2026-01-03",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-01-04",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
+        "total": 2,
+        "ebi": 1,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-01-05",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 5,
+        "ebi": 1,
+        "sia": 2,
+        "alborz": 2
       },
       {
         "date": "2026-01-06",
-        "total": 0,
+        "total": 1,
         "ebi": 0,
-        "sia": 0,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-01-07",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 4,
+        "ebi": 2,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-01-08",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
+        "total": 2,
+        "ebi": 1,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-01-09",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-01-10",
-        "total": 0,
+        "total": 2,
         "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-01-11",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-01-12",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-01-13",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 4,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 2
       },
       {
         "date": "2026-01-14",
-        "total": 0,
-        "ebi": 0,
+        "total": 2,
+        "ebi": 1,
         "sia": 0,
-        "alborz": 0
+        "alborz": 1
       },
       {
         "date": "2026-01-15",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
+        "total": 3,
+        "ebi": 1,
+        "sia": 2,
         "alborz": 0
       },
       {
         "date": "2026-01-16",
-        "total": 0,
+        "total": 2,
         "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-01-17",
-        "total": 1,
+        "total": 4,
         "ebi": 1,
-        "sia": 0,
-        "alborz": 0
+        "sia": 2,
+        "alborz": 1
       },
       {
         "date": "2026-01-18",
-        "total": 0,
+        "total": 1,
         "ebi": 0,
-        "sia": 0,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-01-19",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-01-20",
-        "total": 1,
-        "ebi": 1,
-        "sia": 0,
+        "total": 3,
+        "ebi": 2,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-01-21",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 4,
+        "ebi": 1,
+        "sia": 2,
+        "alborz": 1
       },
       {
         "date": "2026-01-22",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
+        "total": 2,
+        "ebi": 1,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-01-23",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
+        "total": 3,
+        "ebi": 2,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-01-24",
-        "total": 1,
+        "total": 3,
         "ebi": 1,
-        "sia": 0,
-        "alborz": 0
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-01-25",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-01-26",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
+        "total": 2,
+        "ebi": 1,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-01-27",
-        "total": 1,
-        "ebi": 1,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 0,
+        "sia": 1,
+        "alborz": 2
       },
       {
         "date": "2026-01-28",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 4,
+        "ebi": 1,
+        "sia": 2,
+        "alborz": 1
       },
       {
         "date": "2026-01-29",
-        "total": 0,
+        "total": 3,
         "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "sia": 2,
+        "alborz": 1
       },
       {
         "date": "2026-01-30",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-01-31",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 4,
+        "ebi": 2,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-02-01",
-        "total": 0,
-        "ebi": 0,
+        "total": 3,
+        "ebi": 2,
         "sia": 0,
-        "alborz": 0
+        "alborz": 1
       },
       {
         "date": "2026-02-02",
-        "total": 0,
+        "total": 1,
         "ebi": 0,
         "sia": 0,
-        "alborz": 0
+        "alborz": 1
       },
       {
         "date": "2026-02-03",
-        "total": 1,
+        "total": 3,
         "ebi": 1,
-        "sia": 0,
-        "alborz": 0
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-02-04",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-02-05",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-02-06",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-02-07",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 4,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 2
       },
       {
         "date": "2026-02-08",
-        "total": 0,
+        "total": 1,
         "ebi": 0,
-        "sia": 0,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-02-09",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
+        "total": 2,
+        "ebi": 1,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-02-10",
-        "total": 1,
-        "ebi": 1,
-        "sia": 0,
+        "total": 3,
+        "ebi": 2,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-02-11",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-02-12",
-        "total": 0,
+        "total": 2,
         "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-02-13",
-        "total": 0,
+        "total": 2,
         "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-02-14",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-02-15",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
+        "total": 2,
+        "ebi": 1,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-02-16",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
+        "total": 2,
+        "ebi": 1,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-02-17",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-02-18",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-02-19",
-        "total": 1,
-        "ebi": 1,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 0,
+        "sia": 1,
+        "alborz": 2
       },
       {
         "date": "2026-02-20",
-        "total": 0,
-        "ebi": 0,
+        "total": 1,
+        "ebi": 1,
         "sia": 0,
         "alborz": 0
       },
       {
         "date": "2026-02-21",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
+        "total": 2,
+        "ebi": 1,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-02-22",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-02-23",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-02-24",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-02-25",
-        "total": 0,
+        "total": 2,
         "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-02-26",
-        "total": 1,
+        "total": 3,
         "ebi": 1,
-        "sia": 0,
-        "alborz": 0
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-02-27",
-        "total": 0,
+        "total": 3,
         "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "sia": 1,
+        "alborz": 2
       },
       {
         "date": "2026-02-28",
-        "total": 0,
-        "ebi": 0,
+        "total": 1,
+        "ebi": 1,
         "sia": 0,
         "alborz": 0
       },
       {
         "date": "2026-03-01",
-        "total": 1,
-        "ebi": 0,
-        "sia": 0,
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
         "alborz": 1
       },
       {
         "date": "2026-03-02",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-03-03",
-        "total": 0,
+        "total": 2,
         "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-03-04",
-        "total": 0,
+        "total": 1,
         "ebi": 0,
-        "sia": 0,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-03-05",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-03-06",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-03-07",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-03-08",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-03-09",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-03-10",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
+        "total": 3,
+        "ebi": 2,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-03-11",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 4,
+        "ebi": 2,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-03-12",
-        "total": 0,
-        "ebi": 0,
+        "total": 1,
+        "ebi": 1,
         "sia": 0,
         "alborz": 0
       },
       {
         "date": "2026-03-13",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-03-14",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
+        "total": 2,
+        "ebi": 1,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-03-15",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 4,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 2
       },
       {
         "date": "2026-03-16",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 4,
+        "ebi": 1,
+        "sia": 2,
+        "alborz": 1
       },
       {
         "date": "2026-03-17",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 4,
+        "ebi": 1,
+        "sia": 2,
+        "alborz": 1
       },
       {
         "date": "2026-03-18",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
+        "total": 3,
+        "ebi": 1,
+        "sia": 2,
         "alborz": 0
       },
       {
         "date": "2026-03-19",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-03-20",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 5,
+        "ebi": 2,
+        "sia": 2,
+        "alborz": 1
       },
       {
         "date": "2026-03-21",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-03-22",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
+        "total": 2,
+        "ebi": 1,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-03-23",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
+        "total": 3,
+        "ebi": 2,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-03-24",
-        "total": 0,
+        "total": 2,
         "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-03-25",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-03-26",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-03-27",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
-      },
-      {
-        "date": "2026-03-28",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
-      },
-      {
-        "date": "2026-03-29",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
-      },
-      {
-        "date": "2026-03-30",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
-      },
-      {
-        "date": "2026-03-31",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
-      },
-      {
-        "date": "2026-04-01",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
-      },
-      {
-        "date": "2026-04-02",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
-      },
-      {
-        "date": "2026-04-03",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
-      },
-      {
-        "date": "2026-04-04",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
-      },
-      {
-        "date": "2026-04-05",
-        "total": 1,
-        "ebi": 0,
+        "total": 2,
+        "ebi": 1,
         "sia": 0,
         "alborz": 1
       },
       {
-        "date": "2026-04-06",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
+        "date": "2026-03-28",
+        "total": 2,
+        "ebi": 1,
+        "sia": 1,
         "alborz": 0
       },
       {
-        "date": "2026-04-07",
-        "total": 0,
+        "date": "2026-03-29",
+        "total": 2,
         "ebi": 0,
+        "sia": 1,
+        "alborz": 1
+      },
+      {
+        "date": "2026-03-30",
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
+      },
+      {
+        "date": "2026-03-31",
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
+      },
+      {
+        "date": "2026-04-01",
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
+      },
+      {
+        "date": "2026-04-02",
+        "total": 5,
+        "ebi": 2,
+        "sia": 2,
+        "alborz": 1
+      },
+      {
+        "date": "2026-04-03",
+        "total": 2,
+        "ebi": 0,
+        "sia": 1,
+        "alborz": 1
+      },
+      {
+        "date": "2026-04-04",
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
+      },
+      {
+        "date": "2026-04-05",
+        "total": 2,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 0
+      },
+      {
+        "date": "2026-04-06",
+        "total": 2,
+        "ebi": 1,
         "sia": 0,
+        "alborz": 1
+      },
+      {
+        "date": "2026-04-07",
+        "total": 3,
+        "ebi": 1,
+        "sia": 2,
         "alborz": 0
       },
       {
         "date": "2026-04-08",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-04-09",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-04-10",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 4,
+        "ebi": 2,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-04-11",
-        "total": 1,
+        "total": 2,
         "ebi": 1,
-        "sia": 0,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-04-12",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 4,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 2
       },
       {
         "date": "2026-04-13",
-        "total": 0,
-        "ebi": 0,
+        "total": 1,
+        "ebi": 1,
         "sia": 0,
         "alborz": 0
       },
       {
         "date": "2026-04-14",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 4,
+        "ebi": 2,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-04-15",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 4,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 2
       },
       {
         "date": "2026-04-16",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
+        "total": 3,
+        "ebi": 1,
+        "sia": 2,
         "alborz": 0
       },
       {
         "date": "2026-04-17",
-        "total": 0,
+        "total": 2,
         "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-04-18",
-        "total": 0,
+        "total": 1,
         "ebi": 0,
-        "sia": 0,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-04-19",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 4,
+        "ebi": 2,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-04-20",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-04-21",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-04-22",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
+        "total": 2,
+        "ebi": 1,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-04-23",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-04-24",
-        "total": 0,
-        "ebi": 0,
+        "total": 2,
+        "ebi": 2,
         "sia": 0,
         "alborz": 0
       },
       {
         "date": "2026-04-25",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
+        "total": 2,
+        "ebi": 1,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-04-26",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-04-27",
-        "total": 0,
-        "ebi": 0,
+        "total": 2,
+        "ebi": 1,
         "sia": 0,
-        "alborz": 0
+        "alborz": 1
       },
       {
         "date": "2026-04-28",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-04-29",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-04-30",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
+        "total": 2,
+        "ebi": 1,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-05-01",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
+        "total": 2,
+        "ebi": 1,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-05-02",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
-      },
-      {
-        "date": "2026-05-03",
-        "total": 2,
+        "total": 3,
         "ebi": 1,
-        "sia": 0,
+        "sia": 1,
         "alborz": 1
       },
       {
-        "date": "2026-05-04",
-        "total": 0,
+        "date": "2026-05-03",
+        "total": 1,
         "ebi": 0,
-        "sia": 0,
+        "sia": 1,
+        "alborz": 0
+      },
+      {
+        "date": "2026-05-04",
+        "total": 2,
+        "ebi": 1,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-05-05",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-05-06",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-05-07",
-        "total": 1,
-        "ebi": 1,
-        "sia": 0,
-        "alborz": 0
+        "total": 2,
+        "ebi": 0,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-05-08",
-        "total": 1,
+        "total": 3,
         "ebi": 1,
-        "sia": 0,
-        "alborz": 0
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-05-09",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 4,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 2
       },
       {
         "date": "2026-05-10",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-05-11",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
+        "total": 2,
+        "ebi": 1,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-05-12",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-05-13",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
+        "total": 2,
+        "ebi": 1,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-05-14",
-        "total": 1,
-        "ebi": 1,
-        "sia": 0,
-        "alborz": 0
+        "total": 4,
+        "ebi": 2,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-05-15",
-        "total": 0,
-        "ebi": 0,
+        "total": 2,
+        "ebi": 1,
         "sia": 0,
-        "alborz": 0
+        "alborz": 1
       },
       {
         "date": "2026-05-16",
         "total": 1,
-        "ebi": 1,
-        "sia": 0,
+        "ebi": 0,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-05-17",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
-      },
-      {
-        "date": "2026-05-18",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
-      },
-      {
-        "date": "2026-05-19",
-        "total": 1,
-        "ebi": 0,
-        "sia": 0,
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
         "alborz": 1
       },
       {
-        "date": "2026-05-20",
-        "total": 1,
+        "date": "2026-05-18",
+        "total": 3,
         "ebi": 1,
-        "sia": 0,
+        "sia": 1,
+        "alborz": 1
+      },
+      {
+        "date": "2026-05-19",
+        "total": 2,
+        "ebi": 1,
+        "sia": 1,
         "alborz": 0
       },
       {
-        "date": "2026-05-21",
+        "date": "2026-05-20",
         "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
+      },
+      {
+        "date": "2026-05-21",
+        "total": 4,
         "ebi": 2,
-        "sia": 0,
+        "sia": 1,
         "alborz": 1
       },
       {
         "date": "2026-05-22",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
-      },
-      {
-        "date": "2026-05-23",
-        "total": 4,
-        "ebi": 4,
-        "sia": 0,
-        "alborz": 0
-      },
-      {
-        "date": "2026-05-24",
-        "total": 1,
-        "ebi": 0,
-        "sia": 0,
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
         "alborz": 1
       },
       {
-        "date": "2026-05-25",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
+        "date": "2026-05-23",
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
+      },
+      {
+        "date": "2026-05-24",
+        "total": 2,
+        "ebi": 1,
+        "sia": 1,
         "alborz": 0
       },
       {
-        "date": "2026-05-26",
-        "total": 3,
+        "date": "2026-05-25",
+        "total": 4,
         "ebi": 1,
-        "sia": 0,
+        "sia": 1,
+        "alborz": 2
+      },
+      {
+        "date": "2026-05-26",
+        "total": 4,
+        "ebi": 1,
+        "sia": 1,
         "alborz": 2
       },
       {
         "date": "2026-05-27",
-        "total": 1,
+        "total": 2,
         "ebi": 1,
-        "sia": 0,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-05-28",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
+        "total": 3,
+        "ebi": 2,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-05-29",
-        "total": 1,
+        "total": 4,
         "ebi": 1,
-        "sia": 0,
-        "alborz": 0
+        "sia": 2,
+        "alborz": 1
       },
       {
         "date": "2026-05-30",
-        "total": 1,
-        "ebi": 1,
-        "sia": 0,
+        "total": 3,
+        "ebi": 2,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-05-31",
-        "total": 1,
-        "ebi": 0,
-        "sia": 0,
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
         "alborz": 1
       },
       {
         "date": "2026-06-01",
-        "total": 3,
-        "ebi": 3,
-        "sia": 0,
-        "alborz": 0
+        "total": 2,
+        "ebi": 0,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-06-02",
-        "total": 1,
+        "total": 3,
         "ebi": 1,
-        "sia": 0,
-        "alborz": 0
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-06-03",
         "total": 1,
-        "ebi": 1,
-        "sia": 0,
+        "ebi": 0,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-06-04",
-        "total": 1,
-        "ebi": 1,
-        "sia": 0,
+        "total": 3,
+        "ebi": 2,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-06-05",
-        "total": 1,
+        "total": 4,
         "ebi": 1,
-        "sia": 0,
-        "alborz": 0
+        "sia": 1,
+        "alborz": 2
       },
       {
         "date": "2026-06-06",
-        "total": 1,
+        "total": 3,
         "ebi": 1,
-        "sia": 0,
-        "alborz": 0
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-06-07",
-        "total": 1,
+        "total": 3,
         "ebi": 1,
-        "sia": 0,
-        "alborz": 0
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-06-08",
-        "total": 2,
-        "ebi": 2,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-06-09",
-        "total": 1,
+        "total": 3,
         "ebi": 1,
-        "sia": 0,
-        "alborz": 0
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-06-10",
-        "total": 2,
-        "ebi": 2,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-06-11",
-        "total": 2,
+        "total": 3,
         "ebi": 1,
-        "sia": 0,
+        "sia": 1,
         "alborz": 1
       },
       {
         "date": "2026-06-12",
-        "total": 2,
-        "ebi": 0,
-        "sia": 0,
+        "total": 4,
+        "ebi": 1,
+        "sia": 1,
         "alborz": 2
       },
       {
@@ -2919,66 +3169,734 @@
       },
       {
         "date": "2026-06-14",
-        "total": 1,
+        "total": 3,
         "ebi": 1,
-        "sia": 0,
-        "alborz": 0
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-06-15",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
+        "total": 2,
+        "ebi": 1,
+        "sia": 1,
         "alborz": 0
       },
       {
         "date": "2026-06-16",
-        "total": 2,
-        "ebi": 2,
-        "sia": 0,
-        "alborz": 0
+        "total": 4,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 2
       },
       {
         "date": "2026-06-17",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
+        "total": 3,
+        "ebi": 1,
+        "sia": 1,
+        "alborz": 1
       },
       {
         "date": "2026-06-18",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
-      },
-      {
-        "date": "2026-06-19",
         "total": 2,
-        "ebi": 1,
-        "sia": 0,
+        "ebi": 0,
+        "sia": 1,
         "alborz": 1
       }
-    ]
+    ],
+    "locations": [
+      {
+        "lat": 32.64,
+        "lng": 51.74,
+        "count": 26,
+        "athletes": [
+          "alborz",
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.68,
+        "lng": 51.6,
+        "count": 25,
+        "athletes": [
+          "alborz",
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.62,
+        "lng": 51.66,
+        "count": 21,
+        "athletes": [
+          "alborz",
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.59,
+        "lng": 51.71,
+        "count": 20,
+        "athletes": [
+          "alborz",
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.68,
+        "lng": 51.59,
+        "count": 14,
+        "athletes": [
+          "alborz",
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.66,
+        "lng": 51.67,
+        "count": 13,
+        "athletes": [
+          "alborz",
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.59,
+        "lng": 51.72,
+        "count": 12,
+        "athletes": [
+          "alborz",
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.64,
+        "lng": 51.67,
+        "count": 12,
+        "athletes": [
+          "alborz",
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.67,
+        "lng": 51.6,
+        "count": 12,
+        "athletes": [
+          "alborz",
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.58,
+        "lng": 51.71,
+        "count": 11,
+        "athletes": [
+          "alborz",
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.64,
+        "lng": 51.73,
+        "count": 11,
+        "athletes": [
+          "alborz",
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.65,
+        "lng": 51.67,
+        "count": 11,
+        "athletes": [
+          "alborz",
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.66,
+        "lng": 51.66,
+        "count": 11,
+        "athletes": [
+          "alborz",
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.69,
+        "lng": 51.6,
+        "count": 10,
+        "athletes": [
+          "alborz",
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.65,
+        "lng": 51.66,
+        "count": 10,
+        "athletes": [
+          "alborz",
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.65,
+        "lng": 51.68,
+        "count": 10,
+        "athletes": [
+          "alborz",
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.62,
+        "lng": 51.67,
+        "count": 10,
+        "athletes": [
+          "alborz",
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.66,
+        "lng": 51.68,
+        "count": 9,
+        "athletes": [
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.63,
+        "lng": 51.66,
+        "count": 9,
+        "athletes": [
+          "alborz",
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.64,
+        "lng": 51.75,
+        "count": 9,
+        "athletes": [
+          "alborz",
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.68,
+        "lng": 51.61,
+        "count": 9,
+        "athletes": [
+          "alborz",
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.67,
+        "lng": 51.59,
+        "count": 8,
+        "athletes": [
+          "alborz",
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.61,
+        "lng": 51.66,
+        "count": 7,
+        "athletes": [
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.63,
+        "lng": 51.74,
+        "count": 7,
+        "athletes": [
+          "alborz",
+          "ebi"
+        ]
+      },
+      {
+        "lat": 32.63,
+        "lng": 51.73,
+        "count": 6,
+        "athletes": [
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.6,
+        "lng": 51.71,
+        "count": 6,
+        "athletes": [
+          "alborz",
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.65,
+        "lng": 51.74,
+        "count": 6,
+        "athletes": [
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.59,
+        "lng": 51.7,
+        "count": 6,
+        "athletes": [
+          "alborz",
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.63,
+        "lng": 51.75,
+        "count": 6,
+        "athletes": [
+          "alborz",
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.58,
+        "lng": 51.72,
+        "count": 6,
+        "athletes": [
+          "alborz",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.63,
+        "lng": 51.65,
+        "count": 5,
+        "athletes": [
+          "alborz",
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.6,
+        "lng": 51.72,
+        "count": 5,
+        "athletes": [
+          "alborz",
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.67,
+        "lng": 51.61,
+        "count": 5,
+        "athletes": [
+          "alborz",
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.69,
+        "lng": 51.59,
+        "count": 5,
+        "athletes": [
+          "alborz",
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.69,
+        "lng": 51.61,
+        "count": 4,
+        "athletes": [
+          "ebi"
+        ]
+      },
+      {
+        "lat": 32.62,
+        "lng": 51.65,
+        "count": 4,
+        "athletes": [
+          "alborz",
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.64,
+        "lng": 51.68,
+        "count": 4,
+        "athletes": [
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.63,
+        "lng": 51.67,
+        "count": 4,
+        "athletes": [
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.58,
+        "lng": 51.7,
+        "count": 4,
+        "athletes": [
+          "alborz",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.61,
+        "lng": 51.65,
+        "count": 3,
+        "athletes": [
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.65,
+        "lng": 51.73,
+        "count": 3,
+        "athletes": [
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.65,
+        "lng": 51.75,
+        "count": 3,
+        "athletes": [
+          "alborz",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.6,
+        "lng": 51.7,
+        "count": 2,
+        "athletes": [
+          "ebi",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.61,
+        "lng": 51.67,
+        "count": 2,
+        "athletes": [
+          "alborz",
+          "sia"
+        ]
+      },
+      {
+        "lat": 32.64,
+        "lng": 51.66,
+        "count": 1,
+        "athletes": [
+          "sia"
+        ]
+      }
+    ],
+    "patterns": {
+      "dow_labels": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "day_of_week": [
+        63,
+        72,
+        68,
+        71,
+        69,
+        62,
+        63
+      ],
+      "day_of_week_by_sport": {
+        "swim": [
+          19,
+          14,
+          12,
+          14,
+          16,
+          14,
+          13
+        ],
+        "bike": [
+          17,
+          34,
+          31,
+          37,
+          33,
+          26,
+          27
+        ],
+        "run": [
+          27,
+          24,
+          25,
+          20,
+          20,
+          22,
+          23
+        ]
+      },
+      "hour_of_day": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        49,
+        46,
+        93,
+        52,
+        0,
+        0,
+        0,
+        60,
+        0,
+        0,
+        0,
+        0,
+        48,
+        66,
+        54,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "cumulative": {
+      "labels": [
+        "2026-W01",
+        "2026-W02",
+        "2026-W03",
+        "2026-W04",
+        "2026-W05",
+        "2026-W06",
+        "2026-W07",
+        "2026-W08",
+        "2026-W09",
+        "2026-W10",
+        "2026-W11",
+        "2026-W12",
+        "2026-W13",
+        "2026-W14",
+        "2026-W15",
+        "2026-W16",
+        "2026-W17",
+        "2026-W18",
+        "2026-W19",
+        "2026-W20",
+        "2026-W21",
+        "2026-W22",
+        "2026-W23",
+        "2026-W24",
+        "2026-W25"
+      ],
+      "short": [
+        "29/12",
+        "05/01",
+        "12/01",
+        "19/01",
+        "26/01",
+        "02/02",
+        "09/02",
+        "16/02",
+        "23/02",
+        "02/03",
+        "09/03",
+        "16/03",
+        "23/03",
+        "30/03",
+        "06/04",
+        "13/04",
+        "20/04",
+        "27/04",
+        "04/05",
+        "11/05",
+        "18/05",
+        "25/05",
+        "01/06",
+        "08/06",
+        "15/06"
+      ],
+      "week_starts": [
+        "2025-12-29",
+        "2026-01-05",
+        "2026-01-12",
+        "2026-01-19",
+        "2026-01-26",
+        "2026-02-02",
+        "2026-02-09",
+        "2026-02-16",
+        "2026-02-23",
+        "2026-03-02",
+        "2026-03-09",
+        "2026-03-16",
+        "2026-03-23",
+        "2026-03-30",
+        "2026-04-06",
+        "2026-04-13",
+        "2026-04-20",
+        "2026-04-27",
+        "2026-05-04",
+        "2026-05-11",
+        "2026-05-18",
+        "2026-05-25",
+        "2026-06-01",
+        "2026-06-08",
+        "2026-06-15"
+      ],
+      "weekly_km": [
+        166.8,
+        416.6,
+        282.9,
+        647.8,
+        536.3,
+        542.3,
+        313.5,
+        336.0,
+        522.5,
+        538.5,
+        375.1,
+        590.2,
+        560.8,
+        773.6,
+        532.4,
+        501.0,
+        569.0,
+        366.9,
+        706.0,
+        450.2,
+        655.6,
+        680.3,
+        489.7,
+        627.4,
+        449.9
+      ],
+      "cumulative_km": [
+        166.8,
+        583.4,
+        866.3,
+        1514.1,
+        2050.4,
+        2592.7,
+        2906.2,
+        3242.2,
+        3764.7,
+        4303.2,
+        4678.3,
+        5268.5,
+        5829.3,
+        6602.9,
+        7135.3,
+        7636.3,
+        8205.3,
+        8572.2,
+        9278.2,
+        9728.4,
+        10384.0,
+        11064.3,
+        11554.0,
+        12181.4,
+        12631.3
+      ],
+      "target_km": 15000
+    }
   },
   "highlights": [
     {
+      "icon": "🔥",
+      "title": "Hottest streak",
+      "athlete_id": "ebi",
+      "text": "Ebi is on a 14-day streak — keep it alive."
+    },
+    {
       "icon": "👑",
       "title": "This week's leader",
-      "athlete_id": "ebi",
-      "text": "Ebi tops the team with 20.7 km across all sports this week."
+      "athlete_id": "alborz",
+      "text": "Alborz tops the team with 248.4 km across all sports this week."
     },
     {
       "icon": "🚴",
       "title": "Biggest session",
-      "athlete_id": "ebi",
-      "text": "Ebi logged a 16.6 km bike — the week's longest."
+      "athlete_id": "alborz",
+      "text": "Alborz logged a 84.1 km bike — the week's longest."
     },
     {
       "icon": "🏝️",
       "title": "Road to Mallorca",
       "athlete_id": null,
-      "text": "Together you've covered 562.6 of 15000 km (3.8%) toward the team goal."
+      "text": "Together you've covered 12631.5 of 15000 km (84.2%) toward the team goal."
+    },
+    {
+      "icon": "⛰️",
+      "title": "King of the mountains",
+      "athlete_id": "alborz",
+      "text": "Alborz climbed 4514 m this week — the most of anyone."
+    },
+    {
+      "icon": "🧱",
+      "title": "Mr. Consistent",
+      "athlete_id": "sia",
+      "text": "Sia has trained 93% of days over the last 8 weeks — relentless."
+    },
+    {
+      "icon": "🤝",
+      "title": "Team effort",
+      "athlete_id": null,
+      "text": "11 sessions and 449.9 km logged between you this week. Compounding."
+    },
+    {
+      "icon": "⚖️",
+      "title": "Most balanced",
+      "athlete_id": "sia",
+      "text": "Sia's swim/bike/run split is the most even — a true triathlete's engine."
     }
   ]
 }

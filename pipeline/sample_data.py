@@ -60,6 +60,16 @@ PROFILES = {
 
 START_HOURS = [6, 7, 7, 8, 12, 17, 18, 19]  # bias toward mornings/evenings
 
+# Sample training spots (real data fills these from Garmin GPS). Clustered around
+# one city so the demo map looks populated; coords rounded to ~1 km like real data.
+TRAIN_SPOTS = [
+    (32.62, 51.66),  # city park loop
+    (32.65, 51.67),  # riverside path
+    (32.59, 51.71),  # the hills
+    (32.68, 51.60),  # the lake (open water)
+    (32.64, 51.74),  # east route
+]
+
 
 def _mk_activity(rng: random.Random, aid: str, d: date, sport: str, idx: int, ramp: float) -> Activity:
     p = PROFILES[aid]
@@ -100,6 +110,17 @@ def _mk_activity(rng: random.Random, aid: str, d: date, sport: str, idx: int, ra
         km = max(km, rng.uniform(21.5, 32))
         moving_s = int(km * rng.uniform(300, 330))
 
+    # location: outdoor sports get a spot + jitter; pool swims have none
+    if sport == "swim":
+        spot = TRAIN_SPOTS[3] if rng.random() < 0.25 else None  # occasional open water
+    else:
+        spot = rng.choice(TRAIN_SPOTS)
+    if spot:
+        lat = round(spot[0] + rng.uniform(-0.01, 0.01), 2)
+        lng = round(spot[1] + rng.uniform(-0.01, 0.01), 2)
+    else:
+        lat = lng = None
+
     return Activity(
         athlete_id=aid,
         source="garmin",
@@ -116,6 +137,8 @@ def _mk_activity(rng: random.Random, aid: str, d: date, sport: str, idx: int, ra
         avg_speed=round(speed * 1000 / 3600, 3),
         suffer_score=round(hr - 100 + km, 0),
         kudos=rng.randint(0, 32),
+        start_lat=lat,
+        start_lng=lng,
     )
 
 

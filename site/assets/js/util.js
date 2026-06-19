@@ -90,6 +90,71 @@ export async function loadDashboard() {
   return res.json();
 }
 
+// Daily content library (quotes, tips, legends, messages). Optional — the site
+// works without it. Returns null on failure.
+export async function loadContent() {
+  try {
+    const res = await fetch("data/content.json", { cache: "no-cache" });
+    if (!res.ok) return null;
+    return await res.json();
+  } catch {
+    return null;
+  }
+}
+
+// Whole-day index that changes at local midnight — drives deterministic daily
+// rotation (everyone sees the same "today" content, and it advances each day
+// with no rebuild).
+export function dayIndex(d = new Date()) {
+  return Math.floor(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()) / 86400000);
+}
+
+// Pick the n-th item for "today" from a list, rotating daily.
+export function pickDaily(list, offset = 0) {
+  if (!list || !list.length) return null;
+  return list[(dayIndex() + offset) % list.length];
+}
+
+// ---- shared SVG hover tooltip (event-delegated) --------------------------
+let _tipEl;
+function _tip() {
+  if (!_tipEl) {
+    _tipEl = document.createElement("div");
+    _tipEl.className = "chart-tip";
+    _tipEl.hidden = true;
+    document.body.appendChild(_tipEl);
+  }
+  return _tipEl;
+}
+
+/** Enable tooltips on any descendant carrying data-tip="line1\nline2".
+ *  Call once per chart container after rendering its innerHTML. */
+export function enableTips(container) {
+  if (!container || container._tipsOn) return;
+  container._tipsOn = true;
+  const tip = _tip();
+  const move = (e) => {
+    const pt = e.touches ? e.touches[0] : e;
+    const el = document.elementFromPoint(pt.clientX, pt.clientY);
+    const host = el && el.closest("[data-tip]");
+    if (host) {
+      tip.innerHTML = host.getAttribute("data-tip").split("\n").map((l) => `<div>${l}</div>`).join("");
+      tip.hidden = false;
+      const pad = 14;
+      let x = pt.clientX + pad, y = pt.clientY + pad;
+      const w = tip.offsetWidth, h = tip.offsetHeight;
+      if (x + w > innerWidth - 8) x = pt.clientX - w - pad;
+      if (y + h > innerHeight - 8) y = pt.clientY - h - pad;
+      tip.style.left = `${x}px`;
+      tip.style.top = `${y}px`;
+    } else {
+      tip.hidden = true;
+    }
+  };
+  container.addEventListener("pointermove", move);
+  container.addEventListener("pointerleave", () => { tip.hidden = true; });
+}
+
 export function toast(msg) {
   const t = byId("toast");
   if (!t) return;

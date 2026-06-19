@@ -39,6 +39,8 @@ CREATE TABLE IF NOT EXISTS activities (
     avg_speed     REAL,
     suffer_score  REAL,
     kudos         INTEGER NOT NULL DEFAULT 0,
+    start_lat     REAL,                          -- rounded to ~1km for privacy
+    start_lng     REAL,
     PRIMARY KEY (source, activity_id)
 );
 CREATE INDEX IF NOT EXISTS idx_act_athlete_day ON activities(athlete_id, day);
@@ -65,7 +67,18 @@ def connect(db_path: Path | str = DEFAULT_DB) -> sqlite3.Connection:
     conn = sqlite3.connect(str(path))
     conn.row_factory = sqlite3.Row
     conn.executescript(SCHEMA)
+    _migrate(conn)
     return conn
+
+
+def _migrate(conn: sqlite3.Connection) -> None:
+    """Add any columns missing from an older committed DB (CREATE TABLE
+    IF NOT EXISTS won't alter an existing table)."""
+    have = {r[1] for r in conn.execute("PRAGMA table_info(activities)")}
+    for col, decl in (("start_lat", "REAL"), ("start_lng", "REAL")):
+        if col not in have:
+            conn.execute(f"ALTER TABLE activities ADD COLUMN {col} {decl}")
+    conn.commit()
 
 
 def save_activities(conn: sqlite3.Connection, activities: list[Activity]) -> int:

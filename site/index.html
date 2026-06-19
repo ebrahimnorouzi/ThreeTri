@@ -24,6 +24,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
 
+  <!-- Leaflet for the training map (graceful: site works if it fails to load) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
@@ -71,6 +75,23 @@
       </div>
     </section>
 
+    <!-- ====================== MILESTONE / RACE-DAY BANNER ====================== -->
+    <section class="banner" id="milestone-banner" hidden></section>
+
+    <!-- ====================== DAILY BRIEFING ====================== -->
+    <section class="block" id="briefing-block">
+      <div class="block-head">
+        <h2>Today's briefing</h2>
+        <p class="block-sub" id="briefing-date"></p>
+      </div>
+      <div class="briefing-grid">
+        <div class="card brief-quote" id="brief-quote"></div>
+        <div class="card brief-tip" id="brief-tip"></div>
+        <div class="card brief-legend" id="brief-legend"></div>
+      </div>
+      <div class="nudge-grid" id="nudge-grid"></div>
+    </section>
+
     <!-- ====================== STANDINGS / PODIUM ====================== -->
     <section class="block" id="standings-block">
       <div class="block-head">
@@ -98,6 +119,9 @@
         </div>
         <div class="bar-track big"><div class="bar-fill team" id="challenge-bar"></div></div>
         <p class="challenge-sub" id="challenge-sub"></p>
+        <div class="contrib-head">Who's pulling the weight</div>
+        <div class="contrib-stack" id="contrib-stack" title="Each athlete's share of the distance done so far"></div>
+        <div class="contrib-legend" id="contrib-legend"></div>
       </div>
     </section>
 
@@ -119,7 +143,50 @@
       <div class="chart-wrap card">
         <div id="trend-chart" class="trend-chart"></div>
         <div class="legend" id="trend-legend"></div>
+        <p class="axis-note">X: week starting · Y: distance (km) · hover for the week's numbers</p>
       </div>
+    </section>
+
+    <!-- ====================== SPORT SPLIT ====================== -->
+    <section class="block" id="split-block">
+      <div class="block-head">
+        <h2>Discipline split</h2>
+        <p class="block-sub">Where each of us spends the kilometres (swim · bike · run).</p>
+      </div>
+      <div class="split-grid" id="split-grid"></div>
+    </section>
+
+    <!-- ====================== CUMULATIVE TO GOAL ====================== -->
+    <section class="block" id="cumulative-block">
+      <div class="block-head">
+        <h2>Road to 15,000 km</h2>
+        <p class="block-sub">Combined distance stacking up, week by week, toward the team goal.</p>
+      </div>
+      <div class="chart-wrap card">
+        <div id="cumulative-chart" class="trend-chart"></div>
+        <p class="axis-note">X: week · Y: cumulative team km · the dashed line is the goal · hover for detail</p>
+      </div>
+    </section>
+
+    <!-- ====================== WHEN WE TRAIN ====================== -->
+    <section class="block" id="pattern-block">
+      <div class="block-head">
+        <h2>When we train</h2>
+        <p class="block-sub">Team sessions by day of week and time of day.</p>
+      </div>
+      <div class="pattern-grid">
+        <div class="chart-wrap card"><h4 class="mini-title">By day of week</h4><div id="dow-chart"></div></div>
+        <div class="chart-wrap card"><h4 class="mini-title">By time of day</h4><div id="hod-chart"></div></div>
+      </div>
+    </section>
+
+    <!-- ====================== TRAINING MAP ====================== -->
+    <section class="block" id="map-block">
+      <div class="block-head">
+        <h2>Where we train</h2>
+        <p class="block-sub">Session start points (rounded to ~1 km for privacy). Bigger dot = more sessions.</p>
+      </div>
+      <div class="card map-card"><div id="train-map"></div></div>
     </section>
 
     <!-- ====================== HIGHLIGHTS ====================== -->
@@ -128,13 +195,29 @@
       <div class="highlight-grid" id="highlight-grid"></div>
     </section>
 
+    <!-- ====================== SCORING EXPLAINER ====================== -->
+    <section class="block" id="scoring-block">
+      <div class="block-head">
+        <h2>How scoring works</h2>
+        <p class="block-sub">Points reward effort across all three sports — not just whoever runs the most.</p>
+      </div>
+      <div class="score-grid">
+        <div class="card score-formula" id="score-formula"></div>
+        <div class="card score-levels" id="score-levels"></div>
+      </div>
+      <h3 class="badges-title">Badges <span id="badges-count"></span></h3>
+      <div class="badge-gallery" id="badge-gallery"></div>
+    </section>
+
     <!-- ====================== CONSISTENCY CALENDAR ====================== -->
     <section class="block" id="calendar-block">
       <div class="block-head">
         <h2>Consistency</h2>
-        <p class="block-sub">Every dot is a session. Don't break the chain.</p>
+        <p class="block-sub">Showing up beats one big day. Each square is a day — the more sessions, the brighter.</p>
       </div>
+      <div class="consist-people" id="consist-people"></div>
       <div class="calendar card" id="calendar"></div>
+      <p class="axis-note" id="consist-note"></p>
     </section>
 
     <!-- ====================== RECENT FEED ====================== -->
