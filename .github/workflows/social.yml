@@ -7,8 +7,8 @@ name: Social & notifications
 
 on:
   schedule:
-    # Posts — a different kind each hour (see posts.HOUR_ROTATION). UTC.
-    - cron: "0 5,7,9,11,13,15,17,19,21 * * *"
+    # Posts — a different kind each slot (see posts.HOUR_ROTATION). UTC. ~13/day.
+    - cron: "0 4,6,7,8,10,11,12,14,15,16,18,19,21 * * *"
     # Daily coach-digest email.
     - cron: "30 5 * * *"
   workflow_dispatch:

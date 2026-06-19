@@ -10,18 +10,24 @@ from __future__ import annotations
 
 HASHTAGS = "#triathlon #swimbikerun"
 
-# Which kind to post at each scheduled hour (UTC). Tune to taste; more entries
-# = more posts per day. Kept varied so it never feels repetitive or spammy.
+# Which kind to post at each scheduled hour (UTC). Add/remove hours here (and in
+# .github/workflows/social.yml's cron) to change how many posts/day. The daily
+# content kinds (quote/tip/legend/song/video) are indexed by hour too, so even a
+# repeated kind shows different content each slot. ~13 posts/day below.
 HOUR_ROTATION = {
-    5: "quote",
-    7: "recap",
-    9: "tip",
-    11: "leaderboard",
-    13: "legend",
-    15: "song",
-    17: "challenge",
-    19: "video",
-    21: "countdown",
+    4: "countdown",
+    6: "recap",
+    7: "quote",
+    8: "tip",
+    10: "leaderboard",
+    11: "legend",
+    12: "song",
+    14: "quote",
+    15: "challenge",
+    16: "video",
+    18: "tip",
+    19: "streak",
+    21: "legend",
 }
 
 

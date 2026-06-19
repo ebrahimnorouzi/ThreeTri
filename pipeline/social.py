@@ -187,10 +187,24 @@ def main() -> int:
             print("  [email] skipped (set EMAIL_USER / EMAIL_PASSWORD / EMAIL_TO to enable)")
         return 0
 
-    all_posts = posts.build_all(dashboard, content, _day_index())
+    hour = datetime.now(timezone.utc).hour
+    # Index content by hour as well as day, so repeated kinds differ each slot.
+    idx = _day_index() * 24 + hour
+    all_posts = posts.build_all(dashboard, content, idx)
+
+    # "all" = blast every available kind this run (manual bursts / testing).
+    if args.kind == "all":
+        any_chan = any(os.environ.get(k) for k in ("BLUESKY_HANDLE", "DISCORD_WEBHOOK_URL", "TELEGRAM_BOT_TOKEN"))
+        for k, text in all_posts.items():
+            print(f"Posting kind='{k}': {text[:80]}…")
+            post_bluesky(text); post_discord(text); post_telegram(text)
+        if not any_chan:
+            print("  No channel configured — set Bluesky/Discord/Telegram secrets to enable.")
+        return 0
+
     kind = args.kind
     if kind == "auto":
-        kind = posts.HOUR_ROTATION.get(datetime.now(timezone.utc).hour, "quote")
+        kind = posts.HOUR_ROTATION.get(hour, "quote")
     text = all_posts.get(kind) or all_posts.get("recap") or all_posts.get("countdown")
     if not text:
         print("No post text available.")
