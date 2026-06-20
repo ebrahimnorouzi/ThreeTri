@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-06-19T21:50:43Z",
-    "generated_at_human": "19 Jun 2026, 21:50 UTC",
+    "generated_at": "2026-06-20T00:05:10Z",
+    "generated_at_human": "20 Jun 2026, 00:05 UTC",
     "season_start": "2026-01-01",
     "site_url": "https://ebrahimnorouzi.github.io/ThreeTri/",
     "data_sources": [
@@ -17,8 +17,8 @@
     "date_human": "20 Sep 2026",
     "location": "Port de Palma de Mallorca, Palma, Spain",
     "url": "https://worldsmarathons.com/de/marathon/triathlon-port-de-palma-de-mallorca",
-    "days_to_go": 93,
-    "weeks_to_go": 13.3,
+    "days_to_go": 92,
+    "weeks_to_go": 13.1,
     "phase": "Build"
   },
   "sports": {
@@ -338,14 +338,14 @@
       ],
       "badge_count": 1,
       "readiness": {
-        "status": "red",
-        "date": "2026-06-19",
+        "status": "amber",
+        "date": "2026-06-20",
         "hrv": null,
         "hrv_7d": null,
-        "rhr": 48.0,
-        "sleep_hours": 6.02,
-        "sleep_score": 62.0,
-        "body_battery": 9.0,
+        "rhr": 53.0,
+        "sleep_hours": null,
+        "sleep_score": null,
+        "body_battery": 5.0,
         "garmin_readiness": null
       },
       "weekly_summary": null,
@@ -904,14 +904,14 @@
       "badge_count": 0,
       "readiness": {
         "status": "green",
-        "date": "2026-06-19",
+        "date": "2026-06-20",
         "hrv": null,
-        "hrv_7d": 47.5,
-        "rhr": 59.0,
+        "hrv_7d": 48.0,
+        "rhr": null,
         "sleep_hours": null,
         "sleep_score": null,
-        "body_battery": 63.0,
-        "garmin_readiness": 68.0
+        "body_battery": null,
+        "garmin_readiness": null
       },
       "weekly_summary": null,
       "recent_activities": [
@@ -1926,13 +1926,6 @@
       ]
     },
     "calendar": [
-      {
-        "date": "2025-12-20",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
-      },
       {
         "date": "2025-12-21",
         "total": 0,
@@ -3199,6 +3192,13 @@
         "ebi": 2,
         "sia": 0,
         "alborz": 1
+      },
+      {
+        "date": "2026-06-20",
+        "total": 0,
+        "ebi": 0,
+        "sia": 0,
+        "alborz": 0
       }
     ],
     "locations": [
@@ -3427,7 +3427,7 @@
     "digest": [
       {
         "date": "2026-06-19",
-        "label": "Today",
+        "label": "Yesterday",
         "athletes_active": [
           "alborz",
           "ebi"
@@ -3545,7 +3545,7 @@
       },
       {
         "date": "2026-06-13",
-        "label": "Saturday",
+        "label": "Sat 13 Jun",
         "athletes_active": [
           "ebi"
         ],
@@ -3703,45 +3703,6 @@
             "elevation_m": 0,
             "avg_hr": 128,
             "pace": "3:07 /100m",
-            "kudos": 0,
-            "source": "garmin",
-            "coach_note": null
-          }
-        ]
-      },
-      {
-        "date": "2026-06-08",
-        "label": "Mon 08 Jun",
-        "athletes_active": [
-          "ebi"
-        ],
-        "activities": [
-          {
-            "athlete_id": "ebi",
-            "date": "2026-06-08",
-            "datetime": "2026-06-08T21:29:55",
-            "sport": "swim",
-            "name": "Pool Swim",
-            "distance_km": 0.3,
-            "moving_min": 9,
-            "elevation_m": 0,
-            "avg_hr": 127,
-            "pace": "3:05 /100m",
-            "kudos": 0,
-            "source": "garmin",
-            "coach_note": null
-          },
-          {
-            "athlete_id": "ebi",
-            "date": "2026-06-08",
-            "datetime": "2026-06-08T19:24:42",
-            "sport": "run",
-            "name": "Karlsruhe - 25 min Easy Run w 4 × 15s Strid",
-            "distance_km": 3.81,
-            "moving_min": 26,
-            "elevation_m": 15,
-            "avg_hr": 148,
-            "pace": "6:45 /km",
             "kudos": 0,
             "source": "garmin",
             "coach_note": null
