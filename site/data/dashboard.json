@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-06-20T00:05:10Z",
-    "generated_at_human": "20 Jun 2026, 00:05 UTC",
+    "generated_at": "2026-06-21T00:02:36Z",
+    "generated_at_human": "21 Jun 2026, 00:02 UTC",
     "season_start": "2026-01-01",
     "site_url": "https://ebrahimnorouzi.github.io/ThreeTri/",
     "data_sources": [
@@ -17,8 +17,8 @@
     "date_human": "20 Sep 2026",
     "location": "Port de Palma de Mallorca, Palma, Spain",
     "url": "https://worldsmarathons.com/de/marathon/triathlon-port-de-palma-de-mallorca",
-    "days_to_go": 92,
-    "weeks_to_go": 13.1,
+    "days_to_go": 91,
+    "weeks_to_go": 13.0,
     "phase": "Build"
   },
   "sports": {
@@ -236,19 +236,19 @@
         }
       },
       "streak": {
-        "current_days": 1,
+        "current_days": 0,
         "longest_days": 11,
         "last_active": "2026-06-19",
         "active_days_this_week": 2
       },
       "consistency_pct": 48,
-      "points": 1179,
+      "points": 1175,
       "level": 2,
       "xp": {
         "level": 2,
-        "xp_into": 379,
+        "xp_into": 375,
         "xp_per_level": 800,
-        "xp_pct": 47.4
+        "xp_pct": 46.9
       },
       "badges": [
         {
@@ -338,14 +338,14 @@
       ],
       "badge_count": 1,
       "readiness": {
-        "status": "amber",
-        "date": "2026-06-20",
+        "status": "green",
+        "date": "2026-06-21",
         "hrv": null,
         "hrv_7d": null,
-        "rhr": 53.0,
+        "rhr": null,
         "sleep_hours": null,
         "sleep_score": null,
-        "body_battery": 5.0,
+        "body_battery": null,
         "garmin_readiness": null
       },
       "weekly_summary": null,
@@ -801,19 +801,19 @@
         }
       },
       "streak": {
-        "current_days": 1,
+        "current_days": 0,
         "longest_days": 2,
         "last_active": "2026-06-19",
         "active_days_this_week": 1
       },
       "consistency_pct": 16,
-      "points": 236,
+      "points": 232,
       "level": 1,
       "xp": {
         "level": 1,
-        "xp_into": 236,
+        "xp_into": 232,
         "xp_per_level": 800,
-        "xp_pct": 29.5
+        "xp_pct": 29.0
       },
       "badges": [
         {
@@ -904,9 +904,9 @@
       "badge_count": 0,
       "readiness": {
         "status": "green",
-        "date": "2026-06-20",
+        "date": "2026-06-21",
         "hrv": null,
-        "hrv_7d": 48.0,
+        "hrv_7d": null,
         "rhr": null,
         "sleep_hours": null,
         "sleep_score": null,
@@ -1286,13 +1286,13 @@
     "points": [
       {
         "athlete_id": "ebi",
-        "value": 1179.0,
+        "value": 1175.0,
         "unit": "pts",
         "rank": 1
       },
       {
         "athlete_id": "alborz",
-        "value": 236.0,
+        "value": 232.0,
         "unit": "pts",
         "rank": 2
       },
@@ -1306,18 +1306,18 @@
     "streak": [
       {
         "athlete_id": "ebi",
-        "value": 1.0,
+        "value": 0.0,
         "unit": "days",
         "rank": 1
       },
       {
-        "athlete_id": "alborz",
-        "value": 1.0,
+        "athlete_id": "sia",
+        "value": 0.0,
         "unit": "days",
         "rank": 2
       },
       {
-        "athlete_id": "sia",
+        "athlete_id": "alborz",
         "value": 0.0,
         "unit": "days",
         "rank": 3
@@ -1926,13 +1926,6 @@
       ]
     },
     "calendar": [
-      {
-        "date": "2025-12-21",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
-      },
       {
         "date": "2025-12-22",
         "total": 0,
@@ -3199,6 +3192,13 @@
         "ebi": 0,
         "sia": 0,
         "alborz": 0
+      },
+      {
+        "date": "2026-06-21",
+        "total": 0,
+        "ebi": 0,
+        "sia": 0,
+        "alborz": 0
       }
     ],
     "locations": [
@@ -3427,7 +3427,7 @@
     "digest": [
       {
         "date": "2026-06-19",
-        "label": "Yesterday",
+        "label": "Friday",
         "athletes_active": [
           "alborz",
           "ebi"
@@ -3521,7 +3521,7 @@
       },
       {
         "date": "2026-06-14",
-        "label": "Sunday",
+        "label": "Sun 14 Jun",
         "athletes_active": [
           "ebi"
         ],
@@ -3679,30 +3679,6 @@
             "elevation_m": 45,
             "avg_hr": 126,
             "pace": "7:02 /km",
-            "kudos": 0,
-            "source": "garmin",
-            "coach_note": null
-          }
-        ]
-      },
-      {
-        "date": "2026-06-09",
-        "label": "Tue 09 Jun",
-        "athletes_active": [
-          "ebi"
-        ],
-        "activities": [
-          {
-            "athlete_id": "ebi",
-            "date": "2026-06-09",
-            "datetime": "2026-06-09T17:50:09",
-            "sport": "swim",
-            "name": "Breathing & Floating Basics (16",
-            "distance_km": 1.7,
-            "moving_min": 53,
-            "elevation_m": 0,
-            "avg_hr": 128,
-            "pace": "3:07 /100m",
             "kudos": 0,
             "source": "garmin",
             "coach_note": null
