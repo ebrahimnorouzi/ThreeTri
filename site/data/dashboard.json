@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-06-21T00:02:36Z",
-    "generated_at_human": "21 Jun 2026, 00:02 UTC",
+    "generated_at": "2026-06-22T00:07:05Z",
+    "generated_at_human": "22 Jun 2026, 00:07 UTC",
     "season_start": "2026-01-01",
     "site_url": "https://ebrahimnorouzi.github.io/ThreeTri/",
     "data_sources": [
@@ -17,8 +17,8 @@
     "date_human": "20 Sep 2026",
     "location": "Port de Palma de Mallorca, Palma, Spain",
     "url": "https://worldsmarathons.com/de/marathon/triathlon-port-de-palma-de-mallorca",
-    "days_to_go": 91,
-    "weeks_to_go": 13.0,
+    "days_to_go": 90,
+    "weeks_to_go": 12.9,
     "phase": "Build"
   },
   "sports": {
@@ -185,6 +185,32 @@
       },
       "this_week": {
         "all": {
+          "distance_km": 0.0,
+          "moving_h": 0.0,
+          "activities": 0,
+          "elevation_m": 0
+        },
+        "swim": {
+          "distance_km": 0.0,
+          "moving_h": 0.0,
+          "activities": 0,
+          "elevation_m": 0
+        },
+        "bike": {
+          "distance_km": 0.0,
+          "moving_h": 0.0,
+          "activities": 0,
+          "elevation_m": 0
+        },
+        "run": {
+          "distance_km": 0.0,
+          "moving_h": 0.0,
+          "activities": 0,
+          "elevation_m": 0
+        }
+      },
+      "last_week": {
+        "all": {
           "distance_km": 31.2,
           "moving_h": 4.2,
           "activities": 4,
@@ -209,37 +235,11 @@
           "elevation_m": 112
         }
       },
-      "last_week": {
-        "all": {
-          "distance_km": 48.7,
-          "moving_h": 5.6,
-          "activities": 8,
-          "elevation_m": 91
-        },
-        "swim": {
-          "distance_km": 4.0,
-          "moving_h": 2.3,
-          "activities": 4,
-          "elevation_m": 0
-        },
-        "bike": {
-          "distance_km": 29.5,
-          "moving_h": 1.7,
-          "activities": 1,
-          "elevation_m": 0
-        },
-        "run": {
-          "distance_km": 15.2,
-          "moving_h": 1.6,
-          "activities": 3,
-          "elevation_m": 91
-        }
-      },
       "streak": {
         "current_days": 0,
         "longest_days": 11,
         "last_active": "2026-06-19",
-        "active_days_this_week": 2
+        "active_days_this_week": 0
       },
       "consistency_pct": 48,
       "points": 1175,
@@ -750,15 +750,15 @@
       },
       "this_week": {
         "all": {
-          "distance_km": 1.6,
-          "moving_h": 0.8,
-          "activities": 1,
+          "distance_km": 0.0,
+          "moving_h": 0.0,
+          "activities": 0,
           "elevation_m": 0
         },
         "swim": {
-          "distance_km": 1.6,
-          "moving_h": 0.8,
-          "activities": 1,
+          "distance_km": 0.0,
+          "moving_h": 0.0,
+          "activities": 0,
           "elevation_m": 0
         },
         "bike": {
@@ -776,15 +776,15 @@
       },
       "last_week": {
         "all": {
-          "distance_km": 2.3,
-          "moving_h": 1.2,
-          "activities": 3,
+          "distance_km": 1.6,
+          "moving_h": 0.8,
+          "activities": 1,
           "elevation_m": 0
         },
         "swim": {
-          "distance_km": 2.3,
-          "moving_h": 1.2,
-          "activities": 3,
+          "distance_km": 1.6,
+          "moving_h": 0.8,
+          "activities": 1,
           "elevation_m": 0
         },
         "bike": {
@@ -804,7 +804,7 @@
         "current_days": 0,
         "longest_days": 2,
         "last_active": "2026-06-19",
-        "active_days_this_week": 1
+        "active_days_this_week": 0
       },
       "consistency_pct": 16,
       "points": 232,
@@ -1165,18 +1165,18 @@
       "all": [
         {
           "athlete_id": "ebi",
-          "value": 31.2,
+          "value": 0.0,
           "unit": "km",
           "rank": 1
         },
         {
-          "athlete_id": "alborz",
-          "value": 1.6,
+          "athlete_id": "sia",
+          "value": 0.0,
           "unit": "km",
           "rank": 2
         },
         {
-          "athlete_id": "sia",
+          "athlete_id": "alborz",
           "value": 0.0,
           "unit": "km",
           "rank": 3
@@ -1185,18 +1185,18 @@
       "swim": [
         {
           "athlete_id": "ebi",
-          "value": 4.2,
+          "value": 0.0,
           "unit": "km",
           "rank": 1
         },
         {
-          "athlete_id": "alborz",
-          "value": 1.6,
+          "athlete_id": "sia",
+          "value": 0.0,
           "unit": "km",
           "rank": 2
         },
         {
-          "athlete_id": "sia",
+          "athlete_id": "alborz",
           "value": 0.0,
           "unit": "km",
           "rank": 3
@@ -1205,7 +1205,7 @@
       "bike": [
         {
           "athlete_id": "ebi",
-          "value": 16.6,
+          "value": 0.0,
           "unit": "km",
           "rank": 1
         },
@@ -1225,7 +1225,7 @@
       "run": [
         {
           "athlete_id": "ebi",
-          "value": 10.5,
+          "value": 0.0,
           "unit": "km",
           "rank": 1
         },
@@ -1245,18 +1245,18 @@
       "hours": [
         {
           "athlete_id": "ebi",
-          "value": 4.2,
+          "value": 0.0,
           "unit": "h",
           "rank": 1
         },
         {
-          "athlete_id": "alborz",
-          "value": 0.8,
+          "athlete_id": "sia",
+          "value": 0.0,
           "unit": "h",
           "rank": 2
         },
         {
-          "athlete_id": "sia",
+          "athlete_id": "alborz",
           "value": 0.0,
           "unit": "h",
           "rank": 3
@@ -1265,7 +1265,7 @@
       "elevation": [
         {
           "athlete_id": "ebi",
-          "value": 112,
+          "value": 0,
           "unit": "m",
           "rank": 1
         },
@@ -1347,36 +1347,36 @@
   "head_to_head": {
     "this_week": {
       "all": {
-        "leader": "ebi",
+        "leader": null,
         "values": {
-          "ebi": 31.2,
+          "ebi": 0.0,
           "sia": 0.0,
-          "alborz": 1.6
+          "alborz": 0.0
         },
         "unit": "km"
       },
       "swim": {
-        "leader": "ebi",
+        "leader": null,
         "values": {
-          "ebi": 4.2,
+          "ebi": 0.0,
           "sia": 0.0,
-          "alborz": 1.6
+          "alborz": 0.0
         },
         "unit": "km"
       },
       "bike": {
-        "leader": "ebi",
+        "leader": null,
         "values": {
-          "ebi": 16.6,
+          "ebi": 0.0,
           "sia": 0.0,
           "alborz": 0.0
         },
         "unit": "km"
       },
       "run": {
-        "leader": "ebi",
+        "leader": null,
         "values": {
-          "ebi": 10.5,
+          "ebi": 0.0,
           "sia": 0.0,
           "alborz": 0.0
         },
@@ -1410,7 +1410,8 @@
       "2026-W22",
       "2026-W23",
       "2026-W24",
-      "2026-W25"
+      "2026-W25",
+      "2026-W26"
     ],
     "week_starts": [
       "2025-12-29",
@@ -1437,7 +1438,8 @@
       "2026-05-25",
       "2026-06-01",
       "2026-06-08",
-      "2026-06-15"
+      "2026-06-15",
+      "2026-06-22"
     ],
     "short": [
       "29/12",
@@ -1464,7 +1466,8 @@
       "25/05",
       "01/06",
       "08/06",
-      "15/06"
+      "15/06",
+      "22/06"
     ],
     "athletes": {
       "ebi": {
@@ -1493,7 +1496,8 @@
           7.2,
           89.4,
           48.7,
-          31.2
+          31.2,
+          0.0
         ],
         "swim_km": [
           0.0,
@@ -1520,7 +1524,8 @@
           7.2,
           5.0,
           4.0,
-          4.2
+          4.2,
+          0.0
         ],
         "bike_km": [
           0.0,
@@ -1547,7 +1552,8 @@
           0.0,
           73.9,
           29.5,
-          16.6
+          16.6,
+          0.0
         ],
         "run_km": [
           0.0,
@@ -1574,7 +1580,8 @@
           0.0,
           10.5,
           15.2,
-          10.5
+          10.5,
+          0.0
         ],
         "hours": [
           0.0,
@@ -1601,7 +1608,8 @@
           1.6,
           6.4,
           5.6,
-          4.2
+          4.2,
+          0.0
         ]
       },
       "sia": {
@@ -1630,9 +1638,11 @@
           0.0,
           0.0,
           0.0,
+          0.0,
           0.0
         ],
         "swim_km": [
+          0.0,
           0.0,
           0.0,
           0.0,
@@ -1684,6 +1694,7 @@
           0.0,
           0.0,
           0.0,
+          0.0,
           0.0
         ],
         "run_km": [
@@ -1711,9 +1722,11 @@
           0.0,
           0.0,
           0.0,
+          0.0,
           0.0
         ],
         "hours": [
+          0.0,
           0.0,
           0.0,
           0.0,
@@ -1767,7 +1780,8 @@
           1.2,
           0.0,
           2.3,
-          1.6
+          1.6,
+          0.0
         ],
         "swim_km": [
           0.0,
@@ -1794,7 +1808,8 @@
           1.2,
           0.0,
           2.3,
-          1.6
+          1.6,
+          0.0
         ],
         "bike_km": [
           0.0,
@@ -1815,6 +1830,7 @@
           0.0,
           0.0,
           26.5,
+          0.0,
           0.0,
           0.0,
           0.0,
@@ -1848,6 +1864,7 @@
           0.0,
           0.0,
           0.0,
+          0.0,
           0.0
         ],
         "hours": [
@@ -1875,7 +1892,8 @@
           0.6,
           0.0,
           1.2,
-          0.8
+          0.8,
+          0.0
         ]
       }
     }
@@ -1888,10 +1906,10 @@
       "elevation_m": 4032
     },
     "this_week": {
-      "distance_km": 32.8,
-      "moving_h": 5.0,
-      "activities": 5,
-      "elevation_m": 112
+      "distance_km": 0.0,
+      "moving_h": 0.0,
+      "activities": 0,
+      "elevation_m": 0
     },
     "by_sport": {
       "swim": 29.8,
@@ -1926,13 +1944,6 @@
       ]
     },
     "calendar": [
-      {
-        "date": "2025-12-22",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
-      },
       {
         "date": "2025-12-23",
         "total": 0,
@@ -3199,6 +3210,13 @@
         "ebi": 0,
         "sia": 0,
         "alborz": 0
+      },
+      {
+        "date": "2026-06-22",
+        "total": 0,
+        "ebi": 0,
+        "sia": 0,
+        "alborz": 0
       }
     ],
     "locations": [
@@ -3312,7 +3330,8 @@
         "2026-W22",
         "2026-W23",
         "2026-W24",
-        "2026-W25"
+        "2026-W25",
+        "2026-W26"
       ],
       "short": [
         "29/12",
@@ -3339,7 +3358,8 @@
         "25/05",
         "01/06",
         "08/06",
-        "15/06"
+        "15/06",
+        "22/06"
       ],
       "week_starts": [
         "2025-12-29",
@@ -3366,7 +3386,8 @@
         "2026-05-25",
         "2026-06-01",
         "2026-06-08",
-        "2026-06-15"
+        "2026-06-15",
+        "2026-06-22"
       ],
       "weekly_km": [
         0.0,
@@ -3393,7 +3414,8 @@
         8.4,
         89.4,
         51.0,
-        32.8
+        32.8,
+        0.0
       ],
       "cumulative_km": [
         0.0,
@@ -3420,6 +3442,7 @@
         399.8,
         489.2,
         540.2,
+        573.0,
         573.0
       ],
       "target_km": 15000
@@ -3645,72 +3668,15 @@
             "coach_note": null
           }
         ]
-      },
-      {
-        "date": "2026-06-10",
-        "label": "Wed 10 Jun",
-        "athletes_active": [
-          "ebi"
-        ],
-        "activities": [
-          {
-            "athlete_id": "ebi",
-            "date": "2026-06-10",
-            "datetime": "2026-06-10T22:11:55",
-            "sport": "swim",
-            "name": "Pool Swim",
-            "distance_km": 0.25,
-            "moving_min": 9,
-            "elevation_m": 0,
-            "avg_hr": 127,
-            "pace": "3:46 /100m",
-            "kudos": 0,
-            "source": "garmin",
-            "coach_note": null
-          },
-          {
-            "athlete_id": "ebi",
-            "date": "2026-06-10",
-            "datetime": "2026-06-10T21:06:59",
-            "sport": "run",
-            "name": "Karlsruhe - 45 min Long Run",
-            "distance_km": 6.4,
-            "moving_min": 45,
-            "elevation_m": 45,
-            "avg_hr": 126,
-            "pace": "7:02 /km",
-            "kudos": 0,
-            "source": "garmin",
-            "coach_note": null
-          }
-        ]
       }
     ]
   },
   "highlights": [
     {
-      "icon": "👑",
-      "title": "This week's leader",
-      "athlete_id": "ebi",
-      "text": "Ebi tops the team with 31.2 km across all sports this week."
-    },
-    {
-      "icon": "🚴",
-      "title": "Biggest session",
-      "athlete_id": "ebi",
-      "text": "Ebi logged a 16.6 km bike — the week's longest."
-    },
-    {
       "icon": "🏝️",
       "title": "Road to Mallorca",
       "athlete_id": null,
       "text": "Together you've covered 573.1 of 15000 km (3.8%) toward the team goal."
-    },
-    {
-      "icon": "🤝",
-      "title": "Team effort",
-      "athlete_id": null,
-      "text": "5 sessions and 32.8 km logged between you this week. Compounding."
     },
     {
       "icon": "⚖️",
