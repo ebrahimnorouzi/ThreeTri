@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-06-22T00:07:05Z",
-    "generated_at_human": "22 Jun 2026, 00:07 UTC",
+    "generated_at": "2026-06-23T00:01:54Z",
+    "generated_at_human": "23 Jun 2026, 00:01 UTC",
     "season_start": "2026-01-01",
     "site_url": "https://ebrahimnorouzi.github.io/ThreeTri/",
     "data_sources": [
@@ -17,8 +17,8 @@
     "date_human": "20 Sep 2026",
     "location": "Port de Palma de Mallorca, Palma, Spain",
     "url": "https://worldsmarathons.com/de/marathon/triathlon-port-de-palma-de-mallorca",
-    "days_to_go": 90,
-    "weeks_to_go": 12.9,
+    "days_to_go": 89,
+    "weeks_to_go": 12.7,
     "phase": "Build"
   },
   "sports": {
@@ -1945,13 +1945,6 @@
     },
     "calendar": [
       {
-        "date": "2025-12-23",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
-      },
-      {
         "date": "2025-12-24",
         "total": 0,
         "ebi": 0,
@@ -3217,6 +3210,13 @@
         "ebi": 0,
         "sia": 0,
         "alborz": 0
+      },
+      {
+        "date": "2026-06-23",
+        "total": 0,
+        "ebi": 0,
+        "sia": 0,
+        "alborz": 0
       }
     ],
     "locations": [
@@ -3505,7 +3505,7 @@
       },
       {
         "date": "2026-06-16",
-        "label": "Tuesday",
+        "label": "Tue 16 Jun",
         "athletes_active": [
           "ebi"
         ],
@@ -3623,46 +3623,6 @@
             "elevation_m": 0,
             "avg_hr": 124,
             "pace": "3:21 /100m",
-            "kudos": 0,
-            "source": "garmin",
-            "coach_note": null
-          }
-        ]
-      },
-      {
-        "date": "2026-06-11",
-        "label": "Thu 11 Jun",
-        "athletes_active": [
-          "alborz",
-          "ebi"
-        ],
-        "activities": [
-          {
-            "athlete_id": "ebi",
-            "date": "2026-06-11",
-            "datetime": "2026-06-11T17:33:23",
-            "sport": "swim",
-            "name": "Finding Comfort in Flotation (14",
-            "distance_km": 1.75,
-            "moving_min": 69,
-            "elevation_m": 0,
-            "avg_hr": 123,
-            "pace": "3:56 /100m",
-            "kudos": 0,
-            "source": "garmin",
-            "coach_note": null
-          },
-          {
-            "athlete_id": "alborz",
-            "date": "2026-06-11",
-            "datetime": "2026-06-11T17:27:14",
-            "sport": "swim",
-            "name": "Pool Swim",
-            "distance_km": 1.0,
-            "moving_min": 32,
-            "elevation_m": 0,
-            "avg_hr": 114,
-            "pace": "3:09 /100m",
             "kudos": 0,
             "source": "garmin",
             "coach_note": null
