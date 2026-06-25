@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-06-23T23:52:30Z",
-    "generated_at_human": "23 Jun 2026, 23:52 UTC",
+    "generated_at": "2026-06-25T00:05:13Z",
+    "generated_at_human": "25 Jun 2026, 00:05 UTC",
     "season_start": "2026-01-01",
     "site_url": "https://ebrahimnorouzi.github.io/ThreeTri/",
     "data_sources": [
@@ -17,8 +17,8 @@
     "date_human": "20 Sep 2026",
     "location": "Port de Palma de Mallorca, Palma, Spain",
     "url": "https://worldsmarathons.com/de/marathon/triathlon-port-de-palma-de-mallorca",
-    "days_to_go": 89,
-    "weeks_to_go": 12.7,
+    "days_to_go": 87,
+    "weeks_to_go": 12.4,
     "phase": "Build"
   },
   "sports": {
@@ -1945,20 +1945,6 @@
     },
     "calendar": [
       {
-        "date": "2025-12-24",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
-      },
-      {
-        "date": "2025-12-25",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
-      },
-      {
         "date": "2025-12-26",
         "total": 0,
         "ebi": 0,
@@ -3217,6 +3203,20 @@
         "ebi": 0,
         "sia": 0,
         "alborz": 0
+      },
+      {
+        "date": "2026-06-24",
+        "total": 0,
+        "ebi": 0,
+        "sia": 0,
+        "alborz": 0
+      },
+      {
+        "date": "2026-06-25",
+        "total": 0,
+        "ebi": 0,
+        "sia": 0,
+        "alborz": 0
       }
     ],
     "locations": [
@@ -3560,69 +3560,6 @@
             "elevation_m": 0,
             "avg_hr": 127,
             "pace": "17.8 km/h",
-            "kudos": 0,
-            "source": "garmin",
-            "coach_note": null
-          }
-        ]
-      },
-      {
-        "date": "2026-06-13",
-        "label": "Sat 13 Jun",
-        "athletes_active": [
-          "ebi"
-        ],
-        "activities": [
-          {
-            "athlete_id": "ebi",
-            "date": "2026-06-13",
-            "datetime": "2026-06-13T09:05:31",
-            "sport": "run",
-            "name": "Karlsruhe - 30 min Steady Run",
-            "distance_km": 5.02,
-            "moving_min": 28,
-            "elevation_m": 32,
-            "avg_hr": 174,
-            "pace": "5:33 /km",
-            "kudos": 0,
-            "source": "garmin",
-            "coach_note": null
-          }
-        ]
-      },
-      {
-        "date": "2026-06-12",
-        "label": "Fri 12 Jun",
-        "athletes_active": [
-          "alborz"
-        ],
-        "activities": [
-          {
-            "athlete_id": "alborz",
-            "date": "2026-06-12",
-            "datetime": "2026-06-12T09:47:49",
-            "sport": "swim",
-            "name": "Pool Swim",
-            "distance_km": 0.5,
-            "moving_min": 15,
-            "elevation_m": 0,
-            "avg_hr": 126,
-            "pace": "2:58 /100m",
-            "kudos": 0,
-            "source": "garmin",
-            "coach_note": null
-          },
-          {
-            "athlete_id": "alborz",
-            "date": "2026-06-12",
-            "datetime": "2026-06-12T09:15:21",
-            "sport": "swim",
-            "name": "Pool Swim",
-            "distance_km": 0.78,
-            "moving_min": 26,
-            "elevation_m": 0,
-            "avg_hr": 124,
-            "pace": "3:21 /100m",
             "kudos": 0,
             "source": "garmin",
             "coach_note": null
