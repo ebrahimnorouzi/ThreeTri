@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-06-25T00:05:13Z",
-    "generated_at_human": "25 Jun 2026, 00:05 UTC",
+    "generated_at": "2026-06-26T00:05:44Z",
+    "generated_at_human": "26 Jun 2026, 00:05 UTC",
     "season_start": "2026-01-01",
     "site_url": "https://ebrahimnorouzi.github.io/ThreeTri/",
     "data_sources": [
@@ -17,8 +17,8 @@
     "date_human": "20 Sep 2026",
     "location": "Port de Palma de Mallorca, Palma, Spain",
     "url": "https://worldsmarathons.com/de/marathon/triathlon-port-de-palma-de-mallorca",
-    "days_to_go": 87,
-    "weeks_to_go": 12.4,
+    "days_to_go": 86,
+    "weeks_to_go": 12.3,
     "phase": "Build"
   },
   "sports": {
@@ -1945,13 +1945,6 @@
     },
     "calendar": [
       {
-        "date": "2025-12-26",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
-      },
-      {
         "date": "2025-12-27",
         "total": 0,
         "ebi": 0,
@@ -3217,6 +3210,13 @@
         "ebi": 0,
         "sia": 0,
         "alborz": 0
+      },
+      {
+        "date": "2026-06-26",
+        "total": 0,
+        "ebi": 0,
+        "sia": 0,
+        "alborz": 0
       }
     ],
     "locations": [
@@ -3450,7 +3450,7 @@
     "digest": [
       {
         "date": "2026-06-19",
-        "label": "Friday",
+        "label": "Fri 19 Jun",
         "athletes_active": [
           "alborz",
           "ebi"
@@ -3536,30 +3536,6 @@
             "elevation_m": 0,
             "avg_hr": 116,
             "pace": "3:27 /100m",
-            "kudos": 0,
-            "source": "garmin",
-            "coach_note": null
-          }
-        ]
-      },
-      {
-        "date": "2026-06-14",
-        "label": "Sun 14 Jun",
-        "athletes_active": [
-          "ebi"
-        ],
-        "activities": [
-          {
-            "athlete_id": "ebi",
-            "date": "2026-06-14",
-            "datetime": "2026-06-14T20:24:36",
-            "sport": "bike",
-            "name": "Indoor Cycling",
-            "distance_km": 29.45,
-            "moving_min": 99,
-            "elevation_m": 0,
-            "avg_hr": 127,
-            "pace": "17.8 km/h",
             "kudos": 0,
             "source": "garmin",
             "coach_note": null
