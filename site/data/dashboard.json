@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-06-27T23:57:31Z",
-    "generated_at_human": "27 Jun 2026, 23:57 UTC",
+    "generated_at": "2026-06-29T00:03:54Z",
+    "generated_at_human": "29 Jun 2026, 00:03 UTC",
     "season_start": "2026-01-01",
     "site_url": "https://ebrahimnorouzi.github.io/ThreeTri/",
     "data_sources": [
@@ -17,8 +17,8 @@
     "date_human": "20 Sep 2026",
     "location": "Port de Palma de Mallorca, Palma, Spain",
     "url": "https://worldsmarathons.com/de/marathon/triathlon-port-de-palma-de-mallorca",
-    "days_to_go": 85,
-    "weeks_to_go": 12.1,
+    "days_to_go": 83,
+    "weeks_to_go": 11.9,
     "phase": "Build"
   },
   "sports": {
@@ -211,28 +211,28 @@
       },
       "last_week": {
         "all": {
-          "distance_km": 31.2,
-          "moving_h": 4.2,
-          "activities": 4,
-          "elevation_m": 112
+          "distance_km": 0.0,
+          "moving_h": 0.0,
+          "activities": 0,
+          "elevation_m": 0
         },
         "swim": {
-          "distance_km": 4.2,
-          "moving_h": 2.2,
-          "activities": 2,
+          "distance_km": 0.0,
+          "moving_h": 0.0,
+          "activities": 0,
           "elevation_m": 0
         },
         "bike": {
-          "distance_km": 16.6,
-          "moving_h": 0.8,
-          "activities": 1,
+          "distance_km": 0.0,
+          "moving_h": 0.0,
+          "activities": 0,
           "elevation_m": 0
         },
         "run": {
-          "distance_km": 10.5,
-          "moving_h": 1.2,
-          "activities": 1,
-          "elevation_m": 112
+          "distance_km": 0.0,
+          "moving_h": 0.0,
+          "activities": 0,
+          "elevation_m": 0
         }
       },
       "streak": {
@@ -241,7 +241,7 @@
         "last_active": "2026-06-19",
         "active_days_this_week": 0
       },
-      "consistency_pct": 48,
+      "consistency_pct": 46,
       "points": 1175,
       "level": 2,
       "xp": {
@@ -776,15 +776,15 @@
       },
       "last_week": {
         "all": {
-          "distance_km": 1.6,
-          "moving_h": 0.8,
-          "activities": 1,
+          "distance_km": 0.0,
+          "moving_h": 0.0,
+          "activities": 0,
           "elevation_m": 0
         },
         "swim": {
-          "distance_km": 1.6,
-          "moving_h": 0.8,
-          "activities": 1,
+          "distance_km": 0.0,
+          "moving_h": 0.0,
+          "activities": 0,
           "elevation_m": 0
         },
         "bike": {
@@ -806,7 +806,7 @@
         "last_active": "2026-06-19",
         "active_days_this_week": 0
       },
-      "consistency_pct": 16,
+      "consistency_pct": 14,
       "points": 232,
       "level": 1,
       "xp": {
@@ -1326,13 +1326,13 @@
     "consistency": [
       {
         "athlete_id": "ebi",
-        "value": 48.0,
+        "value": 46.0,
         "unit": "%",
         "rank": 1
       },
       {
         "athlete_id": "alborz",
-        "value": 16.0,
+        "value": 14.0,
         "unit": "%",
         "rank": 2
       },
@@ -1411,7 +1411,8 @@
       "2026-W23",
       "2026-W24",
       "2026-W25",
-      "2026-W26"
+      "2026-W26",
+      "2026-W27"
     ],
     "week_starts": [
       "2025-12-29",
@@ -1439,7 +1440,8 @@
       "2026-06-01",
       "2026-06-08",
       "2026-06-15",
-      "2026-06-22"
+      "2026-06-22",
+      "2026-06-29"
     ],
     "short": [
       "29/12",
@@ -1467,7 +1469,8 @@
       "01/06",
       "08/06",
       "15/06",
-      "22/06"
+      "22/06",
+      "29/06"
     ],
     "athletes": {
       "ebi": {
@@ -1497,6 +1500,7 @@
           89.4,
           48.7,
           31.2,
+          0.0,
           0.0
         ],
         "swim_km": [
@@ -1525,6 +1529,7 @@
           5.0,
           4.0,
           4.2,
+          0.0,
           0.0
         ],
         "bike_km": [
@@ -1553,6 +1558,7 @@
           73.9,
           29.5,
           16.6,
+          0.0,
           0.0
         ],
         "run_km": [
@@ -1581,6 +1587,7 @@
           10.5,
           15.2,
           10.5,
+          0.0,
           0.0
         ],
         "hours": [
@@ -1609,6 +1616,7 @@
           6.4,
           5.6,
           4.2,
+          0.0,
           0.0
         ]
       },
@@ -1639,9 +1647,11 @@
           0.0,
           0.0,
           0.0,
+          0.0,
           0.0
         ],
         "swim_km": [
+          0.0,
           0.0,
           0.0,
           0.0,
@@ -1695,6 +1705,7 @@
           0.0,
           0.0,
           0.0,
+          0.0,
           0.0
         ],
         "run_km": [
@@ -1723,9 +1734,11 @@
           0.0,
           0.0,
           0.0,
+          0.0,
           0.0
         ],
         "hours": [
+          0.0,
           0.0,
           0.0,
           0.0,
@@ -1781,6 +1794,7 @@
           0.0,
           2.3,
           1.6,
+          0.0,
           0.0
         ],
         "swim_km": [
@@ -1809,6 +1823,7 @@
           0.0,
           2.3,
           1.6,
+          0.0,
           0.0
         ],
         "bike_km": [
@@ -1830,6 +1845,7 @@
           0.0,
           0.0,
           26.5,
+          0.0,
           0.0,
           0.0,
           0.0,
@@ -1865,6 +1881,7 @@
           0.0,
           0.0,
           0.0,
+          0.0,
           0.0
         ],
         "hours": [
@@ -1893,6 +1910,7 @@
           0.0,
           1.2,
           0.8,
+          0.0,
           0.0
         ]
       }
@@ -1944,20 +1962,6 @@
       ]
     },
     "calendar": [
-      {
-        "date": "2025-12-28",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
-      },
-      {
-        "date": "2025-12-29",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
-      },
       {
         "date": "2025-12-30",
         "total": 0,
@@ -3217,6 +3221,20 @@
         "ebi": 0,
         "sia": 0,
         "alborz": 0
+      },
+      {
+        "date": "2026-06-28",
+        "total": 0,
+        "ebi": 0,
+        "sia": 0,
+        "alborz": 0
+      },
+      {
+        "date": "2026-06-29",
+        "total": 0,
+        "ebi": 0,
+        "sia": 0,
+        "alborz": 0
       }
     ],
     "locations": [
@@ -3331,7 +3349,8 @@
         "2026-W23",
         "2026-W24",
         "2026-W25",
-        "2026-W26"
+        "2026-W26",
+        "2026-W27"
       ],
       "short": [
         "29/12",
@@ -3359,7 +3378,8 @@
         "01/06",
         "08/06",
         "15/06",
-        "22/06"
+        "22/06",
+        "29/06"
       ],
       "week_starts": [
         "2025-12-29",
@@ -3387,7 +3407,8 @@
         "2026-06-01",
         "2026-06-08",
         "2026-06-15",
-        "2026-06-22"
+        "2026-06-22",
+        "2026-06-29"
       ],
       "weekly_km": [
         0.0,
@@ -3415,6 +3436,7 @@
         89.4,
         51.0,
         32.8,
+        0.0,
         0.0
       ],
       "cumulative_km": [
@@ -3442,6 +3464,7 @@
         399.8,
         489.2,
         540.2,
+        573.0,
         573.0,
         573.0
       ],
@@ -3497,45 +3520,6 @@
             "elevation_m": 0,
             "avg_hr": 124,
             "pace": "2:57 /100m",
-            "kudos": 0,
-            "source": "garmin",
-            "coach_note": null
-          }
-        ]
-      },
-      {
-        "date": "2026-06-16",
-        "label": "Tue 16 Jun",
-        "athletes_active": [
-          "ebi"
-        ],
-        "activities": [
-          {
-            "athlete_id": "ebi",
-            "date": "2026-06-16",
-            "datetime": "2026-06-16T20:39:52",
-            "sport": "bike",
-            "name": "4 × 1 min On/Off Fast Intervals",
-            "distance_km": 16.58,
-            "moving_min": 48,
-            "elevation_m": 0,
-            "avg_hr": 125,
-            "pace": "20.6 km/h",
-            "kudos": 0,
-            "source": "garmin",
-            "coach_note": null
-          },
-          {
-            "athlete_id": "ebi",
-            "date": "2026-06-16",
-            "datetime": "2026-06-16T17:37:11",
-            "sport": "swim",
-            "name": "Finding Comfort in Flotation (18",
-            "distance_km": 2.55,
-            "moving_min": 88,
-            "elevation_m": 0,
-            "avg_hr": 116,
-            "pace": "3:27 /100m",
             "kudos": 0,
             "source": "garmin",
             "coach_note": null
