@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-06-29T23:59:04Z",
-    "generated_at_human": "29 Jun 2026, 23:59 UTC",
+    "generated_at": "2026-07-01T00:03:05Z",
+    "generated_at_human": "01 Jul 2026, 00:03 UTC",
     "season_start": "2026-01-01",
     "site_url": "https://ebrahimnorouzi.github.io/ThreeTri/",
     "data_sources": [
@@ -17,8 +17,8 @@
     "date_human": "20 Sep 2026",
     "location": "Port de Palma de Mallorca, Palma, Spain",
     "url": "https://worldsmarathons.com/de/marathon/triathlon-port-de-palma-de-mallorca",
-    "days_to_go": 83,
-    "weeks_to_go": 11.9,
+    "days_to_go": 81,
+    "weeks_to_go": 11.6,
     "phase": "Build"
   },
   "sports": {
@@ -1963,20 +1963,6 @@
     },
     "calendar": [
       {
-        "date": "2025-12-30",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
-      },
-      {
-        "date": "2025-12-31",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
-      },
-      {
         "date": "2026-01-01",
         "total": 0,
         "ebi": 0,
@@ -3235,6 +3221,20 @@
         "ebi": 0,
         "sia": 0,
         "alborz": 0
+      },
+      {
+        "date": "2026-06-30",
+        "total": 0,
+        "ebi": 0,
+        "sia": 0,
+        "alborz": 0
+      },
+      {
+        "date": "2026-07-01",
+        "total": 0,
+        "ebi": 0,
+        "sia": 0,
+        "alborz": 0
       }
     ],
     "locations": [
@@ -3470,63 +3470,7 @@
       ],
       "target_km": 15000
     },
-    "digest": [
-      {
-        "date": "2026-06-19",
-        "label": "Fri 19 Jun",
-        "athletes_active": [
-          "alborz",
-          "ebi"
-        ],
-        "activities": [
-          {
-            "athlete_id": "ebi",
-            "date": "2026-06-19",
-            "datetime": "2026-06-19T19:07:08",
-            "sport": "run",
-            "name": "Baden-Baden - 5 × 2 min Threshold Intervals",
-            "distance_km": 10.46,
-            "moving_min": 71,
-            "elevation_m": 112,
-            "avg_hr": 145,
-            "pace": "6:48 /km",
-            "kudos": 0,
-            "source": "garmin",
-            "coach_note": null
-          },
-          {
-            "athlete_id": "ebi",
-            "date": "2026-06-19",
-            "datetime": "2026-06-19T10:47:13",
-            "sport": "swim",
-            "name": "Posture & Breath Progression (1",
-            "distance_km": 1.6,
-            "moving_min": 45,
-            "elevation_m": 0,
-            "avg_hr": 123,
-            "pace": "2:47 /100m",
-            "kudos": 0,
-            "source": "garmin",
-            "coach_note": null
-          },
-          {
-            "athlete_id": "alborz",
-            "date": "2026-06-19",
-            "datetime": "2026-06-19T10:47:08",
-            "sport": "swim",
-            "name": "Pool Swim",
-            "distance_km": 1.6,
-            "moving_min": 47,
-            "elevation_m": 0,
-            "avg_hr": 124,
-            "pace": "2:57 /100m",
-            "kudos": 0,
-            "source": "garmin",
-            "coach_note": null
-          }
-        ]
-      }
-    ]
+    "digest": []
   },
   "highlights": [
     {
