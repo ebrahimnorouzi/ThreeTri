@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-08-05T23:55:18Z",
-    "generated_at_human": "05 Aug 2026, 23:55 UTC",
+    "generated_at": "2026-08-07T01:40:43Z",
+    "generated_at_human": "07 Aug 2026, 01:40 UTC",
     "season_start": "2026-01-01",
     "site_url": "https://ebrahimnorouzi.github.io/ThreeTri/",
     "data_sources": [
@@ -17,8 +17,8 @@
     "date_human": "20 Sep 2026",
     "location": "Port de Palma de Mallorca, Palma, Spain",
     "url": "https://worldsmarathons.com/de/marathon/triathlon-port-de-palma-de-mallorca",
-    "days_to_go": 46,
-    "weeks_to_go": 6.6,
+    "days_to_go": 44,
+    "weeks_to_go": 6.3,
     "phase": "Peak"
   },
   "sports": {
@@ -241,7 +241,7 @@
         "last_active": "2026-06-19",
         "active_days_this_week": 0
       },
-      "consistency_pct": 9,
+      "consistency_pct": 7,
       "points": 1175,
       "level": 2,
       "xp": {
@@ -806,7 +806,7 @@
         "last_active": "2026-06-19",
         "active_days_this_week": 0
       },
-      "consistency_pct": 5,
+      "consistency_pct": 2,
       "points": 232,
       "level": 1,
       "xp": {
@@ -1326,13 +1326,13 @@
     "consistency": [
       {
         "athlete_id": "ebi",
-        "value": 9.0,
+        "value": 7.0,
         "unit": "%",
         "rank": 1
       },
       {
         "athlete_id": "alborz",
-        "value": 5.0,
+        "value": 2.0,
         "unit": "%",
         "rank": 2
       },
@@ -2052,20 +2052,6 @@
       ]
     },
     "calendar": [
-      {
-        "date": "2026-02-05",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
-      },
-      {
-        "date": "2026-02-06",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
-      },
       {
         "date": "2026-02-07",
         "total": 0,
@@ -3321,6 +3307,20 @@
       },
       {
         "date": "2026-08-05",
+        "total": 0,
+        "ebi": 0,
+        "sia": 0,
+        "alborz": 0
+      },
+      {
+        "date": "2026-08-06",
+        "total": 0,
+        "ebi": 0,
+        "sia": 0,
+        "alborz": 0
+      },
+      {
+        "date": "2026-08-07",
         "total": 0,
         "ebi": 0,
         "sia": 0,
