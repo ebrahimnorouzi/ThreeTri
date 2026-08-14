@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-08-13T23:35:28Z",
-    "generated_at_human": "13 Aug 2026, 23:35 UTC",
+    "generated_at": "2026-08-14T23:16:11Z",
+    "generated_at_human": "14 Aug 2026, 23:16 UTC",
     "season_start": "2026-01-01",
     "site_url": "https://ebrahimnorouzi.github.io/ThreeTri/",
     "data_sources": [
@@ -17,8 +17,8 @@
     "date_human": "20 Sep 2026",
     "location": "Port de Palma de Mallorca, Palma, Spain",
     "url": "https://worldsmarathons.com/de/marathon/triathlon-port-de-palma-de-mallorca",
-    "days_to_go": 38,
-    "weeks_to_go": 5.4,
+    "days_to_go": 37,
+    "weeks_to_go": 5.3,
     "phase": "Peak"
   },
   "sports": {
@@ -241,7 +241,7 @@
         "last_active": "2026-06-19",
         "active_days_this_week": 0
       },
-      "consistency_pct": 2,
+      "consistency_pct": 0,
       "points": 1175,
       "level": 2,
       "xp": {
@@ -806,7 +806,7 @@
         "last_active": "2026-06-19",
         "active_days_this_week": 0
       },
-      "consistency_pct": 2,
+      "consistency_pct": 0,
       "points": 232,
       "level": 1,
       "xp": {
@@ -1326,18 +1326,18 @@
     "consistency": [
       {
         "athlete_id": "ebi",
-        "value": 2.0,
+        "value": 0.0,
         "unit": "%",
         "rank": 1
       },
       {
-        "athlete_id": "alborz",
-        "value": 2.0,
+        "athlete_id": "sia",
+        "value": 0.0,
         "unit": "%",
         "rank": 2
       },
       {
-        "athlete_id": "sia",
+        "athlete_id": "alborz",
         "value": 0.0,
         "unit": "%",
         "rank": 3
@@ -2070,13 +2070,6 @@
       ]
     },
     "calendar": [
-      {
-        "date": "2026-02-13",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
-      },
       {
         "date": "2026-02-14",
         "total": 0,
@@ -3339,6 +3332,13 @@
       },
       {
         "date": "2026-08-13",
+        "total": 0,
+        "ebi": 0,
+        "sia": 0,
+        "alborz": 0
+      },
+      {
+        "date": "2026-08-14",
         "total": 0,
         "ebi": 0,
         "sia": 0,
