@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-10-02T01:56:02Z",
-    "generated_at_human": "02 Oct 2026, 01:56 UTC",
+    "generated_at": "2026-10-03T01:39:20Z",
+    "generated_at_human": "03 Oct 2026, 01:39 UTC",
     "season_start": "2026-01-01",
     "site_url": "https://ebrahimnorouzi.github.io/ThreeTri/",
     "data_sources": [
@@ -17,8 +17,8 @@
     "date_human": "20 Sep 2026",
     "location": "Port de Palma de Mallorca, Palma, Spain",
     "url": "https://worldsmarathons.com/de/marathon/triathlon-port-de-palma-de-mallorca",
-    "days_to_go": -12,
-    "weeks_to_go": -1.7,
+    "days_to_go": -13,
+    "weeks_to_go": -1.9,
     "phase": "Race done"
   },
   "sports": {
@@ -2197,13 +2197,6 @@
     },
     "calendar": [
       {
-        "date": "2026-04-04",
-        "total": 0,
-        "ebi": 0,
-        "sia": 0,
-        "alborz": 0
-      },
-      {
         "date": "2026-04-05",
         "total": 1,
         "ebi": 0,
@@ -3465,6 +3458,13 @@
       },
       {
         "date": "2026-10-02",
+        "total": 0,
+        "ebi": 0,
+        "sia": 0,
+        "alborz": 0
+      },
+      {
+        "date": "2026-10-03",
         "total": 0,
         "ebi": 0,
         "sia": 0,
